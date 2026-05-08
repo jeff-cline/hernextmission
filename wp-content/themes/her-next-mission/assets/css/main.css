@@ -1,0 +1,362 @@
+/* ==========================================================================
+   Her Next Mission — main.css
+
+   Visual system for the block theme. CSS custom properties mirror theme.json
+   so any swap of brand colors is one place. Block-theme styles in theme.json
+   handle most typography and color; this file adds:
+     - the rocket-launch hero animation
+     - card hover and focus states
+     - the mantra band texture
+     - layout polish that block markup can't express
+
+   ========================================================================== */
+
+:root {
+    --hnm-navy:       #0A2540;
+    --hnm-navy-deep:  #061A2E;
+    --hnm-cream:      #F5F0E8;
+    --hnm-gold:       #C9A961;
+    --hnm-gold-soft:  #E5D4A1;
+    --hnm-sage:       #6B7C5E;
+    --hnm-paper:      #FAFAF6;
+    --hnm-ink:        #1A1A1A;
+    --hnm-ink-soft:   #4A4A4A;
+    --hnm-line:       #E5DFD3;
+
+    --hnm-radius:     6px;
+    --hnm-radius-lg:  10px;
+    --hnm-shadow:     0 1px 2px rgba(10, 37, 64, 0.04), 0 8px 24px rgba(10, 37, 64, 0.06);
+    --hnm-shadow-hi:  0 4px 12px rgba(10, 37, 64, 0.08), 0 24px 48px rgba(10, 37, 64, 0.12);
+    --hnm-easing:     cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+
+/* ---------- base ---------- */
+
+html { scroll-behavior: smooth; }
+
+body {
+    background-color: var(--hnm-paper);
+    color: var(--hnm-ink);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+a { transition: color 180ms var(--hnm-easing); }
+
+/* ---------- header ---------- */
+
+.hnm-site-header {
+    background: rgba(255, 255, 255, 0.92);
+    backdrop-filter: saturate(160%) blur(8px);
+    -webkit-backdrop-filter: saturate(160%) blur(8px);
+    border-bottom: 1px solid var(--hnm-line);
+    position: sticky;
+    top: 0;
+    z-index: 50;
+}
+
+.hnm-site-header .wp-block-site-title a {
+    color: var(--hnm-navy);
+    text-decoration: none;
+}
+
+.hnm-site-header .wp-block-navigation a {
+    color: var(--hnm-ink);
+    text-decoration: none;
+}
+
+.hnm-site-header .wp-block-navigation a:hover,
+.hnm-site-header .wp-block-navigation a:focus-visible {
+    color: var(--hnm-gold);
+}
+
+/* ---------- hero ---------- */
+
+.hnm-hero {
+    position: relative;
+    overflow: hidden;
+    isolation: isolate;
+}
+
+.hnm-hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+        radial-gradient(ellipse at 70% 30%, rgba(201, 169, 97, 0.18) 0%, transparent 50%),
+        radial-gradient(ellipse at 20% 80%, rgba(107, 124, 94, 0.18) 0%, transparent 50%);
+    z-index: 0;
+    pointer-events: none;
+}
+
+.hnm-hero .wp-block-cover__inner-container { position: relative; z-index: 1; }
+
+.hnm-hero__title {
+    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.2);
+}
+
+.hnm-hero__lede {
+    max-width: 36em;
+    opacity: 0.92;
+}
+
+.hnm-hero__photo {
+    margin: 0;
+    padding: 0;
+    border-radius: var(--hnm-radius-lg);
+    overflow: hidden;
+    box-shadow: var(--hnm-shadow-hi);
+    transform: translateZ(0);
+}
+
+.hnm-hero__photo img {
+    width: 100%;
+    height: auto;
+    display: block;
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* ---------- rocket-launch animation ---------- */
+
+.hnm-rocket-stage {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: 2;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.hnm-rocket {
+    width: clamp(120px, 18vw, 220px);
+    height: auto;
+    margin-top: clamp(1rem, 4vh, 3rem);
+    transform: translate3d(0, calc(100vh + 200px), 0) scale(0.8);
+    opacity: 0;
+    will-change: transform, opacity;
+    filter: drop-shadow(0 12px 40px rgba(0, 0, 0, 0.45));
+}
+
+.hnm-rocket-trail {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 8px;
+    height: 0;
+    transform: translate3d(-50%, 0, 0);
+    background: linear-gradient(180deg, transparent 0%, rgba(255, 200, 120, 0.6) 30%, rgba(201, 169, 97, 0.0) 100%);
+    border-radius: 4px;
+    opacity: 0;
+    will-change: height, opacity;
+}
+
+.hnm-rocket-stage[data-hnm-rocket-launched="true"] .hnm-rocket {
+    animation: hnmRocketLaunch 1.6s var(--hnm-easing) 0.15s forwards;
+}
+
+.hnm-rocket-stage[data-hnm-rocket-launched="true"] .hnm-rocket-trail {
+    animation: hnmRocketTrail 1.6s var(--hnm-easing) 0.15s forwards;
+}
+
+@keyframes hnmRocketLaunch {
+    0% {
+        transform: translate3d(0, calc(100vh + 200px), 0) scale(0.78);
+        opacity: 0;
+    }
+    35% {
+        opacity: 1;
+    }
+    70% {
+        transform: translate3d(0, -2vh, 0) scale(1.03);
+        opacity: 1;
+    }
+    100% {
+        transform: translate3d(0, 0, 0) scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes hnmRocketTrail {
+    0%   { height: 0;     opacity: 0; }
+    25%  { height: 60vh;  opacity: 0.9; }
+    100% { height: 0;     opacity: 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .hnm-rocket-stage[data-hnm-rocket-launched="true"] .hnm-rocket {
+        animation: none;
+        transform: none;
+        opacity: 1;
+    }
+    .hnm-rocket-stage[data-hnm-rocket-launched="true"] .hnm-rocket-trail {
+        animation: none;
+        opacity: 0;
+    }
+}
+
+/* ---------- mantra band ---------- */
+
+.hnm-mantra {
+    border-top: 1px solid rgba(0, 0, 0, 0.08);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.hnm-mantra__line {
+    margin: 0;
+}
+
+/* ---------- cards ---------- */
+
+.hnm-card {
+    transition: transform 240ms var(--hnm-easing), box-shadow 240ms var(--hnm-easing);
+}
+
+.hnm-card-col .hnm-card:hover,
+.hnm-card-col .hnm-card:focus-within {
+    transform: translateY(-4px);
+    box-shadow: var(--hnm-shadow-hi);
+}
+
+.hnm-card .wp-block-buttons {
+    margin-top: auto;
+}
+
+/* ---------- services ---------- */
+
+.hnm-service {
+    background: #fff;
+    transition: transform 200ms var(--hnm-easing), border-color 200ms var(--hnm-easing);
+}
+
+.hnm-service:hover {
+    transform: translateY(-2px);
+    border-color: var(--hnm-gold) !important;
+}
+
+.hnm-service h3 {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    color: var(--hnm-navy);
+}
+
+/* ---------- true north ---------- */
+
+.hnm-true-north__compass {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.hnm-true-north__compass img {
+    width: 100%;
+    max-width: 380px;
+    height: auto;
+    border-radius: 50%;
+    box-shadow: 0 0 0 1px rgba(201, 169, 97, 0.3), 0 24px 60px rgba(0, 0, 0, 0.4);
+    background: var(--hnm-cream);
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+}
+
+/* ---------- podcast ---------- */
+
+.hnm-podcast__cover {
+    margin: 0;
+    padding: 0;
+}
+
+.hnm-podcast__cover img {
+    width: 100%;
+    max-width: 440px;
+    height: auto;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: var(--hnm-radius-lg);
+    box-shadow: var(--hnm-shadow-hi);
+}
+
+/* ---------- footer ---------- */
+
+.hnm-site-footer .wp-block-navigation a {
+    color: var(--hnm-cream);
+    opacity: 0.85;
+    text-decoration: none;
+}
+
+.hnm-site-footer .wp-block-navigation a:hover,
+.hnm-site-footer .wp-block-navigation a:focus-visible {
+    color: var(--hnm-gold-soft);
+    opacity: 1;
+}
+
+.hnm-footer-h {
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+
+/* ---------- buttons ---------- */
+
+.wp-block-button .wp-block-button__link {
+    transition: transform 180ms var(--hnm-easing), box-shadow 180ms var(--hnm-easing), background-color 180ms var(--hnm-easing);
+}
+
+.wp-block-button .wp-block-button__link:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 8px 20px rgba(10, 37, 64, 0.18);
+}
+
+.wp-block-button.is-style-outline .wp-block-button__link {
+    background: transparent;
+}
+
+/* ---------- list polish (mvv) ---------- */
+
+.hnm-values {
+    list-style: none;
+    margin: 0;
+}
+
+.hnm-values li {
+    position: relative;
+    padding-left: 1.75rem;
+    margin-bottom: 0.85rem;
+}
+
+.hnm-values li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0.65em;
+    width: 0.85rem;
+    height: 1px;
+    background: var(--hnm-gold);
+}
+
+/* ---------- responsive ---------- */
+
+@media (max-width: 900px) {
+    .hnm-hero__row { flex-direction: column-reverse; }
+    .hnm-hero__copy,
+    .hnm-hero__media { flex-basis: 100% !important; width: 100%; }
+    .hnm-hero__photo img { aspect-ratio: 16 / 10; }
+    .hnm-rocket { width: clamp(96px, 28vw, 160px); }
+}
+
+@media (max-width: 700px) {
+    .hnm-section { padding-top: 4rem !important; padding-bottom: 4rem !important; }
+    .hnm-hero { min-height: auto !important; }
+}
+
+/* ---------- focus visibility ---------- */
+
+a:focus-visible,
+button:focus-visible,
+.wp-block-button__link:focus-visible {
+    outline: 3px solid var(--hnm-gold);
+    outline-offset: 3px;
+    border-radius: 4px;
+}

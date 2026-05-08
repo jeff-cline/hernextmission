@@ -1,0 +1,17 @@
+/*
+Theme Name: Her Next Mission
+Theme URI: https://hernextmission.org
+Author: Her Next Mission Foundation
+Author URI: https://hernextmission.org
+Description: Custom block theme for Her Next Mission Foundation — empowering female veterans and first responders transitioning out of service to reclaim their identity, rebuild their confidence, and discover their next mission.
+Version: 0.1.0
+Requires at least: 6.5
+Tested up to: 6.9
+Requires PHP: 8.1
+License: GPL-2.0-or-later
+License URI: https://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: her-next-mission
+Tags: block-theme, full-site-editing, nonprofit, foundation, veterans, women
+*/
+
+/* This file declares theme metadata. Visual styles live in assets/css/main.css and theme.json. */

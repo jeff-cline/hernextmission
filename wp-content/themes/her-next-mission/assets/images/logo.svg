@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 160" role="img" aria-label="Her Next Mission">
+  <defs>
+    <linearGradient id="hnmGold" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#E5D4A1"/>
+      <stop offset="100%" stop-color="#C9A961"/>
+    </linearGradient>
+  </defs>
+
+  <!-- rocket glyph -->
+  <g transform="translate(40 28)">
+    <path d="M30 0 C 44 14, 50 30, 50 50 L 50 78 L 10 78 L 10 50 C 10 30, 16 14, 30 0 Z"
+          fill="url(#hnmGold)" />
+    <circle cx="30" cy="38" r="7" fill="#0A2540"/>
+    <path d="M10 64 L 0 84 L 14 78 Z" fill="#0A2540" opacity="0.85"/>
+    <path d="M50 64 L 60 84 L 46 78 Z" fill="#0A2540" opacity="0.85"/>
+    <path d="M22 78 L 26 96 L 30 86 L 34 96 L 38 78 Z" fill="#C9A961" opacity="0.85"/>
+  </g>
+
+  <!-- wordmark -->
+  <g fill="#0A2540" font-family="'Cormorant Garamond', Georgia, serif">
+    <text x="120" y="62" font-size="34" font-weight="500" letter-spacing="0.5">HER NEXT</text>
+    <text x="120" y="100" font-size="34" font-weight="500" letter-spacing="0.5">MISSION</text>
+    <text x="120" y="124" font-size="11" font-family="'Inter', sans-serif"
+          font-weight="600" letter-spacing="3" fill="#C9A961">FOUNDATION</text>
+  </g>
+</svg>

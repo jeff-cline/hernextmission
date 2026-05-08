@@ -1,0 +1,58 @@
+# OS
+.DS_Store
+Thumbs.db
+
+# Editor
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# WP core (server-managed)
+/wp-admin/
+/wp-includes/
+/wp-config.php
+/wp-config-sample.php
+/.htaccess
+/index.php
+/license.txt
+/readme.html
+/wp-*.php
+/xmlrpc.php
+
+# WP server-managed content
+wp-content/uploads/
+wp-content/cache/
+wp-content/upgrade/
+wp-content/backup-db/
+wp-content/blogs.dir/
+wp-content/advanced-cache.php
+wp-content/wp-cache-config.php
+wp-content/db.php
+wp-content/object-cache.php
+
+# Default WP plugins/themes (we manage only hnm-* and her-next-mission)
+wp-content/plugins/akismet/
+wp-content/plugins/hello.php
+wp-content/plugins/index.php
+wp-content/themes/twenty*/
+wp-content/themes/index.php
+wp-content/index.php
+wp-content/mu-plugins/
+
+# Logs
+*.log
+
+# Build output
+node_modules/
+vendor/
+dist/
+build/
+
+# Secrets — never commit
+*.env
+.env
+.env.local
+secrets.json
+*.key
+*.pem
