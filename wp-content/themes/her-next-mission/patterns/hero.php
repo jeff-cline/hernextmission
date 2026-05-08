@@ -10,7 +10,7 @@
  */
 
 $theme_uri = get_stylesheet_directory_uri();
-$logo_url  = esc_url($theme_uri . '/assets/images/logo.svg');
+$logo_url  = esc_url($theme_uri . '/assets/images/logo.png');
 $hero_url  = esc_url($theme_uri . '/assets/images/hero-krystalore.jpg');
 ?>
 <!-- wp:cover {"customOverlayColor":"#0A2540","minHeight":92,"minHeightUnit":"vh","className":"hnm-hero","style":{"spacing":{"padding":{"top":"3rem","bottom":"3rem","left":"1.5rem","right":"1.5rem"}}},"layout":{"type":"constrained","contentSize":"1280px"}} -->

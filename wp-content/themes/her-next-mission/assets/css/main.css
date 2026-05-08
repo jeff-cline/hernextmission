@@ -73,13 +73,6 @@ img { max-width: 100%; height: auto; }
     font-size: 1.05rem !important;
 }
 
-.hnm-site-header .hnm-wordmark-img,
-.hnm-header-logo img {
-    display: block;
-    height: 56px;
-    width: auto;
-}
-
 .hnm-header-logo {
     display: inline-block;
     line-height: 0;
@@ -87,6 +80,9 @@ img { max-width: 100%; height: auto; }
 }
 
 .hnm-header-logo img {
+    display: block;
+    height: 72px;
+    width: auto;
     transition: transform 220ms var(--hnm-easing);
 }
 
@@ -178,13 +174,17 @@ img { max-width: 100%; height: auto; }
 }
 
 .hnm-rocket {
-    width: clamp(140px, 20vw, 240px);
+    width: clamp(160px, 22vw, 280px);
     height: auto;
+    aspect-ratio: 1 / 1;
+    object-fit: contain;
     margin-top: clamp(1rem, 4vh, 2.5rem);
     transform: translate3d(0, calc(100vh + 200px), 0) scale(0.78);
     opacity: 0;
     will-change: transform, opacity;
     filter: drop-shadow(0 14px 40px rgba(0, 0, 0, 0.55));
+    border-radius: 12px;
+    background: #FFFFFF;
 }
 
 .hnm-rocket-trail {
@@ -336,9 +336,16 @@ img { max-width: 100%; height: auto; }
 
 .hnm-footer-logo img {
     display: inline-block;
-    height: 96px;
-    width: auto;
-    filter: drop-shadow(0 4px 16px rgba(0, 0, 0, 0.4));
+    height: 130px;
+    width: 130px;
+    object-fit: cover;
+    object-position: center 32%;  /* center on the bird; the wordmark below gets cropped (it's already in the footer copy) */
+    border-radius: 50%;
+    background: #FFFFFF;
+    box-shadow:
+        0 0 0 2px rgba(214, 32, 110, 0.35),
+        0 0 0 6px rgba(232, 85, 144, 0.18),
+        0 16px 40px rgba(0, 0, 0, 0.45);
 }
 
 .hnm-footer-nav {
