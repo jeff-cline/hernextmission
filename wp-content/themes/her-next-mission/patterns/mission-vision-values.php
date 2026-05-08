@@ -3,7 +3,7 @@
  * Title: Mission, Vision, Values
  * Slug: her-next-mission/mission-vision-values
  * Categories: hnm
- * Description: The foundation's core statements.
+ * Description: Core statements — mission, vision, values.
  * Inserter: yes
  *
  * @package HerNextMission
@@ -26,7 +26,7 @@
         <h3 class="wp-block-heading has-navy-color has-text-color" style="font-size:1.25rem;font-weight:600;letter-spacing:0.06em;text-transform:uppercase">Mission</h3>
         <!-- /wp:heading -->
         <!-- wp:paragraph {"style":{"typography":{"fontSize":"1.25rem","lineHeight":"1.65","fontFamily":"var(--wp--preset--font-family--display)"}}} -->
-        <p style="font-family:var(--wp--preset--font-family--display);font-size:1.25rem;line-height:1.65">Her Next Mission Foundation empowers female veterans and first responders transitioning out of service to reclaim their identity, rebuild their confidence, and discover their next mission — through coaching, community, fitness, and transformative experiences that honor their service and fuel their future.</p>
+        <p style="font-family:var(--wp--preset--font-family--display);font-size:1.25rem;line-height:1.65">Her Next Mission empowers female veterans and first responders transitioning out of service to reclaim their identity, rebuild their confidence, and discover their next mission — through coaching, community, fitness, and transformative experiences that honor their service and fuel their future.</p>
         <!-- /wp:paragraph -->
     </div>
     <!-- /wp:group -->

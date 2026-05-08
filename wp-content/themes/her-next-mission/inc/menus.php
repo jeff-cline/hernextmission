@@ -3,7 +3,7 @@
  * Navigation menu registration.
  *
  * Primary nav (header):  Home, Podcasts, Events, About, Book a Call
- * Footer — Categories:   the foundational themes (Wellbeing, Transition, Understanding, Clarity, Identity)
+ * Footer — Categories:   the core themes (Wellbeing, Transition, Understanding, Clarity, Identity)
  * Footer — Give:         Donate, Become a Sponsor, Featured Sponsors
  * Footer — Meta:         Privacy, Contact, etc.
  *

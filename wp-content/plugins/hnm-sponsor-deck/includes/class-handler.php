@@ -100,7 +100,7 @@ final class Handler
             . "Thank you for requesting the Her Next Mission sponsor deck. Your one-time download link is below — it's good for 72 hours.\n\n"
             . $url . "\n\n"
             . "If you have questions, just reply to this email.\n\n"
-            . "Pay it forward.\n— Her Next Mission Foundation";
+            . "Pay it forward.\n— Her Next Mission";
 
         wp_mail($data['email'], $subject, $body);
     }

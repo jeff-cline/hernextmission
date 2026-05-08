@@ -80,7 +80,7 @@ final class Form
                         <button type="submit" class="hnm-button hnm-button--gold">Request Sponsor Deck</button>
                     </p>
 
-                    <p class="hnm-deck-form__legal">By submitting you consent to receive the deck and follow-up from Her Next Mission Foundation.</p>
+                    <p class="hnm-deck-form__legal">By submitting you consent to receive the deck and follow-up from Her Next Mission.</p>
                 </form>
             <?php endif; ?>
         </div>

@@ -85,10 +85,10 @@ add_action('init', static function (): void {
     ]);
 
     register_taxonomy('hnm_theme', ['post', 'story'], [
-        'label'        => __('Foundation Themes', 'her-next-mission'),
+        'label'        => __('Themes', 'her-next-mission'),
         'labels'       => [
-            'singular_name' => __('Foundation Theme', 'her-next-mission'),
-            'menu_name'     => __('Foundation Themes', 'her-next-mission'),
+            'singular_name' => __('Theme', 'her-next-mission'),
+            'menu_name'     => __('Themes', 'her-next-mission'),
         ],
         'public'       => true,
         'show_in_rest' => true,
@@ -106,10 +106,10 @@ add_action('init', static function (): void {
 });
 
 /**
- * Seed the foundational taxonomy terms on theme activation.
+ * Seed the core taxonomy terms on theme activation.
  *
- * Wellbeing, Transition, Understanding, Clarity, Identity are the foundation's
- * core themes — they drive the footer category nav.
+ * Wellbeing, Transition, Understanding, Clarity, Identity are the core
+ * themes — they drive the footer category nav.
  */
 add_action('after_switch_theme', static function (): void {
     $themes = [

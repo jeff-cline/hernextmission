@@ -1,4 +1,4 @@
-# Her Next Mission Foundation — WordPress
+# Her Next Mission — WordPress
 
 Custom WordPress theme + plugins for [hernextmission.org](https://hernextmission.org).
 
@@ -32,7 +32,7 @@ Server agent listens on a webhook (secret at `/root/.hnm-webhook-secret`). On pu
    - activate the theme `her-next-mission`
    - activate `hnm-crm` and `hnm-sponsor-deck` plugins
    - flush rewrites
-   - ensure foundational taxonomy terms exist (Wellbeing, Transition, Understanding, Clarity, Identity)
+   - ensure core taxonomy terms exist (Wellbeing, Transition, Understanding, Clarity, Identity)
 3. Site is live at `https://hernextmission.org`.
 
 ## Brand assets — placeholder status

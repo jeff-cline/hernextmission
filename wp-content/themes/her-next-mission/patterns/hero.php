@@ -31,7 +31,7 @@ $hero_url     = esc_url($theme_uri . '/assets/images/hero-placeholder.svg');
             <!-- wp:column {"verticalAlignment":"center","width":"55%","className":"hnm-hero__copy"} -->
             <div class="wp-block-column is-vertically-aligned-center hnm-hero__copy" style="flex-basis:55%">
                 <!-- wp:paragraph {"className":"hnm-eyebrow","style":{"typography":{"fontSize":"0.85rem","letterSpacing":"0.18em","textTransform":"uppercase","fontWeight":"600"}},"textColor":"gold"} -->
-                <p class="hnm-eyebrow has-gold-color has-text-color" style="font-size:0.85rem;font-weight:600;letter-spacing:0.18em;text-transform:uppercase">Her Next Mission Foundation</p>
+                <p class="hnm-eyebrow has-gold-color has-text-color" style="font-size:0.85rem;font-weight:600;letter-spacing:0.18em;text-transform:uppercase">Her Next Mission</p>
                 <!-- /wp:paragraph -->
 
                 <!-- wp:heading {"level":1,"className":"hnm-hero__title","style":{"typography":{"fontSize":"clamp(2.75rem, 6vw, 5rem)","fontWeight":"500","lineHeight":"1.02","letterSpacing":"-0.02em"}},"textColor":"cream"} -->

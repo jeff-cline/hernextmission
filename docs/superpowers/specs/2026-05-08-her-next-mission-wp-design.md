@@ -4,11 +4,11 @@ title: Her Next Mission — WordPress design (v0.1)
 status: in-progress (placeholder assets; iterating once real assets land)
 ---
 
-# Her Next Mission Foundation — WordPress design
+# Her Next Mission — WordPress design
 
 ## What this is
 
-Custom WordPress site for the Her Next Mission Foundation, serving female veterans and first responders transitioning out of service. Three audiences: women in transition (beneficiaries), corporate sponsors, individual donors. Built so Jeff and Krystalore can edit pages and posts from /wp-admin without touching code; built so the visual identity is swappable from a single CSS-variables file as soon as real brand assets arrive.
+Custom WordPress site for Her Next Mission, serving female veterans and first responders transitioning out of service. Three audiences: women in transition (beneficiaries), corporate sponsors, individual donors. Built so Jeff and Krystalore can edit pages and posts from /wp-admin without touching code; built so the visual identity is swappable from a single CSS-variables file as soon as real brand assets arrive.
 
 ## Decisions locked
 
@@ -143,7 +143,7 @@ Home, About, Services, Podcast, Events, Book a Call, Become a Sponsor, Sponsor D
 ### Nav menu locations
 
 - `primary` — header (Podcasts, Book a Call, Events, About, …)
-- `footer-categories` — footer left col (the foundational themes)
+- `footer-categories` — footer left col (the core themes)
 - `footer-give` — footer middle (Donate, Become a Sponsor, Featured Sponsors)
 - `footer-meta` — footer right (Contact, Privacy, …)
 
@@ -212,7 +212,7 @@ Settings → Sponsor Deck:
 | Hero photo | Decorative SVG with "[hero portrait]" text | Upload to Media → set in `patterns/hero.php` (or wp-admin once we move the hero into a Page block) |
 | True North compass | SVG illustration of a brass compass | Upload to Media → set in `patterns/true-north.php` |
 | Podcast cover | SVG with mic glyph | Upload to Media → set in `patterns/podcast-feature.php` |
-| Color palette | Vet-foundation classics (navy/cream/gold/sage) | When real palette arrives, swap hex in `theme.json` + `main.css` `:root` |
+| Color palette | Vet/nonprofit classics (navy/cream/gold/sage) | When real palette arrives, swap hex in `theme.json` + `main.css` `:root` |
 | Sponsor deck PDF | None bundled | Upload PDF to Media → paste ID in Settings → Sponsor Deck |
 | Krystalore bio | None — couldn't research without input | Add to About page once provided |
 | Real podcast episodes | None — empty CPT | Add via wp-admin → Podcast Episodes |

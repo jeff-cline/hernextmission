@@ -3,7 +3,7 @@
  * Title: True North — compass feature
  * Slug: her-next-mission/true-north
  * Categories: hnm, featured
- * Description: A featured section honoring the compass she received as a gift, framed as the foundation's "True North."
+ * Description: A featured section honoring the compass she received as a gift, framed as our "True North."
  * Inserter: yes
  *
  * @package HerNextMission
