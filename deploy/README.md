@@ -5,11 +5,34 @@ Server-agent deploy steps for `hernextmission.org`.
 ## Flow
 
 1. **GitHub webhook** fires on push to `main` (signed with the secret at `/root/.hnm-webhook-secret`).
-2. **Server agent verifies the signature**, then pulls `origin/main` into the WordPress `wp-content/` tree.
-3. **Agent runs `deploy/post-deploy.sh`** with `WP_ROOT=/var/www/hernextmission` (or whatever the actual WP root is).
+2. **Server agent verifies the signature**, then `git pull`s `origin/main` into the repo checkout (e.g. `/var/www/hernextmission/site/`).
+3. **Agent runs `deploy/post-deploy.sh`** with `WP_ROOT=/var/www/hernextmission` and `HNM_REPO_ROOT=/var/www/hernextmission/site`. The script:
+   - rsyncs the theme and `hnm-*` plugins from the repo into the WP tree (only those subdirs — uploads and core are untouched);
+   - activates the theme and plugins via WP-CLI;
+   - flushes rewrites;
+   - sets site identity;
+   - seeds taxonomy terms and core pages.
 4. **Site is live** at `https://hernextmission.org`.
 
 `post-deploy.sh` is idempotent — safe to run on every deploy.
+
+## One-shot manual deploy (use if the webhook isn't wired up yet)
+
+```bash
+cd /var/www/hernextmission/site
+git pull origin main
+WP_ROOT=/var/www/hernextmission \
+HNM_REPO_ROOT=/var/www/hernextmission/site \
+    bash deploy/post-deploy.sh
+```
+
+## Smoke check the deployed version matches origin/main
+
+```bash
+curl -s https://hernextmission.org/wp-content/themes/her-next-mission/style.css | grep '^Version:'
+```
+
+That `Version: X.Y.Z` value must match the `Version:` line in this commit's `wp-content/themes/her-next-mission/style.css`. If it doesn't, the rsync step didn't run (most likely cause: webhook not configured, so the agent never ran post-deploy.sh).
 
 ## What `post-deploy.sh` does
 

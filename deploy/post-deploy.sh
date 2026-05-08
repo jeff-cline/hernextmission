@@ -2,10 +2,10 @@
 #
 # Her Next Mission — post-deploy hook for the server agent.
 #
-# Run this AFTER the agent has pulled the latest commit into the WordPress
-# wp-content/ tree on the server. It activates the theme and plugins,
-# flushes rewrites, ensures core pages exist with rich content, and seeds
-# taxonomy terms.
+# This script runs the full deploy: it syncs custom code from the repo
+# checkout into the WordPress tree (if the two live in different places),
+# activates theme + plugins, flushes rewrites, sets site identity, seeds
+# taxonomy terms, and seeds page content.
 #
 # Idempotent: safe to run on every deploy.
 #
@@ -14,28 +14,71 @@
 #     the latest rich content.
 #   - Pages with custom (admin-edited) content are left alone.
 #
-# Required env / args:
-#   WP_ROOT  — absolute path to WordPress install root. Defaults to
-#              /var/www/hernextmission.
+# Required env:
+#   WP_ROOT        — absolute path to WordPress install root (where wp-config.php
+#                    lives). Defaults to /var/www/hernextmission.
+#   HNM_REPO_ROOT  — absolute path to the cloned repo on the server. Defaults
+#                    to the directory containing this script's parent (i.e.
+#                    "$(dirname this_script)/..", which works when the agent
+#                    invokes it via deploy/post-deploy.sh from the repo root).
+#
+# What the rsync does:
+#   If HNM_REPO_ROOT/wp-content != WP_ROOT/wp-content, this script rsyncs
+#   the THEME and HNM PLUGINS from the repo to the WP tree. It does NOT
+#   touch wp-content/uploads/, mu-plugins/, default WP themes/plugins, or
+#   anything else. So user-uploaded media is safe.
 #
 # Usage:
-#   WP_ROOT=/var/www/hernextmission bash deploy/post-deploy.sh
+#   WP_ROOT=/var/www/hernextmission \
+#   HNM_REPO_ROOT=/var/www/hernextmission/site \
+#       bash deploy/post-deploy.sh
 #
 # Exit codes:
 #   0 — success
-#   1 — wp-cli not found or WP_ROOT invalid
+#   1 — wp-cli not found, WP_ROOT invalid, or rsync missing
 #   2 — theme/plugin activation failed
 
 set -euo pipefail
 
 WP_ROOT="${WP_ROOT:-/var/www/hernextmission}"
 
+# Resolve where this script lives, then derive the repo root (its parent's parent).
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+HNM_REPO_ROOT="${HNM_REPO_ROOT:-$(cd "$SCRIPT_DIR/.." && pwd)}"
+
 log()  { printf '[hnm-deploy] %s\n' "$*"; }
 fail() { printf '[hnm-deploy] ERROR: %s\n' "$*" >&2; exit 1; }
 
-command -v wp >/dev/null 2>&1 || fail "wp-cli not found in PATH"
+command -v wp    >/dev/null 2>&1 || fail "wp-cli not found in PATH"
+command -v rsync >/dev/null 2>&1 || fail "rsync not found in PATH"
 [ -d "$WP_ROOT" ] || fail "WP_ROOT does not exist: $WP_ROOT"
 [ -f "$WP_ROOT/wp-config.php" ] || fail "wp-config.php not found in $WP_ROOT"
+[ -d "$HNM_REPO_ROOT/wp-content" ] || fail "HNM_REPO_ROOT/wp-content not found at $HNM_REPO_ROOT/wp-content"
+
+log "WP_ROOT       = $WP_ROOT"
+log "HNM_REPO_ROOT = $HNM_REPO_ROOT"
+
+# ---------- sync custom code from repo to WP tree ----------
+
+if [ "$HNM_REPO_ROOT" = "$WP_ROOT" ]; then
+    log "Repo and WP root are the same — skipping rsync (files already in place)"
+else
+    sync_dir() {
+        local src="$1"
+        local dst="$2"
+        if [ -d "$src" ]; then
+            log "Syncing $src -> $dst"
+            mkdir -p "$dst"
+            rsync -a --delete "$src/" "$dst/"
+        else
+            log "Skipping (not in repo): $src"
+        fi
+    }
+
+    sync_dir "$HNM_REPO_ROOT/wp-content/themes/her-next-mission"   "$WP_ROOT/wp-content/themes/her-next-mission"
+    sync_dir "$HNM_REPO_ROOT/wp-content/plugins/hnm-crm"           "$WP_ROOT/wp-content/plugins/hnm-crm"
+    sync_dir "$HNM_REPO_ROOT/wp-content/plugins/hnm-sponsor-deck"  "$WP_ROOT/wp-content/plugins/hnm-sponsor-deck"
+fi
 
 cd "$WP_ROOT"
 
