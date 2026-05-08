@@ -8,15 +8,16 @@
             "defaultPalette": false,
             "defaultGradients": false,
             "palette": [
-                { "name": "Navy",    "slug": "navy",    "color": "#0A2540" },
-                { "name": "Navy Deep","slug": "navy-deep","color": "#061A2E" },
-                { "name": "Cream",   "slug": "cream",   "color": "#F5F0E8" },
-                { "name": "Gold",    "slug": "gold",    "color": "#C9A961" },
-                { "name": "Gold Soft","slug": "gold-soft","color": "#E5D4A1" },
-                { "name": "Sage",    "slug": "sage",    "color": "#6B7C5E" },
-                { "name": "Paper",   "slug": "paper",   "color": "#FAFAF6" },
-                { "name": "Ink",     "slug": "ink",     "color": "#1A1A1A" },
-                { "name": "Ink Soft","slug": "ink-soft","color": "#4A4A4A" }
+                { "name": "Navy",         "slug": "navy",      "color": "#0A2540" },
+                { "name": "Navy Deep",    "slug": "navy-deep", "color": "#061A2E" },
+                { "name": "Cream",        "slug": "cream",     "color": "#F8F6F3" },
+                { "name": "Magenta",      "slug": "gold",      "color": "#D6206E" },
+                { "name": "Magenta Soft", "slug": "gold-soft", "color": "#E85590" },
+                { "name": "Red",          "slug": "red",       "color": "#C8102E" },
+                { "name": "Sage",         "slug": "sage",      "color": "#6B7C5E" },
+                { "name": "Paper",        "slug": "paper",     "color": "#FFFFFF" },
+                { "name": "Ink",          "slug": "ink",       "color": "#1A1A1A" },
+                { "name": "Ink Soft",     "slug": "ink-soft",  "color": "#4A4A4A" }
             ],
             "gradients": [
                 {
@@ -27,7 +28,12 @@
                 {
                     "name": "Cream Fade",
                     "slug": "cream-fade",
-                    "gradient": "linear-gradient(180deg, #F5F0E8 0%, #FAFAF6 100%)"
+                    "gradient": "linear-gradient(180deg, #F8F6F3 0%, #FFFFFF 100%)"
+                },
+                {
+                    "name": "Magenta Fade",
+                    "slug": "magenta-fade",
+                    "gradient": "linear-gradient(135deg, #D6206E 0%, #C8102E 100%)"
                 }
             ]
         },
@@ -130,25 +136,25 @@
             "button": {
                 "color": {
                     "background": "var(--wp--preset--color--gold)",
-                    "text": "var(--wp--preset--color--navy-deep)"
+                    "text": "var(--wp--preset--color--paper)"
                 },
                 "border": {
                     "radius": "999px"
                 },
                 "spacing": {
                     "padding": {
-                        "top": "0.85rem",
-                        "right": "1.75rem",
-                        "bottom": "0.85rem",
-                        "left": "1.75rem"
+                        "top": "0.95rem",
+                        "right": "2rem",
+                        "bottom": "0.95rem",
+                        "left": "2rem"
                     }
                 },
                 "typography": {
                     "fontFamily": "var(--wp--preset--font-family--body)",
                     "fontWeight": "600",
                     "fontSize": "1rem",
-                    "letterSpacing": "0.01em",
-                    "textTransform": "none"
+                    "letterSpacing": "0.02em",
+                    "textTransform": "uppercase"
                 }
             }
         },
@@ -160,7 +166,7 @@
             },
             "core/quote": {
                 "border": {
-                    "color": "var(--wp--preset--color--gold)",
+                    "color": "var(--wp--preset--color--red)",
                     "style": "solid",
                     "width": "0 0 0 4px"
                 },
