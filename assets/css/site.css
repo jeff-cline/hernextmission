@@ -267,10 +267,10 @@ p  { margin: 0 0 1em; }
 
 .hero {
     position: relative;
-    overflow: hidden;
+    overflow: visible;
     isolation: isolate;
     background: linear-gradient(180deg, #FFFFFF 0%, var(--ivory) 100%);
-    padding: clamp(4rem, 9vw, 7rem) 0 clamp(5rem, 9vw, 8rem);
+    padding: clamp(7rem, 13vw, 11rem) 0 clamp(2rem, 3vw, 3.5rem);
 }
 .hero::before {
     content: "";
@@ -320,10 +320,11 @@ p  { margin: 0 0 1em; }
 }
 .hero__photo img { width: 100%; height: 100%; object-fit: cover; object-position: center top; }
 
-/* rocket */
+/* rocket — lands above the hero copy, never overlaps */
 .rocket-stage {
     position: absolute;
-    left: 0; right: 0; top: 0;
+    left: 0; right: 0;
+    top: clamp(1rem, 2vw, 1.75rem);
     height: 0;
     pointer-events: none;
     z-index: 3;
@@ -333,13 +334,13 @@ p  { margin: 0 0 1em; }
     padding-left: clamp(1.5rem, 5vw, 4rem);
 }
 .rocket {
-    width: clamp(140px, 18vw, 220px);
+    width: clamp(120px, 14vw, 170px);
     aspect-ratio: 1/1;
     transform: translate3d(0, calc(100vh + 200px), 0) scale(0.65) rotate(-4deg);
     opacity: 0;
     will-change: transform, opacity;
     filter: drop-shadow(0 14px 30px rgba(14,21,48,.25));
-    margin-top: clamp(1rem, 3vh, 2rem);
+    margin-top: 0;
     object-fit: contain;
 }
 .rocket-trail {
@@ -372,24 +373,33 @@ p  { margin: 0 0 1em; }
     .rocket-stage[data-launched="true"] .rocket-trail { animation: none; opacity: 0; }
 }
 
-/* compass float */
+/* compass float — left-anchored, 30% sits in the hero, 70% drops past the
+   blue mantra into the marquee. Shakes gently. Pointer-events off so it
+   never blocks clicks behind it. */
 .compass-float {
-    position: relative;
+    position: absolute;
     z-index: 4;
-    width: clamp(280px, 36vw, 480px);
-    margin: -100px auto -60px;
+    left: clamp(1rem, 6vw, 6rem);
+    bottom: -70%;
+    width: clamp(180px, 22vw, 300px);
+    margin: 0;
+    pointer-events: none;
     filter: drop-shadow(0 28px 70px rgba(14,21,48,.30));
-    animation: pulse 6s ease-in-out infinite;
+    animation: shake 4.2s ease-in-out infinite;
+    transform-origin: 50% 35%;
 }
-@keyframes pulse {
-    0%, 100% { transform: translateY(0) rotate(-1.5deg); }
-    50%      { transform: translateY(-10px) rotate(2deg); }
+@keyframes shake {
+    0%, 100% { transform: rotate(-3deg) translate3d(0, 0, 0); }
+    20%      { transform: rotate(2deg)  translate3d(2px, -3px, 0); }
+    40%      { transform: rotate(-1deg) translate3d(-2px, -1px, 0); }
+    60%      { transform: rotate(3deg)  translate3d(2px, 2px, 0); }
+    80%      { transform: rotate(-2deg) translate3d(-1px, 0, 0); }
 }
 @media (prefers-reduced-motion: reduce) { .compass-float { animation: none; } }
 
 @media (max-width: 900px) {
     .hero__row { grid-template-columns: 1fr; }
-    .compass-float { width: clamp(220px, 60vw, 360px); margin-top: -60px; margin-bottom: -20px; }
+    .compass-float { width: clamp(140px, 32vw, 220px); left: 4vw; bottom: -55%; }
     .rocket { width: clamp(96px, 22vw, 150px); }
 }
 
@@ -757,7 +767,10 @@ p  { margin: 0 0 1em; }
     object-fit: contain;
     filter: drop-shadow(0 32px 80px rgba(14,21,48,.35));
     position: relative; z-index: 1;
+    animation: shake 4.5s ease-in-out infinite;
+    transform-origin: 50% 35%;
 }
+@media (prefers-reduced-motion: reduce) { .true-north__compass img { animation: none; } }
 .true-north blockquote {
     border-left: 3px solid var(--gold);
     padding-left: 1.5rem;
