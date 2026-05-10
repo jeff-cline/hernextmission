@@ -270,7 +270,7 @@ p  { margin: 0 0 1em; }
     overflow: visible;
     isolation: isolate;
     background: linear-gradient(180deg, #FFFFFF 0%, var(--ivory) 100%);
-    padding: clamp(7rem, 13vw, 11rem) 0 clamp(2rem, 3vw, 3.5rem);
+    padding: clamp(6rem, 11vw, 9.5rem) 0 clamp(0.5rem, 1.5vw, 1.5rem);
 }
 .hero::before {
     content: "";
@@ -1031,6 +1031,88 @@ ul.list li::before {
 .foot-cta:hover { color: #FFF; }
 
 @media (max-width: 900px) { .foot-cols { grid-template-columns: 1fr; gap: 2rem; } }
+
+/* FAQ block — accordion-style with FAQ JSON-LD */
+.faq__list { margin-top: 1.5rem; border-top: 1px solid var(--line); }
+.faq__item {
+    border-bottom: 1px solid var(--line);
+    padding: .25rem 0;
+}
+.faq__item summary {
+    list-style: none;
+    cursor: pointer;
+    padding: 1.15rem 2.25rem 1.15rem 0;
+    font-family: 'Fraunces', serif;
+    font-size: 1.15rem;
+    color: var(--navy-deep);
+    line-height: 1.35;
+    position: relative;
+    transition: color 200ms var(--ease);
+}
+.faq__item summary::-webkit-details-marker { display: none; }
+.faq__item summary::after {
+    content: "+";
+    position: absolute;
+    right: 0; top: 50%;
+    transform: translateY(-50%);
+    width: 28px; height: 28px;
+    border-radius: 999px;
+    border: 1px solid var(--gold-deep);
+    color: var(--gold-deep);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    font-family: 'Inter', sans-serif;
+    transition: transform 200ms var(--ease), background 200ms var(--ease), color 200ms var(--ease);
+}
+.faq__item[open] summary::after { content: "−"; transform: translateY(-50%) rotate(0); background: var(--gold); color: #FFF; border-color: var(--gold); }
+.faq__item summary:hover { color: var(--gold-deep); }
+.faq__answer { padding: 0 0 1.4rem; color: var(--ink-soft); font-size: 1rem; line-height: 1.65; }
+.faq__answer p { margin: 0 0 .75rem; }
+.faq__answer a { color: var(--gold-deep); text-decoration: underline; }
+
+/* Related-pages silo grid */
+.rel-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 1.25rem;
+    margin-top: 2rem;
+}
+.rel {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    border-radius: var(--r-md);
+    text-decoration: none;
+    background: var(--paper);
+    border: 1px solid var(--line);
+    transition: transform 280ms var(--ease), box-shadow 280ms var(--ease);
+    color: inherit;
+}
+.rel:hover { transform: translateY(-4px); box-shadow: var(--shadow-1); }
+.rel__media { display: block; aspect-ratio: 4/3; overflow: hidden; }
+.rel__media img { width: 100%; height: 100%; object-fit: cover; transition: transform 700ms var(--ease); }
+.rel:hover .rel__media img { transform: scale(1.05); }
+.rel__body { padding: 1.1rem 1.25rem 1.4rem; display: flex; flex-direction: column; gap: .5rem; }
+.rel__title {
+    font-family: 'Fraunces', serif;
+    font-size: 1.125rem;
+    color: var(--navy-deep);
+    line-height: 1.2;
+}
+.rel__lede { font-size: .92rem; color: var(--ink-soft); line-height: 1.5; }
+.rel__cta {
+    margin-top: auto;
+    font-family: 'Inter', sans-serif;
+    font-weight: 800;
+    font-size: .72rem;
+    letter-spacing: .22em;
+    text-transform: uppercase;
+    color: var(--gold-deep);
+}
+@media (max-width: 1100px) { .rel-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 600px)  { .rel-grid { grid-template-columns: 1fr; } }
 
 /* split section (used by role/service/health pages) */
 .split__row {
