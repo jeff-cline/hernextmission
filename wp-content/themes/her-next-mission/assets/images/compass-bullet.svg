@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+  <defs>
+    <linearGradient id="cb-gold" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#E8C870"/>
+      <stop offset="100%" stop-color="#A87B2A"/>
+    </linearGradient>
+  </defs>
+  <circle cx="12" cy="12" r="11" fill="#FFFFFF" stroke="#1F2A52" stroke-width="1"/>
+  <circle cx="12" cy="12" r="8.5" fill="none" stroke="url(#cb-gold)" stroke-width="0.6"/>
+  <!-- needle north (navy) -->
+  <path d="M12 12 L14 14 L12 3 Z" fill="#1F2A52"/>
+  <!-- needle south (gold) -->
+  <path d="M12 12 L10 10 L12 21 Z" fill="url(#cb-gold)"/>
+  <circle cx="12" cy="12" r="1.1" fill="#3D2C6B"/>
+</svg>

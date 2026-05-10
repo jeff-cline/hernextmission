@@ -36,7 +36,7 @@ add_action('wp_enqueue_scripts', static function (): void {
 
     wp_enqueue_style(
         'hnm-fonts',
-        'https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@400;500;600;700&display=swap',
+        'https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Inter:wght@400;500;600;700;800&display=swap',
         [],
         null
     );
@@ -63,3 +63,14 @@ add_filter('upload_mimes', static function (array $mimes): array {
     $mimes['svg'] = 'image/svg+xml';
     return $mimes;
 });
+
+/**
+ * Print the compass favicon (and apple-touch-icon equivalent).
+ * Lives in the theme so it ships with deployment, no media-library upload needed.
+ */
+add_action('wp_head', static function (): void {
+    $theme_uri = get_stylesheet_directory_uri();
+    echo '<link rel="icon" type="image/svg+xml" href="' . esc_url($theme_uri . '/assets/images/favicon.svg') . '">' . "\n";
+    echo '<link rel="apple-touch-icon" href="' . esc_url($theme_uri . '/assets/images/favicon.svg') . '">' . "\n";
+    echo '<meta name="theme-color" content="#1F2A52">' . "\n";
+}, 1);

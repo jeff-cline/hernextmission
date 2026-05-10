@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 750" role="img" aria-label="Woman firefighter">
+  <title>Woman firefighter</title>
+  <defs>
+    <linearGradient id="bg-fire" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#3D2C6B"/>
+      <stop offset="100%" stop-color="#1B143C"/>
+    </linearGradient>
+    <linearGradient id="gold-fire" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#E8C870"/>
+      <stop offset="100%" stop-color="#A87B2A"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="750" fill="url(#bg-fire)"/>
+  <!-- jacket -->
+  <path d="M100 750 C 130 510, 220 450, 300 450 C 380 450, 470 510, 500 750 Z" fill="#2C2A2E"/>
+  <!-- reflective stripes -->
+  <rect x="120" y="600" width="360" height="14" fill="url(#gold-fire)"/>
+  <rect x="120" y="640" width="360" height="14" fill="#F5E9C2" opacity="0.85"/>
+  <!-- chest panel -->
+  <rect x="240" y="500" width="120" height="40" fill="#3A3A40" stroke="url(#gold-fire)" stroke-width="2"/>
+  <!-- maltese cross -->
+  <g transform="translate(280,508)" fill="url(#gold-fire)">
+    <path d="M20 0 L26 14 L40 20 L26 26 L20 40 L14 26 L0 20 L14 14 Z"/>
+  </g>
+  <!-- collar -->
+  <path d="M260 450 L 300 510 L 340 450 Z" fill="#1A181B"/>
+  <!-- neck -->
+  <rect x="280" y="420" width="40" height="50" fill="#E2C2A6"/>
+  <!-- head -->
+  <ellipse cx="300" cy="360" rx="78" ry="90" fill="#E8CCAD"/>
+  <!-- hair (long, side, off shoulder) -->
+  <path d="M225 305 C 220 260, 270 235, 305 235 C 345 235, 380 260, 380 305 L 385 380 C 388 420, 372 460, 358 470 L 360 425 C 368 395, 365 360, 355 320 C 320 335, 280 335, 245 320 C 235 360, 232 395, 240 425 L 242 470 C 228 460, 212 420, 215 380 Z" fill="#5A3A1F"/>
+  <!-- helmet (firefighter — orange/black with brim) -->
+  <path d="M212 280 C 220 220, 280 198, 320 198 C 365 198, 392 222, 395 280 L 405 290 L 195 290 Z" fill="#C9A04A"/>
+  <path d="M195 285 C 195 305, 405 305, 405 285 L 405 300 C 380 312, 220 312, 195 300 Z" fill="#1F2A52"/>
+  <!-- helmet shield -->
+  <path d="M285 240 L 315 240 L 320 260 L 300 280 L 280 260 Z" fill="#FFFFFF" stroke="#1F2A52" stroke-width="2"/>
+  <text x="300" y="265" text-anchor="middle" font-family="Inter,sans-serif" font-size="13" font-weight="700" fill="#1F2A52">HNM</text>
+  <!-- eyes -->
+  <ellipse cx="275" cy="365" rx="6" ry="3.5" fill="#1F1A14"/>
+  <ellipse cx="325" cy="365" rx="6" ry="3.5" fill="#1F1A14"/>
+  <!-- brows -->
+  <path d="M262 350 Q 275 343 290 350" stroke="#5A3A1F" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <path d="M310 350 Q 325 343 338 350" stroke="#5A3A1F" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <!-- nose -->
+  <path d="M298 378 Q 295 402 302 410" stroke="#C4A685" stroke-width="2" fill="none" stroke-linecap="round"/>
+  <!-- mouth (slight smile) -->
+  <path d="M283 420 Q 300 432 317 420" stroke="#9B5A55" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <!-- collar mic -->
+  <circle cx="350" cy="525" r="6" fill="#1F2A52" stroke="url(#gold-fire)" stroke-width="1"/>
+  <line x1="350" y1="531" x2="380" y2="600" stroke="#1F2A52" stroke-width="2"/>
+</svg>

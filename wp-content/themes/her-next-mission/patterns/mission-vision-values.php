@@ -3,18 +3,18 @@
  * Title: Mission, Vision, Values
  * Slug: her-next-mission/mission-vision-values
  * Categories: hnm
- * Description: Core statements — mission, vision, values.
+ * Description: Core statements — mission, vision, values. Compass-bullet list.
  * Inserter: yes
  *
  * @package HerNextMission
  */
 ?>
-<!-- wp:group {"className":"hnm-section hnm-section--mvv","backgroundColor":"cream","layout":{"type":"constrained","contentSize":"1080px"},"style":{"spacing":{"padding":{"top":"7rem","bottom":"7rem","left":"1.5rem","right":"1.5rem"}}}} -->
-<div class="wp-block-group hnm-section hnm-section--mvv has-cream-background-color has-background" style="padding:7rem 1.5rem">
+<!-- wp:group {"className":"hnm-section hnm-section--mvv","backgroundColor":"paper","layout":{"type":"constrained","contentSize":"1080px"},"style":{"spacing":{"padding":{"top":"7rem","bottom":"7rem","left":"1.5rem","right":"1.5rem"}}}} -->
+<div class="wp-block-group hnm-section hnm-section--mvv has-paper-background-color has-background" style="padding:7rem 1.5rem">
 
-    <!-- wp:paragraph {"align":"center","className":"hnm-eyebrow","style":{"typography":{"fontSize":"0.85rem","letterSpacing":"0.18em","textTransform":"uppercase","fontWeight":"600"}},"textColor":"gold"} -->
-    <p class="has-text-align-center hnm-eyebrow has-gold-color has-text-color" style="font-size:0.85rem;font-weight:600;letter-spacing:0.18em;text-transform:uppercase">What we stand for</p>
-    <!-- /wp:paragraph -->
+    <!-- wp:html -->
+    <p style="text-align:center;margin:0 0 0.75rem"><span class="hnm-eyebrow">What we stand for</span></p>
+    <!-- /wp:html -->
 
     <!-- wp:heading {"textAlign":"center","level":2,"style":{"spacing":{"margin":{"bottom":"3rem"}}}} -->
     <h2 class="wp-block-heading has-text-align-center" style="margin-bottom:3rem">Service beyond service.</h2>
@@ -46,8 +46,8 @@
     <h3 class="wp-block-heading has-navy-color has-text-color" style="font-size:1.25rem;font-weight:600;letter-spacing:0.06em;text-transform:uppercase">Values</h3>
     <!-- /wp:heading -->
 
-    <!-- wp:list {"className":"hnm-values","style":{"typography":{"fontSize":"1.0625rem","lineHeight":"1.7"},"spacing":{"padding":{"left":"0"}}}} -->
-    <ul class="hnm-values" style="font-size:1.0625rem;line-height:1.7;padding-left:0">
+    <!-- wp:list {"className":"hnm-values","style":{"typography":{"fontSize":"1.0625rem","lineHeight":"1.7"}}} -->
+    <ul class="hnm-values" style="font-size:1.0625rem;line-height:1.7">
         <li><strong>Service beyond service.</strong> The drive to serve doesn't end at discharge or retirement.</li>
         <li><strong>Whole-woman healing.</strong> Mind, body, and spirit — from somatic coaching to fitness to business.</li>
         <li><strong>Courage in transition.</strong> We honor the bravery of leaving structure behind and create brave spaces for the work.</li>

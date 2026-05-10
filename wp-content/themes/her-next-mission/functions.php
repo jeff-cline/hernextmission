@@ -13,3 +13,4 @@ require_once __DIR__ . '/inc/setup.php';
 require_once __DIR__ . '/inc/cpt.php';
 require_once __DIR__ . '/inc/menus.php';
 require_once __DIR__ . '/inc/patterns.php';
+require_once __DIR__ . '/inc/mailto.php';

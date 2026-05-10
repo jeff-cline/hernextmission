@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 750" role="img" aria-label="Woman police officer">
+  <title>Woman police officer</title>
+  <defs>
+    <linearGradient id="bg-police" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#101A38"/>
+      <stop offset="100%" stop-color="#050B1E"/>
+    </linearGradient>
+    <linearGradient id="gold-pol" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#E8C870"/>
+      <stop offset="100%" stop-color="#A87B2A"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="750" fill="url(#bg-police)"/>
+  <!-- uniform shirt (navy) -->
+  <path d="M110 750 C 140 520, 220 460, 300 460 C 380 460, 460 520, 490 750 Z" fill="#0E1530"/>
+  <!-- yoke -->
+  <path d="M150 540 C 200 520, 400 520, 450 540 L 460 560 L 140 560 Z" fill="#0A1126"/>
+  <!-- tie/badge area -->
+  <rect x="220" y="540" width="160" height="200" fill="#0A1126"/>
+  <!-- shield/badge -->
+  <g transform="translate(260,560)">
+    <path d="M40 0 L 80 12 L 78 60 C 78 78, 60 92, 40 100 C 20 92, 2 78, 2 60 L 0 12 Z" fill="url(#gold-pol)" stroke="#1F2A52" stroke-width="1.5"/>
+    <text x="40" y="44" text-anchor="middle" font-family="Inter,sans-serif" font-size="10" font-weight="700" fill="#1F2A52">POLICE</text>
+    <circle cx="40" cy="62" r="11" fill="#1F2A52"/>
+    <path d="M40 54 L 43 60 L 50 60 L 44 64 L 46 71 L 40 67 L 34 71 L 36 64 L 30 60 L 37 60 Z" fill="url(#gold-pol)"/>
+  </g>
+  <!-- name plate -->
+  <rect x="240" y="678" width="120" height="20" fill="url(#gold-pol)"/>
+  <text x="300" y="694" text-anchor="middle" font-family="Inter,sans-serif" font-size="10" font-weight="700" fill="#1F2A52" letter-spacing="2">CREWS</text>
+  <!-- collar -->
+  <path d="M260 460 L 300 520 L 340 460 Z" fill="#0E1530"/>
+  <!-- neck -->
+  <rect x="282" y="430" width="36" height="50" fill="#E2C2A6"/>
+  <!-- head -->
+  <ellipse cx="300" cy="370" rx="78" ry="90" fill="#E8CCAD"/>
+  <!-- hair pulled back -->
+  <path d="M222 322 C 230 260, 280 232, 305 232 C 340 232, 380 260, 380 322 L 388 360 C 388 388, 372 412, 360 420 L 357 380 C 360 350, 360 320, 350 305 C 320 322, 280 322, 250 305 C 240 320, 240 350, 243 380 L 240 420 C 228 412, 212 388, 212 360 Z" fill="#3B2A1F"/>
+  <!-- bun -->
+  <ellipse cx="300" cy="245" rx="44" ry="22" fill="#3B2A1F"/>
+  <!-- police peaked cap -->
+  <path d="M205 282 C 215 232, 280 208, 320 208 C 365 208, 392 230, 395 282 L 405 295 L 195 295 Z" fill="#0A1126"/>
+  <path d="M192 290 L 408 290 L 408 308 C 380 320, 220 320, 192 308 Z" fill="#0E1530"/>
+  <rect x="285" y="252" width="30" height="14" fill="url(#gold-pol)" rx="1"/>
+  <!-- chin strap -->
+  <path d="M225 295 Q 300 340 375 295" stroke="url(#gold-pol)" stroke-width="2" fill="none"/>
+  <!-- eyes -->
+  <ellipse cx="275" cy="372" rx="6" ry="3.5" fill="#1F1A14"/>
+  <ellipse cx="325" cy="372" rx="6" ry="3.5" fill="#1F1A14"/>
+  <!-- brows -->
+  <path d="M262 356 Q 275 350 290 356" stroke="#3B2A1F" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <path d="M310 356 Q 325 350 338 356" stroke="#3B2A1F" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <!-- nose -->
+  <path d="M298 382 Q 295 405 302 412" stroke="#C4A685" stroke-width="2" fill="none" stroke-linecap="round"/>
+  <!-- mouth -->
+  <path d="M285 425 Q 300 433 315 425" stroke="#9B5A55" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <!-- shoulder mic -->
+  <rect x="430" y="540" width="14" height="22" rx="3" fill="#1F2A52" stroke="url(#gold-pol)" stroke-width="1"/>
+</svg>

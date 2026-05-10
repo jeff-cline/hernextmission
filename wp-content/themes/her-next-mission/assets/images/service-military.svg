@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 750" role="img" aria-label="Woman in military uniform">
+  <title>Woman in military uniform</title>
+  <defs>
+    <linearGradient id="bg-mil" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1F2A52"/>
+      <stop offset="100%" stop-color="#0E1530"/>
+    </linearGradient>
+    <linearGradient id="gold-mil" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#E8C870"/>
+      <stop offset="100%" stop-color="#A87B2A"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="750" fill="url(#bg-mil)"/>
+  <!-- subtle stars/specks -->
+  <g fill="#FFFFFF" opacity="0.06">
+    <circle cx="80" cy="80" r="2"/><circle cx="520" cy="120" r="2"/><circle cx="160" cy="200" r="1.5"/><circle cx="480" cy="300" r="2"/><circle cx="100" cy="400" r="1.5"/><circle cx="540" cy="540" r="2"/><circle cx="60" cy="620" r="1.5"/>
+  </g>
+  <!-- shoulders -->
+  <path d="M120 750 C 140 540, 220 470, 300 470 C 380 470, 460 540, 480 750 Z" fill="#3A4666"/>
+  <!-- camo pattern hints -->
+  <g opacity="0.4">
+    <ellipse cx="200" cy="640" rx="40" ry="20" fill="#2A3553"/>
+    <ellipse cx="380" cy="600" rx="35" ry="18" fill="#56638A"/>
+    <ellipse cx="280" cy="720" rx="50" ry="22" fill="#2A3553"/>
+    <ellipse cx="430" cy="700" rx="38" ry="18" fill="#56638A"/>
+  </g>
+  <!-- name tape -->
+  <rect x="220" y="540" width="160" height="22" fill="#5C6B92" rx="2"/>
+  <!-- collar/jacket placket -->
+  <path d="M260 470 L 300 540 L 340 470 Z" fill="#1F2A52"/>
+  <!-- neck -->
+  <rect x="280" y="430" width="40" height="60" fill="#E2C2A6"/>
+  <!-- head -->
+  <ellipse cx="300" cy="370" rx="80" ry="92" fill="#E8CCAD"/>
+  <!-- hair (back, tied) -->
+  <path d="M250 320 C 240 260, 290 240, 300 240 C 310 240, 360 260, 350 320 C 360 350, 360 380, 350 400 L 360 460 C 365 470, 348 470, 345 460 L 340 410 C 348 380, 350 350, 340 320 Z" fill="#3B2A1F"/>
+  <path d="M250 320 C 240 350, 240 380, 250 400 L 240 460 C 235 470, 252 470, 255 460 L 260 410 C 252 380, 250 350, 260 320 Z" fill="#3B2A1F"/>
+  <!-- cover/cap (beret) -->
+  <path d="M225 290 C 230 240, 285 215, 320 215 C 360 215, 380 240, 378 290 L 378 305 C 350 315, 250 315, 222 305 Z" fill="#1F2A52"/>
+  <path d="M222 305 L 378 305 L 372 318 L 228 318 Z" fill="#0E1530"/>
+  <!-- beret flash -->
+  <rect x="338" y="252" width="32" height="22" fill="url(#gold-mil)" rx="2"/>
+  <!-- eyes -->
+  <ellipse cx="275" cy="370" rx="6" ry="3.5" fill="#1F1A14"/>
+  <ellipse cx="325" cy="370" rx="6" ry="3.5" fill="#1F1A14"/>
+  <!-- brows -->
+  <path d="M262 354 Q 275 348 290 354" stroke="#3B2A1F" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <path d="M310 354 Q 325 348 338 354" stroke="#3B2A1F" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <!-- nose -->
+  <path d="M298 380 Q 295 405 302 412" stroke="#C4A685" stroke-width="2" fill="none" stroke-linecap="round"/>
+  <!-- mouth -->
+  <path d="M285 425 Q 300 433 315 425" stroke="#9B5A55" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <!-- rank chevron on shoulder -->
+  <g fill="url(#gold-mil)">
+    <path d="M150 580 L 165 590 L 150 600 L 145 595 Z"/>
+    <path d="M150 605 L 165 615 L 150 625 L 145 620 Z"/>
+  </g>
+</svg>
