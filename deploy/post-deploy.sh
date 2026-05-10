@@ -77,7 +77,7 @@ $WP rewrite flush --hard
 
 log "Setting site identity"
 $WP option update blogname        "Her Next Mission"
-$WP option update blogdescription "It's her turn. Coaching, community, and clarity for female veterans and first responders transitioning out of service."
+$WP option update blogdescription "It's her turn. Coaching, community, and clarity for female Veterans and first responders transitioning out of service."
 $WP option update siteurl         "https://hernextmission.org"
 $WP option update home            "https://hernextmission.org"
 $WP option update timezone_string "America/New_York" --quiet || true
@@ -188,7 +188,7 @@ Best email:")
 DECK_HREF=$(mailto_url "Request Sponsor Deck" "Please send me the Her Next Mission sponsor deck.
 
 Company / organization:
-Sponsor tier(s) of interest (Featured \$25k · Lead \$50k · Mission Partner \$250k):
+Sponsor tier(s) of interest (Featured · Lead · Mission Partner):
 Use of the deck (executive review, board, marketing committee):
 Decision timeline:
 
@@ -251,8 +251,8 @@ City:")
 ABOUT_CONTENT="$(make_hero 'About Her Next Mission' \"Service beyond service.\")
 <!-- wp:group {\"className\":\"hnm-section\",\"layout\":{\"type\":\"constrained\",\"contentSize\":\"760px\"},\"style\":{\"spacing\":{\"padding\":{\"top\":\"5rem\",\"bottom\":\"3rem\",\"left\":\"1.5rem\",\"right\":\"1.5rem\"}}}} -->
 <div class=\"wp-block-group hnm-section\" style=\"padding:5rem 1.5rem 3rem\">
-<!-- wp:paragraph {\"style\":{\"typography\":{\"fontSize\":\"1.25rem\",\"lineHeight\":\"1.7\"}}} --><p style=\"font-size:1.25rem;line-height:1.7\">Her Next Mission is a 501(c)(3) nonprofit (in formation) serving female veterans and first responders in the hardest mission of their career: leaving service. We meet women where they are &mdash; transitioning, retiring, medically separating, or years out and stuck &mdash; with the coaching, community, and clarity that the standard programs miss.</p><!-- /wp:paragraph -->
-<!-- wp:paragraph {\"style\":{\"typography\":{\"fontSize\":\"1.0625rem\",\"lineHeight\":\"1.7\"}}} --><p style=\"font-size:1.0625rem;line-height:1.7\">National data tells us why this is needed: 54% of women veterans report not feeling prepared to navigate civilian community resources (compared with 35% of men), and women veterans face higher rates of identity loss, isolation, and unemployment in the first 12 months after separation. The same patterns hold for women leaving fire, law enforcement, and EMS &mdash; service cultures shaped around men, with few off-ramps that look like them.</p><!-- /wp:paragraph -->
+<!-- wp:paragraph {\"style\":{\"typography\":{\"fontSize\":\"1.25rem\",\"lineHeight\":\"1.7\"}}} --><p style=\"font-size:1.25rem;line-height:1.7\">Her Next Mission is a 501(c)(3) nonprofit (in formation) serving female Veterans and first responders in the hardest mission of their career: leaving service. We meet women where they are &mdash; transitioning, retiring, medically separating, or years out and stuck &mdash; with the coaching, community, and clarity that the standard programs miss.</p><!-- /wp:paragraph -->
+<!-- wp:paragraph {\"style\":{\"typography\":{\"fontSize\":\"1.0625rem\",\"lineHeight\":\"1.7\"}}} --><p style=\"font-size:1.0625rem;line-height:1.7\">National data tells us why this is needed: 54% of women Veterans report not feeling prepared to navigate civilian community resources (compared with 35% of men), and women Veterans face higher rates of identity loss, isolation, and unemployment in the first 12 months after separation. The same patterns hold for women leaving fire, law enforcement, and EMS &mdash; service cultures shaped around men, with few off-ramps that look like them.</p><!-- /wp:paragraph -->
 <!-- wp:paragraph {\"style\":{\"typography\":{\"fontSize\":\"1.0625rem\",\"lineHeight\":\"1.7\"}}} --><p style=\"font-size:1.0625rem;line-height:1.7\">We exist to close that gap. Through 1-on-1 coaching, cohort bootcamps, somatic-fitness retreats, the annual Summit, and the <em>From Service to Success</em> podcast, we walk alongside women as they reclaim their identity, rebuild their confidence, and discover what comes next.</p><!-- /wp:paragraph -->
 </div>
 <!-- /wp:group -->
@@ -262,8 +262,8 @@ ABOUT_CONTENT="$(make_hero 'About Her Next Mission' \"Service beyond service.\")
 <div class=\"wp-block-group hnm-section has-cream-background-color has-background\" style=\"padding:6rem 1.5rem\">
 <!-- wp:html --><p style=\"text-align:center;margin:0 0 0.75rem\"><span class=\"hnm-eyebrow\">Founder</span></p><!-- /wp:html -->
 <!-- wp:heading {\"level\":2,\"textAlign\":\"center\"} --><h2 class=\"wp-block-heading has-text-align-center\">SMSgt Krystalore Crews, USAF (Ret.)</h2><!-- /wp:heading -->
-<!-- wp:paragraph {\"style\":{\"typography\":{\"fontSize\":\"1.0625rem\",\"lineHeight\":\"1.7\"}}} --><p style=\"font-size:1.0625rem;line-height:1.7\">Krystalore served 24 years in the U.S. Air Force and Air National Guard, retiring in 2024 as a Senior Master Sergeant. The transition out of uniform was the hardest mission of her career &mdash; and the catalyst for this work. She is a certified life and somatic coach, founder, podcast host, and a relentless advocate for the women who served alongside her.</p><!-- /wp:paragraph -->
-<!-- wp:paragraph {\"style\":{\"typography\":{\"fontSize\":\"1.0625rem\",\"lineHeight\":\"1.7\"}}} --><p style=\"font-size:1.0625rem;line-height:1.7\">Her work blends the discipline of 24 years in uniform with somatic and nervous-system tools that meet the body where the mind can't go alone. The result is a brave space for women to do the work most programs skip.</p><!-- /wp:paragraph -->
+<!-- wp:paragraph {\"style\":{\"typography\":{\"fontSize\":\"1.0625rem\",\"lineHeight\":\"1.7\"}}} --><p style=\"font-size:1.0625rem;line-height:1.7\">Krystalore served 22 years in the U.S. Air Force and Air National Guard, retiring in 2024 as a Senior Master Sergeant. The transition out of uniform was the hardest mission of her career &mdash; and the catalyst for this work. She is a certified life and somatic coach, founder, podcast host, and a relentless advocate for the women who served alongside her.</p><!-- /wp:paragraph -->
+<!-- wp:paragraph {\"style\":{\"typography\":{\"fontSize\":\"1.0625rem\",\"lineHeight\":\"1.7\"}}} --><p style=\"font-size:1.0625rem;line-height:1.7\">Her work blends the discipline of 22 years in uniform with somatic and nervous-system tools that meet the body where the mind can't go alone. The result is a brave space for women to do the work most programs skip.</p><!-- /wp:paragraph -->
 <!-- wp:buttons {\"layout\":{\"type\":\"flex\",\"justifyContent\":\"center\"}} --><div class=\"wp-block-buttons\"><!-- wp:button --><div class=\"wp-block-button\"><a class=\"wp-block-button__link wp-element-button\" href=\"${BOOKCALL_HREF}\">Book a Call with Krystalore</a></div><!-- /wp:button --></div><!-- /wp:buttons -->
 </div>
 <!-- /wp:group -->"
@@ -387,12 +387,12 @@ EVENTS_CONTENT="$(make_hero 'Events &amp; Summit' 'Where the mission gathers.')
 <div class=\"wp-block-group hnm-section\" style=\"padding:5rem 1.5rem 3rem\">
 <!-- wp:html --><p style=\"margin:0 0 0.75rem\"><span class=\"hnm-eyebrow\">The Annual Summit</span></p><!-- /wp:html -->
 <!-- wp:heading {\"level\":2} --><h2 class=\"wp-block-heading\">From Service to Success Summit</h2><!-- /wp:heading -->
-<!-- wp:paragraph {\"style\":{\"typography\":{\"fontSize\":\"1.125rem\",\"lineHeight\":\"1.7\"}}} --><p style=\"font-size:1.125rem;line-height:1.7\">A flagship gathering of women who served and women now serving themselves &mdash; veterans, first responders, sponsors, and the leaders who fund the work. In-person, virtual, and hybrid tracks. Tiered tickets including scholarship seats so service-status never gates access. Date and venue announced soon.</p><!-- /wp:paragraph -->
+<!-- wp:paragraph {\"style\":{\"typography\":{\"fontSize\":\"1.125rem\",\"lineHeight\":\"1.7\"}}} --><p style=\"font-size:1.125rem;line-height:1.7\">A flagship gathering of women who served and women now serving themselves &mdash; Veterans, first responders, sponsors, and the leaders who fund the work. In-person, virtual, and hybrid tracks. Tiered tickets including scholarship seats so service-status never gates access. Date and venue announced soon.</p><!-- /wp:paragraph -->
 <!-- wp:list {\"className\":\"hnm-compass-list\",\"style\":{\"typography\":{\"fontSize\":\"1.0625rem\",\"lineHeight\":\"1.7\"}}} --><ul class=\"hnm-compass-list\" style=\"font-size:1.0625rem;line-height:1.7\">
 <li>Keynotes from women who built second careers after the uniform</li>
 <li>Working sessions on transition, business launch, leadership, and somatic healing</li>
 <li>Sponsor activation tracks for corporate partners</li>
-<li>Press &amp; media room for veteran storytelling</li>
+<li>Press &amp; media room for Veteran storytelling</li>
 </ul><!-- /wp:list -->
 <!-- wp:buttons --><div class=\"wp-block-buttons\"><!-- wp:button --><div class=\"wp-block-button\"><a class=\"wp-block-button__link wp-element-button\" href=\"${SUMMIT_HREF}\">Get Summit Info</a></div><!-- /wp:button --></div><!-- /wp:buttons -->
 </div>
@@ -417,9 +417,9 @@ SPONSORS_CONTENT="$(make_hero 'Sponsors' 'Stand with these women.')
 <!-- wp:paragraph {\"style\":{\"typography\":{\"fontSize\":\"1.1875rem\",\"lineHeight\":\"1.7\"}}} --><p style=\"font-size:1.1875rem;line-height:1.7\">Three tiers, real activation. We design partnerships around what your team needs to report and the audience your brand wants to stand with &mdash; women in service, women in transition, and the families and employers who back them.</p><!-- /wp:paragraph -->
 <!-- wp:columns -->
 <div class=\"wp-block-columns\">
-<!-- wp:column --><div class=\"wp-block-column\"><!-- wp:group {\"className\":\"hnm-card\",\"style\":{\"spacing\":{\"padding\":{\"top\":\"2rem\",\"bottom\":\"2rem\",\"left\":\"1.75rem\",\"right\":\"1.75rem\"}}}} --><div class=\"wp-block-group hnm-card\" style=\"padding:2rem 1.75rem\"><!-- wp:html --><p style=\"margin:0 0 0.5rem\"><span class=\"hnm-eyebrow\">Featured &mdash; \$25k</span></p><!-- /wp:html --><!-- wp:heading {\"level\":3} --><h3 class=\"wp-block-heading\">Featured Sponsor</h3><!-- /wp:heading --><!-- wp:paragraph --><p>Featured placement on the site, recognition across the podcast, and visibility at one annual event.</p><!-- /wp:paragraph --></div><!-- /wp:group --></div><!-- /wp:column -->
-<!-- wp:column --><div class=\"wp-block-column\"><!-- wp:group {\"className\":\"hnm-card\",\"backgroundColor\":\"navy\",\"textColor\":\"cream\",\"style\":{\"spacing\":{\"padding\":{\"top\":\"2rem\",\"bottom\":\"2rem\",\"left\":\"1.75rem\",\"right\":\"1.75rem\"}}}} --><div class=\"wp-block-group hnm-card has-cream-color has-navy-background-color has-text-color has-background\" style=\"padding:2rem 1.75rem\"><!-- wp:html --><p style=\"margin:0 0 0.5rem;color:#E8C870;font-size:0.78rem;font-weight:700;letter-spacing:0.22em;text-transform:uppercase\">Lead &mdash; \$50k</p><!-- /wp:html --><!-- wp:heading {\"level\":3,\"textColor\":\"cream\"} --><h3 class=\"wp-block-heading has-cream-color has-text-color\">Lead Sponsor</h3><!-- /wp:heading --><!-- wp:paragraph --><p>Reserved table at live events, dedicated landing page, recognition at speaking events, and podcast / TV features.</p><!-- /wp:paragraph --></div><!-- /wp:group --></div><!-- /wp:column -->
-<!-- wp:column --><div class=\"wp-block-column\"><!-- wp:group {\"className\":\"hnm-card\",\"style\":{\"spacing\":{\"padding\":{\"top\":\"2rem\",\"bottom\":\"2rem\",\"left\":\"1.75rem\",\"right\":\"1.75rem\"}}}} --><div class=\"wp-block-group hnm-card\" style=\"padding:2rem 1.75rem\"><!-- wp:html --><p style=\"margin:0 0 0.5rem\"><span class=\"hnm-eyebrow\">Mission Partner &mdash; \$250k</span></p><!-- /wp:html --><!-- wp:heading {\"level\":3} --><h3 class=\"wp-block-heading\">Mission Partner</h3><!-- /wp:heading --><!-- wp:paragraph --><p>Naming rights to a live event with 50+ women, full media and production rights, corporate consulting track, and press leadership access.</p><!-- /wp:paragraph --></div><!-- /wp:group --></div><!-- /wp:column -->
+<!-- wp:column --><div class=\"wp-block-column\"><!-- wp:group {\"className\":\"hnm-card\",\"style\":{\"spacing\":{\"padding\":{\"top\":\"2rem\",\"bottom\":\"2rem\",\"left\":\"1.75rem\",\"right\":\"1.75rem\"}}}} --><div class=\"wp-block-group hnm-card\" style=\"padding:2rem 1.75rem\"><!-- wp:html --><p style=\"margin:0 0 0.5rem\"><span class=\"hnm-eyebrow\">Featured Sponsor</span></p><!-- /wp:html --><!-- wp:heading {\"level\":3} --><h3 class=\"wp-block-heading\">Featured Sponsor</h3><!-- /wp:heading --><!-- wp:paragraph --><p>Featured placement on the site, recognition across the podcast, and visibility at one annual event.</p><!-- /wp:paragraph --></div><!-- /wp:group --></div><!-- /wp:column -->
+<!-- wp:column --><div class=\"wp-block-column\"><!-- wp:group {\"className\":\"hnm-card\",\"backgroundColor\":\"navy\",\"textColor\":\"cream\",\"style\":{\"spacing\":{\"padding\":{\"top\":\"2rem\",\"bottom\":\"2rem\",\"left\":\"1.75rem\",\"right\":\"1.75rem\"}}}} --><div class=\"wp-block-group hnm-card has-cream-color has-navy-background-color has-text-color has-background\" style=\"padding:2rem 1.75rem\"><!-- wp:html --><p style=\"margin:0 0 0.5rem;color:#E8C870;font-size:0.78rem;font-weight:700;letter-spacing:0.22em;text-transform:uppercase\">Lead Sponsor</p><!-- /wp:html --><!-- wp:heading {\"level\":3,\"textColor\":\"cream\"} --><h3 class=\"wp-block-heading has-cream-color has-text-color\">Lead Sponsor</h3><!-- /wp:heading --><!-- wp:paragraph --><p>Reserved table at live events, dedicated landing page, recognition at speaking events, and podcast / TV features.</p><!-- /wp:paragraph --></div><!-- /wp:group --></div><!-- /wp:column -->
+<!-- wp:column --><div class=\"wp-block-column\"><!-- wp:group {\"className\":\"hnm-card\",\"style\":{\"spacing\":{\"padding\":{\"top\":\"2rem\",\"bottom\":\"2rem\",\"left\":\"1.75rem\",\"right\":\"1.75rem\"}}}} --><div class=\"wp-block-group hnm-card\" style=\"padding:2rem 1.75rem\"><!-- wp:html --><p style=\"margin:0 0 0.5rem\"><span class=\"hnm-eyebrow\">Mission Partner</span></p><!-- /wp:html --><!-- wp:heading {\"level\":3} --><h3 class=\"wp-block-heading\">Mission Partner</h3><!-- /wp:heading --><!-- wp:paragraph --><p>Naming rights to a live event with 50+ women, full media and production rights, corporate consulting track, and press leadership access.</p><!-- /wp:paragraph --></div><!-- /wp:group --></div><!-- /wp:column -->
 </div>
 <!-- /wp:columns -->
 <!-- wp:heading {\"level\":2,\"textAlign\":\"center\",\"style\":{\"spacing\":{\"margin\":{\"top\":\"3rem\"}}}} --><h2 class=\"wp-block-heading has-text-align-center\" style=\"margin-top:3rem\">Activations we already deliver</h2><!-- /wp:heading -->
@@ -452,14 +452,14 @@ GIVE_CONTENT="$(make_hero 'Give' 'Move her mission forward.')
 <!-- wp:group {\"className\":\"hnm-section\",\"layout\":{\"type\":\"constrained\",\"contentSize\":\"880px\"},\"style\":{\"spacing\":{\"padding\":{\"top\":\"5rem\",\"bottom\":\"3rem\",\"left\":\"1.5rem\",\"right\":\"1.5rem\"}}}} -->
 <div class=\"wp-block-group hnm-section\" style=\"padding:5rem 1.5rem 3rem\">
 <!-- wp:paragraph {\"style\":{\"typography\":{\"fontSize\":\"1.1875rem\",\"lineHeight\":\"1.7\"}}} --><p style=\"font-size:1.1875rem;line-height:1.7\">Every dollar moves a woman through her transition &mdash; coaching, retreats, scholarships to the Summit. Recurring giving is the most impactful way to support these women, because programs are built around what we can sustain.</p><!-- /wp:paragraph -->
-<!-- wp:heading {\"level\":2} --><h2 class=\"wp-block-heading\">Where the dollars go</h2><!-- /wp:heading -->
+<!-- wp:heading {\"level\":2} --><h2 class=\"wp-block-heading\">Where your gift goes</h2><!-- /wp:heading -->
 <!-- wp:list {\"className\":\"hnm-compass-list\",\"style\":{\"typography\":{\"fontSize\":\"1.0625rem\",\"lineHeight\":\"1.7\"}}} -->
 <ul class=\"hnm-compass-list\" style=\"font-size:1.0625rem;line-height:1.7\">
-<li><strong>\$50/month</strong> covers a single 1-on-1 coaching session for a woman on scholarship.</li>
-<li><strong>\$500</strong> sponsors a single bootcamp seat &mdash; a full eight-week cohort.</li>
-<li><strong>\$2,500</strong> sends a woman to a multi-day retreat, fully covered.</li>
-<li><strong>\$10,000</strong> funds a regional micro-Summit for 25 women in your city.</li>
-<li><strong>\$25k+</strong> moves into named-gift territory &mdash; we'll talk about what that names.</li>
+<li><strong>Coaching scholarships.</strong> 1-on-1 sessions for women who otherwise couldn't access them.</li>
+<li><strong>Bootcamp seats.</strong> A full cohort experience for a woman in transition.</li>
+<li><strong>Retreats.</strong> Sending a woman to a multi-day immersive retreat, fully covered.</li>
+<li><strong>Regional micro-Summits.</strong> Bringing the work into your city for the women already there.</li>
+<li><strong>Named gifts.</strong> Funding an entire program track or live event in someone's honor.</li>
 </ul>
 <!-- /wp:list -->
 <!-- wp:heading {\"level\":2,\"style\":{\"spacing\":{\"margin\":{\"top\":\"2rem\"}}}} --><h2 class=\"wp-block-heading\" style=\"margin-top:2rem\">Ways to give</h2><!-- /wp:heading -->

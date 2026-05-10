@@ -2,60 +2,70 @@
 /**
  * Title: Mission, Vision, Values
  * Slug: her-next-mission/mission-vision-values
- * Categories: hnm
- * Description: Core statements — mission, vision, values. Compass-bullet list.
+ * Categories: hnm, featured
+ * Description: Editorial 2-column section with a bold image alongside Mission/Vision/Values copy. Visual feature, like the podcast section.
  * Inserter: yes
  *
  * @package HerNextMission
  */
+
+$theme_uri  = get_stylesheet_directory_uri();
+$photo_main = esc_url($theme_uri . '/assets/images/uniform/ml-04.jpg');
+$photo_a    = esc_url($theme_uri . '/assets/images/uniform/ff-04.jpg');
+$photo_b    = esc_url($theme_uri . '/assets/images/uniform/po-01.jpg');
+
+$cta_intake = function_exists('hnm_cta_mailto') ? hnm_cta_mailto('beneficiary-intake') : '#';
+$cta_call   = function_exists('hnm_cta_mailto') ? hnm_cta_mailto('book-a-call')        : '#';
 ?>
-<!-- wp:group {"className":"hnm-section hnm-section--mvv","backgroundColor":"paper","layout":{"type":"constrained","contentSize":"1080px"},"style":{"spacing":{"padding":{"top":"7rem","bottom":"7rem","left":"1.5rem","right":"1.5rem"}}}} -->
-<div class="wp-block-group hnm-section hnm-section--mvv has-paper-background-color has-background" style="padding:7rem 1.5rem">
-
+<!-- wp:group {"className":"hnm-section hnm-mission","layout":{"type":"constrained","contentSize":"1320px"},"style":{"spacing":{"padding":{"top":"7rem","bottom":"7rem","left":"1.5rem","right":"1.5rem"}}}} -->
+<div class="wp-block-group hnm-section hnm-mission" style="padding:7rem 1.5rem">
     <!-- wp:html -->
-    <p style="text-align:center;margin:0 0 0.75rem"><span class="hnm-eyebrow">What we stand for</span></p>
+    <div class="hnm-mission__row">
+        <div class="hnm-mission__art">
+            <figure class="hnm-mission__photo hnm-mission__photo--main">
+                <img src="<?php echo $photo_main; ?>" alt="Woman Veteran in uniform — proud, ready for the next mission" loading="lazy" />
+            </figure>
+            <figure class="hnm-mission__photo hnm-mission__photo--a">
+                <img src="<?php echo $photo_a; ?>" alt="Female firefighter in full gear" loading="lazy" />
+            </figure>
+            <figure class="hnm-mission__photo hnm-mission__photo--b">
+                <img src="<?php echo $photo_b; ?>" alt="Female police officer" loading="lazy" />
+            </figure>
+        </div>
+
+        <div class="hnm-mission__copy">
+            <p class="hnm-mission__eyebrow"><span class="hnm-eyebrow">Our Mission</span></p>
+            <h2 class="hnm-mission__title">SHE STILL HAS A MISSION.</h2>
+            <p class="hnm-mission__lede">Her Next Mission empowers female Veterans and first responders transitioning out of service to reclaim their identity, rebuild their confidence, and discover their next mission — through coaching, community, fitness, and transformative experiences that honor their service and fuel their future.</p>
+
+            <div class="hnm-mission__threeup">
+                <div>
+                    <h3>Mission</h3>
+                    <p>Walk every woman through the transition no one prepared her for — until she finds the next mission worth running toward.</p>
+                </div>
+                <div>
+                    <h3>Vision</h3>
+                    <p>A world where every woman who served never has to navigate her transition alone — and her next chapter is as purposeful as the one she closed.</p>
+                </div>
+                <div>
+                    <h3>Values</h3>
+                    <ul class="hnm-mission__values">
+                        <li><strong>Sister-led, never solo.</strong> Women who walked it, walking with you.</li>
+                        <li><strong>Whole-woman healing.</strong> Mind, body, breath — somatic and nervous-system tools that meet the body where talk can't.</li>
+                        <li><strong>Identity reclaimed.</strong> When the uniform comes off, who you were doesn't.</li>
+                        <li><strong>Direct, never soft.</strong> Plain language. No fluff. No pity. Real work.</li>
+                        <li><strong>Access without gates.</strong> Scholarships built in. Cost is never the wall.</li>
+                        <li><strong>Excellence, on her terms.</strong> She gave the best of herself. She gets the best back.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="hnm-mission__ctas">
+                <a class="hnm-btn hnm-btn--gold" href="<?php echo esc_url($cta_intake); ?>">For Women in Transition</a>
+                <a class="hnm-btn hnm-btn--ghost" href="<?php echo esc_url($cta_call); ?>">Book a Call</a>
+            </div>
+        </div>
+    </div>
     <!-- /wp:html -->
-
-    <!-- wp:heading {"textAlign":"center","level":2,"style":{"spacing":{"margin":{"bottom":"3rem"}}}} -->
-    <h2 class="wp-block-heading has-text-align-center" style="margin-bottom:3rem">Service beyond service.</h2>
-    <!-- /wp:heading -->
-
-    <!-- wp:group {"style":{"spacing":{"margin":{"bottom":"3rem"}}}} -->
-    <div class="wp-block-group" style="margin-bottom:3rem">
-        <!-- wp:heading {"level":3,"style":{"typography":{"fontSize":"1.25rem","letterSpacing":"0.06em","textTransform":"uppercase","fontWeight":"600"}},"textColor":"navy"} -->
-        <h3 class="wp-block-heading has-navy-color has-text-color" style="font-size:1.25rem;font-weight:600;letter-spacing:0.06em;text-transform:uppercase">Mission</h3>
-        <!-- /wp:heading -->
-        <!-- wp:paragraph {"style":{"typography":{"fontSize":"1.25rem","lineHeight":"1.65","fontFamily":"var(--wp--preset--font-family--display)"}}} -->
-        <p style="font-family:var(--wp--preset--font-family--display);font-size:1.25rem;line-height:1.65">Her Next Mission empowers female veterans and first responders transitioning out of service to reclaim their identity, rebuild their confidence, and discover their next mission — through coaching, community, fitness, and transformative experiences that honor their service and fuel their future.</p>
-        <!-- /wp:paragraph -->
-    </div>
-    <!-- /wp:group -->
-
-    <!-- wp:group {"style":{"spacing":{"margin":{"bottom":"3rem"}}}} -->
-    <div class="wp-block-group" style="margin-bottom:3rem">
-        <!-- wp:heading {"level":3,"style":{"typography":{"fontSize":"1.25rem","letterSpacing":"0.06em","textTransform":"uppercase","fontWeight":"600"}},"textColor":"navy"} -->
-        <h3 class="wp-block-heading has-navy-color has-text-color" style="font-size:1.25rem;font-weight:600;letter-spacing:0.06em;text-transform:uppercase">Vision</h3>
-        <!-- /wp:heading -->
-        <!-- wp:paragraph {"style":{"typography":{"fontSize":"1.25rem","lineHeight":"1.65","fontFamily":"var(--wp--preset--font-family--display)"}}} -->
-        <p style="font-family:var(--wp--preset--font-family--display);font-size:1.25rem;line-height:1.65">A world where every woman who has served never has to navigate the transition alone — where her sacrifice is celebrated, her potential is fully realized, and her next chapter is as purposeful as the one she closed.</p>
-        <!-- /wp:paragraph -->
-    </div>
-    <!-- /wp:group -->
-
-    <!-- wp:heading {"level":3,"style":{"typography":{"fontSize":"1.25rem","letterSpacing":"0.06em","textTransform":"uppercase","fontWeight":"600"}},"textColor":"navy"} -->
-    <h3 class="wp-block-heading has-navy-color has-text-color" style="font-size:1.25rem;font-weight:600;letter-spacing:0.06em;text-transform:uppercase">Values</h3>
-    <!-- /wp:heading -->
-
-    <!-- wp:list {"className":"hnm-values","style":{"typography":{"fontSize":"1.0625rem","lineHeight":"1.7"}}} -->
-    <ul class="hnm-values" style="font-size:1.0625rem;line-height:1.7">
-        <li><strong>Service beyond service.</strong> The drive to serve doesn't end at discharge or retirement.</li>
-        <li><strong>Whole-woman healing.</strong> Mind, body, and spirit — from somatic coaching to fitness to business.</li>
-        <li><strong>Courage in transition.</strong> We honor the bravery of leaving structure behind and create brave spaces for the work.</li>
-        <li><strong>Community as mission.</strong> No woman crosses this threshold alone.</li>
-        <li><strong>Clarity over confusion.</strong> Clear tools, honest guidance, programs that move women forward — fast.</li>
-        <li><strong>Excellence without apology.</strong> They gave everything. They deserve world-class support.</li>
-    </ul>
-    <!-- /wp:list -->
-
 </div>
 <!-- /wp:group -->

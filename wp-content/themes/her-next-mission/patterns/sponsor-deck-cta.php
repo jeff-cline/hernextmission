@@ -23,7 +23,7 @@ $cta_deck = function_exists('hnm_cta_mailto') ? hnm_cta_mailto('sponsor-deck') :
     <!-- /wp:heading -->
 
     <!-- wp:paragraph {"align":"center","textColor":"navy-deep","style":{"typography":{"fontSize":"1.1875rem","lineHeight":"1.65"},"spacing":{"margin":{"bottom":"2.5rem"}}}} -->
-    <p class="has-text-align-center has-navy-deep-color has-text-color" style="font-size:1.1875rem;line-height:1.65;margin-bottom:2.5rem">Featured Sponsor ($25k) · Lead Sponsor ($50k) · Mission Partner ($250k naming rights). Request the full deck for tier benefits, audience reach, and live-event activation.</p>
+    <p class="has-text-align-center has-navy-deep-color has-text-color" style="font-size:1.1875rem;line-height:1.65;margin-bottom:2.5rem">Featured Sponsor · Lead Sponsor · Mission Partner with naming rights. Request the full deck for tier benefits, audience reach, and live-event activation.</p>
     <!-- /wp:paragraph -->
 
     <!-- wp:buttons {"layout":{"type":"flex","justifyContent":"center"}} -->

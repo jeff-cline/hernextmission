@@ -43,11 +43,11 @@ $cta_donor   = function_exists('hnm_cta_mailto') ? hnm_cta_mailto('donor-inquiry
                 <!-- /wp:html -->
 
                 <!-- wp:html -->
-                <h1 class="hnm-hero__title">It's <em>her</em> turn.</h1>
+                <h1 class="hnm-hero__title">IT'S <em>HER</em> TURN.</h1>
                 <!-- /wp:html -->
 
                 <!-- wp:paragraph {"className":"hnm-hero__lede"} -->
-                <p class="hnm-hero__lede">For female veterans and first responders transitioning out of service — coaching, community, and clarity for the next mission.</p>
+                <p class="hnm-hero__lede">For female Veterans and first responders transitioning out of service — coaching, community, and clarity for the next mission.</p>
                 <!-- /wp:paragraph -->
 
                 <!-- wp:buttons {"className":"hnm-hero__ctas","style":{"spacing":{"blockGap":{"top":"0.75rem","left":"0.75rem"}}}} -->

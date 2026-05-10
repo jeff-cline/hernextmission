@@ -43,13 +43,13 @@ $services = [
     ],
     [
         'title' => 'Podcast Sponsorships',
-        'desc'  => 'Reach a vetted audience of female veterans and first responders through brand-safe partnership reads on the Her Next Mission podcast.',
+        'desc'  => 'Reach a vetted audience of female Veterans and first responders through brand-safe partnership reads on the Her Next Mission podcast.',
         'cta'   => 'Sponsor the Podcast',
         'href'  => $cta_pod_spon,
     ],
     [
         'title' => 'Grants & Donations',
-        'desc'  => 'Recurring giving, named gifts, and SBIR / DoD veteran-support grants. Funds coaching, scholarships, and the Summit.',
+        'desc'  => 'Recurring giving, named gifts, and SBIR / DoD Veteran-support grants. Funds coaching, scholarships, and the Summit.',
         'cta'   => 'Fund the Mission',
         'href'  => $cta_grants,
     ],

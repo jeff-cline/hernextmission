@@ -12,7 +12,7 @@
 $theme_uri = get_stylesheet_directory_uri();
 
 $cells = [
-    ['src' => $theme_uri . '/assets/images/uniform/ml-01.jpg',  'alt' => 'Woman veteran in camouflage uniform — close-up portrait',          'wide' => false, 'double' => false],
+    ['src' => $theme_uri . '/assets/images/uniform/ml-01.jpg',  'alt' => 'Woman Veteran in camouflage uniform — close-up portrait',          'wide' => false, 'double' => false],
     ['src' => $theme_uri . '/assets/images/uniform/ff-02.jpg',  'alt' => 'Female firefighter beside fire truck',                              'wide' => true,  'double' => false],
     ['src' => $theme_uri . '/assets/images/uniform/po-03.jpg',  'alt' => 'Female police officer outdoors in uniform',                         'wide' => false, 'double' => false],
     ['src' => $theme_uri . '/assets/images/uniform/em-03.jpg',  'alt' => 'Female paramedic in EMS uniform',                                   'wide' => false, 'double' => true],

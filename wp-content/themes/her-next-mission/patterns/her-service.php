@@ -19,7 +19,7 @@ $photos = [
     ['src' => $theme_uri . '/assets/images/uniform/ff-01.jpg',            'alt' => 'Smiling firefighter in full gear',                          'caption' => 'Fire'],
     ['src' => $theme_uri . '/assets/images/uniform/po-01.jpg',            'alt' => 'Confident female police officer in uniform',                'caption' => 'Law Enforcement'],
     ['src' => $theme_uri . '/assets/images/uniform/em-01.jpg',            'alt' => 'Female paramedic standing beside ambulance',                'caption' => 'EMS'],
-    ['src' => $theme_uri . '/assets/images/uniform/ml-02.jpg',            'alt' => 'Woman veteran in camouflage uniform',                       'caption' => 'Veteran'],
+    ['src' => $theme_uri . '/assets/images/uniform/ml-02.jpg',            'alt' => 'Woman Veteran in camouflage uniform',                       'caption' => 'Veteran'],
     ['src' => $theme_uri . '/assets/images/uniform/ff-04.jpg',            'alt' => 'Firefighter in full protective gear before fire truck',     'caption' => 'First Responder'],
     ['src' => $theme_uri . '/assets/images/uniform/po-02.jpg',            'alt' => 'Smiling policewoman in uniform on sunny street',            'caption' => 'Officer'],
     ['src' => $theme_uri . '/assets/images/uniform/ml-05.jpg',            'alt' => 'Woman in military uniform during training',                 'caption' => 'In Service'],
@@ -38,7 +38,7 @@ $photos = [
     <!-- /wp:heading -->
 
     <!-- wp:paragraph {"align":"center","style":{"typography":{"fontSize":"1.125rem","lineHeight":"1.65","maxWidth":"700px"},"spacing":{"margin":{"left":"auto","right":"auto","bottom":"4rem"}}},"textColor":"ink-soft"} -->
-    <p class="has-text-align-center has-ink-soft-color has-text-color" style="font-size:1.125rem;line-height:1.65;max-width:700px;margin-left:auto;margin-right:auto;margin-bottom:4rem">SMSgt Krystalore Crews served 24 years in the U.S. Air Force and Air National Guard, retiring in 2024 — and now stands alongside women across every uniformed service: military, fire, law enforcement, EMS, and beyond.</p>
+    <p class="has-text-align-center has-ink-soft-color has-text-color" style="font-size:1.125rem;line-height:1.65;max-width:700px;margin-left:auto;margin-right:auto;margin-bottom:4rem">SMSgt Krystalore Crews served 22 years in the U.S. Air Force and Air National Guard, retiring in 2024 — and now stands alongside women across every uniformed service: military, fire, law enforcement, EMS, and beyond.</p>
     <!-- /wp:paragraph -->
 
     <!-- wp:html -->

@@ -1,20 +1,25 @@
 <!-- wp:group {"tagName":"header","className":"hnm-site-header","layout":{"type":"constrained","contentSize":"1320px"},"style":{"spacing":{"padding":{"top":"0.85rem","bottom":"0.85rem","left":"1.5rem","right":"1.5rem"}}}} -->
 <header class="wp-block-group hnm-site-header" style="padding:0.85rem 1.5rem">
-    <!-- wp:group {"className":"hnm-site-header__row","layout":{"type":"flex","justifyContent":"space-between","flexWrap":"nowrap","verticalAlignment":"center"}} -->
-    <div class="wp-block-group hnm-site-header__row">
-
-        <!-- wp:html -->
+    <!-- wp:html -->
+    <div class="hnm-site-header__row">
         <a class="hnm-header-logo" href="/" aria-label="Her Next Mission home">
-            <img src="/wp-content/themes/her-next-mission/assets/images/logo.png" alt="" width="56" height="56" />
+            <img src="/wp-content/themes/her-next-mission/assets/images/logo.png" alt="" width="64" height="64" />
             <span class="hnm-header-logo__text">
-                <strong>Her Next Mission</strong>
+                <strong>HER NEXT MISSION</strong>
                 <span>From Service to Success</span>
             </span>
         </a>
-        <!-- /wp:html -->
-
-        <!-- wp:navigation {"ref":0,"icon":"menu","menuSlug":"primary","layout":{"type":"flex","justifyContent":"right","orientation":"horizontal","flexWrap":"nowrap"},"style":{"typography":{"fontFamily":"var(--wp--preset--font-family--body)","fontSize":"0.85rem","fontWeight":"600","letterSpacing":"0.06em","textTransform":"uppercase"},"spacing":{"blockGap":"1.75rem"}},"overlayBackgroundColor":"navy-deep","overlayTextColor":"cream"} /-->
+        <nav class="hnm-header-nav" aria-label="Primary">
+            <a href="/">Home</a>
+            <a href="/about/">About</a>
+            <a href="/services/">Programs</a>
+            <a href="/podcast/">Podcast</a>
+            <a href="/events/">Events</a>
+            <a href="/sponsors/">Sponsors</a>
+            <a href="/give/">Give</a>
+            <a href="/book-a-call/" class="hnm-header-nav__cta">Book a Call</a>
+        </nav>
     </div>
-    <!-- /wp:group -->
+    <!-- /wp:html -->
 </header>
 <!-- /wp:group -->

@@ -1,16 +1,16 @@
 # Stock photo credits — women in uniform
 
 All images sourced from [Pexels](https://www.pexels.com) under the
-[Pexels License](https://www.pexels.com/license/) (free to use for commercial
-and personal projects, modification permitted, attribution not required —
-but credit listed here as good practice).
+[Pexels License](https://www.pexels.com/license/) (free for commercial
+and personal use, modification permitted, attribution not required).
+
+Every photo in this folder is a clearly identifiable woman.
 
 ## Firefighters
 - `ff-01.jpg` — Photo by Bwalya Marcel Ngosa · pexels.com/photo/7179617
 - `ff-02.jpg` — Photo by Mirada Robot · pexels.com/photo/19487942
 - `ff-04.jpg` — Photo by Rebornfilmes · pexels.com/photo/29379358
-- `ff-05.jpg` — Photo by Anna Shvets · pexels.com/photo/5964971
-- `ff-06.jpg` — Photo by Anna Shvets · pexels.com/photo/5964741
+- `ff-05.jpg` — pexels.com/photo/16737198
 
 ## Police
 - `po-01.jpg` — pexels.com/photo/28849533
@@ -25,6 +25,9 @@ but credit listed here as good practice).
 - `ml-03.jpg` — pexels.com/photo/7467952
 - `ml-04.jpg` — pexels.com/photo/7467958
 - `ml-05.jpg` — pexels.com/photo/9845026
+- `ml-06.jpg` — pexels.com/photo/7467959
+- `ml-07.jpg` — pexels.com/photo/7467956
+- `ml-08.jpg` — pexels.com/photo/7467963
 
 ## EMS / Paramedics
 - `em-01.jpg` — pexels.com/photo/28123719
