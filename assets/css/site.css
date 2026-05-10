@@ -992,6 +992,63 @@ ul.list li::before {
 .foot-meta { text-align: center; font-size: .82rem; letter-spacing: .04em; color: var(--gold-soft); }
 .foot-meta a { color: inherit; text-decoration: underline; }
 
+.foot-cols {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.5rem;
+    margin: 0 0 3rem;
+    padding-bottom: 2.5rem;
+    border-bottom: 1px solid rgba(212,165,55,.20);
+}
+.foot-col h4 {
+    font-family: 'Inter', sans-serif;
+    font-size: .78rem;
+    font-weight: 800;
+    letter-spacing: .22em;
+    text-transform: uppercase;
+    color: var(--gold-soft);
+    margin: 0 0 1rem;
+}
+.foot-col ul { list-style: none; padding: 0; margin: 0; }
+.foot-col li { margin-bottom: .55rem; }
+.foot-col a {
+    color: var(--ivory);
+    font-size: .92rem;
+    line-height: 1.45;
+    transition: color 200ms var(--ease);
+}
+.foot-col a:hover { color: var(--gold-soft); }
+.foot-col p { font-size: .92rem; color: rgba(255,255,255,.85); }
+.foot-cta {
+    display: inline-flex; align-items: center; gap: .35rem;
+    font-family: 'Inter', sans-serif;
+    font-weight: 800;
+    font-size: .78rem;
+    letter-spacing: .22em;
+    text-transform: uppercase;
+    color: var(--gold-soft);
+}
+.foot-cta:hover { color: #FFF; }
+
+@media (max-width: 900px) { .foot-cols { grid-template-columns: 1fr; gap: 2rem; } }
+
+/* split section (used by role/service/health pages) */
+.split__row {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: clamp(2rem, 5vw, 4rem);
+    align-items: center;
+}
+.split__photo { margin: 0; border-radius: var(--r-md); overflow: hidden; box-shadow: var(--shadow-2); aspect-ratio: 4/5; }
+.split__photo img { width: 100%; height: 100%; object-fit: cover; transition: transform 700ms var(--ease); }
+.split__photo:hover img { transform: scale(1.04); }
+.split__copy h2 { margin-top: .75rem; }
+.split__copy .eyebrow { margin-bottom: .25rem; }
+@media (max-width: 900px) {
+    .split__row { grid-template-columns: 1fr; }
+    .split__photo { aspect-ratio: 4/3; }
+}
+
 /* ---------- inner page hero ---------- */
 
 .page-hero {
