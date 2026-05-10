@@ -667,16 +667,11 @@ img { max-width: 100%; height: auto; }
 
 .hnm-footer-logo img {
     display: inline-block;
-    height: 140px;
-    width: 140px;
+    height: 160px;
+    width: 160px;
     object-fit: contain;
-    background: #FFFFFF;
-    padding: 14px;
-    border-radius: 50%;
-    box-shadow:
-        0 0 0 2px rgba(232, 200, 112, 0.45),
-        0 0 0 10px rgba(232, 200, 112, 0.10),
-        0 16px 40px rgba(0, 0, 0, 0.45);
+    background: transparent;
+    filter: drop-shadow(0 8px 24px rgba(232, 200, 112, 0.30));
 }
 
 .hnm-footer-nav {
