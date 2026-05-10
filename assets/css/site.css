@@ -373,21 +373,7 @@ p  { margin: 0 0 1em; }
     .rocket-stage[data-launched="true"] .rocket-trail { animation: none; opacity: 0; }
 }
 
-/* compass float — left-anchored, 30% sits in the hero, 70% drops past the
-   blue mantra into the marquee. Shakes gently. Pointer-events off so it
-   never blocks clicks behind it. */
-.compass-float {
-    position: absolute;
-    z-index: 4;
-    left: clamp(1rem, 6vw, 6rem);
-    bottom: -70%;
-    width: clamp(180px, 22vw, 300px);
-    margin: 0;
-    pointer-events: none;
-    filter: drop-shadow(0 28px 70px rgba(14,21,48,.30));
-    animation: shake 4.2s ease-in-out infinite;
-    transform-origin: 50% 35%;
-}
+/* shake animation — kept for the True North section's compass image */
 @keyframes shake {
     0%, 100% { transform: rotate(-3deg) translate3d(0, 0, 0); }
     20%      { transform: rotate(2deg)  translate3d(2px, -3px, 0); }
@@ -395,11 +381,9 @@ p  { margin: 0 0 1em; }
     60%      { transform: rotate(3deg)  translate3d(2px, 2px, 0); }
     80%      { transform: rotate(-2deg) translate3d(-1px, 0, 0); }
 }
-@media (prefers-reduced-motion: reduce) { .compass-float { animation: none; } }
 
 @media (max-width: 900px) {
     .hero__row { grid-template-columns: 1fr; }
-    .compass-float { width: clamp(140px, 32vw, 220px); left: 4vw; bottom: -55%; }
     .rocket { width: clamp(96px, 22vw, 150px); }
 }
 
