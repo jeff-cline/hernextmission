@@ -13,7 +13,7 @@
  */
 
 $theme_uri      = get_stylesheet_directory_uri();
-$logo_url       = esc_url($theme_uri . '/assets/images/logo-mark.svg');
+$logo_url       = esc_url($theme_uri . '/assets/images/logo.png');
 $hero_url       = esc_url($theme_uri . '/assets/images/hero-krystalore.jpg');
 $compass_top    = esc_url($theme_uri . '/assets/images/compass-true-north.png');
 

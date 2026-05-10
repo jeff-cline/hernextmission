@@ -78,8 +78,9 @@ img { max-width: 100%; height: auto; }
 
 .hnm-header-logo img {
     display: block;
-    height: 56px;
-    width: auto;
+    height: 64px;
+    width: 64px;
+    object-fit: contain;
     transition: transform 220ms var(--hnm-easing);
 }
 
@@ -239,7 +240,7 @@ img { max-width: 100%; height: auto; }
 
 .hnm-rocket {
     position: relative;
-    width: clamp(120px, 16vw, 180px);
+    width: clamp(140px, 18vw, 220px);
     height: auto;
     aspect-ratio: 1 / 1;
     object-fit: contain;
@@ -248,6 +249,8 @@ img { max-width: 100%; height: auto; }
     will-change: transform, opacity;
     filter: drop-shadow(0 14px 30px rgba(31, 42, 82, 0.25));
     margin-top: clamp(1rem, 3vh, 2rem);
+    background: transparent;
+    border-radius: 0;
 }
 
 .hnm-rocket-trail {
@@ -306,10 +309,10 @@ img { max-width: 100%; height: auto; }
 .hnm-compass-float {
     position: relative;
     z-index: 4;
-    width: clamp(160px, 22vw, 280px);
-    margin: -90px auto -40px;
+    width: clamp(280px, 38vw, 520px);
+    margin: -120px auto -60px;
     display: block;
-    filter: drop-shadow(0 24px 60px rgba(31, 42, 82, 0.28));
+    filter: drop-shadow(0 28px 70px rgba(31, 42, 82, 0.35));
     animation: hnmCompassPulse 6s ease-in-out infinite;
 }
 
@@ -492,12 +495,10 @@ img { max-width: 100%; height: auto; }
 
 .hnm-true-north__compass img {
     width: 100%;
-    max-width: 480px;
+    max-width: 640px;
     height: auto;
-    border-radius: var(--hnm-radius-lg);
-    box-shadow: 0 0 0 1px rgba(168, 123, 42, 0.25), 0 32px 80px rgba(14, 21, 48, 0.22);
-    aspect-ratio: 4 / 3;
-    object-fit: cover;
+    filter: drop-shadow(0 32px 80px rgba(14, 21, 48, 0.35));
+    object-fit: contain;
     object-position: center;
     position: relative;
     z-index: 1;
@@ -666,15 +667,15 @@ img { max-width: 100%; height: auto; }
 
 .hnm-footer-logo img {
     display: inline-block;
-    height: 120px;
-    width: 120px;
+    height: 140px;
+    width: 140px;
     object-fit: contain;
     background: #FFFFFF;
-    padding: 12px;
+    padding: 14px;
     border-radius: 50%;
     box-shadow:
         0 0 0 2px rgba(232, 200, 112, 0.45),
-        0 0 0 8px rgba(232, 200, 112, 0.10),
+        0 0 0 10px rgba(232, 200, 112, 0.10),
         0 16px 40px rgba(0, 0, 0, 0.45);
 }
 
@@ -807,7 +808,7 @@ ul.hnm-content-list li::before {
     .hnm-hero__media { flex-basis: 100% !important; width: 100%; }
     .hnm-hero__photo img { aspect-ratio: 4 / 5; max-height: 70vh; }
     .hnm-rocket { width: clamp(96px, 22vw, 150px); }
-    .hnm-compass-float { width: clamp(140px, 30vw, 220px); margin-top: -50px; margin-bottom: -10px; }
+    .hnm-compass-float { width: clamp(220px, 60vw, 380px); margin-top: -70px; margin-bottom: -20px; }
 }
 
 @media (max-width: 700px) {

@@ -3,7 +3,7 @@
  * Title: Women in Service — wall
  * Slug: her-next-mission/women-in-service
  * Categories: hnm, featured
- * Description: Edge-to-edge banner of women in uniform across services — military, fire, police, EMS. Designed to scale to 8+ photos so the page reads rich.
+ * Description: Edge-to-edge banner of women in uniform across services — military, fire, police, EMS — using royalty-free Pexels stock photos.
  * Inserter: yes
  *
  * @package HerNextMission
@@ -12,13 +12,13 @@
 $theme_uri = get_stylesheet_directory_uri();
 
 $cells = [
-    ['src' => $theme_uri . '/assets/images/service-military.svg',         'alt' => 'Woman in military uniform',          'wide' => false, 'double' => false],
-    ['src' => $theme_uri . '/assets/images/service-firefighter.svg',      'alt' => 'Woman firefighter',                  'wide' => true,  'double' => false],
-    ['src' => $theme_uri . '/assets/images/service-police.svg',           'alt' => 'Woman police officer',               'wide' => false, 'double' => false],
-    ['src' => $theme_uri . '/assets/images/service-paramedic.svg',        'alt' => 'Woman paramedic',                    'wide' => false, 'double' => true],
-    ['src' => $theme_uri . '/assets/images/service-called-to-serve.jpg',  'alt' => 'Woman in Air Force uniform',         'wide' => false, 'double' => false],
-    ['src' => $theme_uri . '/assets/images/service-collage.jpg',          'alt' => 'Air National Guard service career',  'wide' => true,  'double' => false],
-    ['src' => $theme_uri . '/assets/images/service-stadium.jpg',          'alt' => 'NCO in dress uniform',               'wide' => false, 'double' => false],
+    ['src' => $theme_uri . '/assets/images/uniform/ml-01.jpg',  'alt' => 'Woman veteran in camouflage uniform — close-up portrait',          'wide' => false, 'double' => false],
+    ['src' => $theme_uri . '/assets/images/uniform/ff-02.jpg',  'alt' => 'Female firefighter beside fire truck',                              'wide' => true,  'double' => false],
+    ['src' => $theme_uri . '/assets/images/uniform/po-03.jpg',  'alt' => 'Female police officer outdoors in uniform',                         'wide' => false, 'double' => false],
+    ['src' => $theme_uri . '/assets/images/uniform/em-03.jpg',  'alt' => 'Female paramedic in EMS uniform',                                   'wide' => false, 'double' => true],
+    ['src' => $theme_uri . '/assets/images/uniform/ml-03.jpg',  'alt' => 'Female Marine in camouflage uniform',                               'wide' => false, 'double' => false],
+    ['src' => $theme_uri . '/assets/images/uniform/ff-05.jpg',  'alt' => 'Firefighter in uniform and helmet by fire truck',                   'wide' => true,  'double' => false],
+    ['src' => $theme_uri . '/assets/images/uniform/po-04.jpg',  'alt' => 'Policewoman in blue uniform on the street',                         'wide' => false, 'double' => false],
 ];
 ?>
 <!-- wp:group {"className":"hnm-wall","layout":{"type":"constrained","contentSize":"100%"},"style":{"spacing":{"padding":{"top":"0","bottom":"0","left":"0","right":"0"}}}} -->

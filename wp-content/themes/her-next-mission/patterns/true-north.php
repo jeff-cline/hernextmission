@@ -10,7 +10,7 @@
  */
 
 $theme_uri   = get_stylesheet_directory_uri();
-$compass_url = esc_url($theme_uri . '/assets/images/compass.jpg');
+$compass_url = esc_url($theme_uri . '/assets/images/compass-true-north.png');
 ?>
 <!-- wp:group {"className":"hnm-section hnm-true-north","layout":{"type":"constrained","contentSize":"1320px"},"style":{"spacing":{"padding":{"top":"7rem","bottom":"7rem","left":"1.5rem","right":"1.5rem"}}}} -->
 <div class="wp-block-group hnm-section hnm-true-north" style="padding:7rem 1.5rem">
@@ -22,7 +22,7 @@ $compass_url = esc_url($theme_uri . '/assets/images/compass.jpg');
         <div class="wp-block-column is-vertically-aligned-center" style="flex-basis:48%">
             <!-- wp:html -->
             <figure class="hnm-true-north__compass">
-                <img src="<?php echo $compass_url; ?>" alt="Brass compass with engraving: SMSgt Krystalore Crews Retired 2022 — Congratulations! You sacrificed, overcame, and conquered. A true leader and inspiration. Love, Melissa" />
+                <img src="<?php echo $compass_url; ?>" alt="Brass compass given to SMSgt Krystalore Crews on her retirement in 2024 — engraving inside reads: Congratulations! You sacrificed, overcame, and conquered. A true leader and inspiration. Love, Melissa" />
             </figure>
             <!-- /wp:html -->
         </div>
@@ -39,7 +39,7 @@ $compass_url = esc_url($theme_uri . '/assets/images/compass.jpg');
             <!-- /wp:heading -->
 
             <!-- wp:paragraph {"style":{"typography":{"fontSize":"1.1875rem","lineHeight":"1.7"},"spacing":{"margin":{"top":"1.5rem"}}},"textColor":"ink-soft"} -->
-            <p class="has-ink-soft-color has-text-color" style="font-size:1.1875rem;line-height:1.7;margin-top:1.5rem">When SMSgt Krystalore Crews retired in 2022, a sister in service — Melissa — gave her a brass compass. Inscribed inside the cover are these words:</p>
+            <p class="has-ink-soft-color has-text-color" style="font-size:1.1875rem;line-height:1.7;margin-top:1.5rem">When SMSgt Krystalore Crews retired in 2024, a sister in service — Melissa — gave her a brass compass. Inscribed inside the cover are these words:</p>
             <!-- /wp:paragraph -->
 
             <!-- wp:quote {"className":"hnm-true-north__inscription","style":{"typography":{"fontSize":"1.25rem","fontFamily":"var(--wp--preset--font-family--display)","fontStyle":"italic","lineHeight":"1.5"},"spacing":{"padding":{"left":"1.5rem"},"margin":{"top":"1.5rem","bottom":"1.5rem"}},"border":{"left":{"color":"#C9A04A","width":"3px"}}}} -->
