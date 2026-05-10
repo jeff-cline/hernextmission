@@ -1,55 +1,85 @@
-# Her Next Mission — WordPress
+# Her Next Mission
 
-Custom WordPress theme + plugins for [hernextmission.org](https://hernextmission.org).
-
-> Empowering female veterans and first responders transitioning out of service to reclaim their identity, rebuild their confidence, and discover their next mission.
-
-## Repo layout
-
-```
-wp-content/
-  themes/her-next-mission/      # block theme (FSE)
-  plugins/hnm-crm/              # lead CPT + admin (sponsor deck + contact leads)
-  plugins/hnm-sponsor-deck/     # gated sponsor-deck request form
-deploy/                          # server-agent deploy hooks (WP-CLI)
-docs/superpowers/specs/          # design doc
-```
-
-This repo holds **custom code only**. WP core, default plugins, uploads, and the database live on the server and are managed by the server agent.
+Static landing site for **HER NEXT MISSION** — a 501(c)(3) nonprofit
+(in formation) serving female Veterans and first responders in the
+transition out of service.
 
 ## Stack
 
-- WordPress 6.9.4
-- PHP 8.3.6
-- WP-CLI 2.12.0
+Plain HTML / CSS / JS. No build step, no framework, no PHP, no DB.
+
+```
+/                       → repo root
+  index.html            → home
+  about.html            → about + founder + true north
+  programs.html         → programs / coaching / retreats
+  podcast.html          → from-service-to-success podcast
+  events.html           → summit + retreats + bootcamps
+  sponsors.html         → 3 sponsor tiers + activations
+  give.html             → impact tiers + ways to give
+  book-a-call.html      → discovery-call intake
+  contact.html          → audience-routed mailto cards
+  privacy.html          → privacy policy
+  /assets/
+    /css/site.css       → single comprehensive stylesheet
+    /js/site.js         → rocket animation + mobile nav + mailto helper
+    /images/            → photos, logos, icons
+      logo.png          → transparent phoenix mark
+      compass-true-north.png → transparent brass-compass photo
+      compass-melissa.jpg    → engraved version of the compass
+      hero-krystalore.jpg    → founder mirror photo
+      service-*.jpg          → founder's service photos
+      /uniform/         → 20 royalty-free women-in-uniform photos (Pexels)
+      /civilian/        → 5 royalty-free business-attire photos (Pexels)
+      favicon.svg
+      compass-bullet.svg
+  /deploy/
+    deploy.sh           → rsync to web root
+    README.md
+  README.md
+  LICENSE
+```
+
+## Local preview
+
+Any static server works. From the repo root:
+
+```bash
+python3 -m http.server 8080
+# then open http://localhost:8080/
+```
 
 ## Deploy
 
-Server agent listens on a webhook (secret at `/root/.hnm-webhook-secret`). On push to `main`:
+See `deploy/README.md`.
 
-1. Agent pulls latest from `origin/main` into the server's `wp-content/` tree.
-2. Agent runs `deploy/post-deploy.sh` which calls WP-CLI to:
-   - activate the theme `her-next-mission`
-   - activate `hnm-crm` and `hnm-sponsor-deck` plugins
-   - flush rewrites
-   - ensure core taxonomy terms exist (Wellbeing, Transition, Understanding, Clarity, Identity)
-3. Site is live at `https://hernextmission.org`.
+## CTAs
 
-## Brand assets — placeholder status
+Every call-to-action button across the site routes to a `mailto:`
+opening in the visitor's email client. Subjects follow the pattern
+`<Button Title> - HER NEXT MISSION`. Bodies are pre-filled with
+intake questions tailored to each intent (beneficiary, sponsor,
+donor, podcast guest, etc.) plus a contact-info block.
 
-The first push uses placeholders. Replace with real assets as they arrive:
+The full catalog lives in `assets/js/site.js`. Adding a new CTA:
 
-- **Logo** — `wp-content/themes/her-next-mission/assets/images/logo.svg` (currently a typographic wordmark). Drop a real SVG with the same filename or upload via Customizer.
-- **Color palette** — defined in `wp-content/themes/her-next-mission/theme.json` and `assets/css/main.css` as CSS custom properties (`--hnm-navy`, `--hnm-cream`, `--hnm-gold`, `--hnm-sage`, `--hnm-paper`, `--hnm-ink`). Swap hex values in those two places.
-- **Photography** — hero, True North compass, in-service photos, podcast cover. Upload via wp-admin → Media, then assign in front-page sections.
+1. Add a new entry in the `CATALOG` object.
+2. Add `data-cta="your-slug"` to a button.
 
-## Admins
+`site.js` rewrites the `href` on page load.
 
-- `jeff.cline@me.com` (already created server-side; password rotated by Jeff on first login)
-- Krystalore — to be added by Jeff in wp-admin → Users (admin role)
+## Imagery
 
-CRM lead access is restricted to users with the `manage_options` capability (admins only).
+All stock photos under `/assets/images/uniform/` and
+`/assets/images/civilian/` are sourced from
+[Pexels](https://www.pexels.com) under the
+[Pexels License](https://www.pexels.com/license/) (free for
+commercial use, modification permitted, attribution not required).
+Per-photo credits are in `assets/images/uniform/CREDITS.md`.
 
-## License
+## Why static
 
-Theme and plugins are licensed GPL-2.0-or-later, consistent with WordPress.
+The previous WordPress build is in git history (any commit prior to
+`v1.0`). Static is faster to host, easier to edit by hand, and
+removes the WP attack surface. If a CMS is ever needed, the on-disk
+structure is friendly to any SSG migration (Eleventy, Astro, Next.js).
