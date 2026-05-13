@@ -14,20 +14,57 @@
     var prefersReducedMotion = window.matchMedia &&
         window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
+    var audioPlayed = false;        // sound has actually been emitted at least once
+    var audioRetryArmed = false;    // first-gesture retry listeners are wired up
+
+    // Re-fire the rocket launch animation + sound together. Used by the
+    // first-gesture unlock so the visual and audio start in sync.
+    function relaunchWithSound() {
+        var stages = document.querySelectorAll('[data-rocket]');
+        stages.forEach(function (s) {
+            s.removeAttribute('data-launched');
+            // eslint-disable-next-line no-unused-expressions
+            s.offsetWidth;
+            s.setAttribute('data-launched', 'true');
+        });
+        setTimeout(playJetEngine, 60);
+    }
+
+    // Browsers block audio until a user gesture has happened. If our first
+    // playJetEngine() call hits a suspended AudioContext, arm a one-shot
+    // gesture listener so the very next click/tap/key replays the launch
+    // animation AND the engine sound together.
+    function armAudioUnlock() {
+        if (audioRetryArmed || audioPlayed || prefersReducedMotion) return;
+        audioRetryArmed = true;
+        var fired = false;
+        var retry = function () {
+            if (fired || audioPlayed) return;
+            fired = true;
+            relaunchWithSound();
+        };
+        ['pointerdown', 'touchstart', 'keydown', 'click'].forEach(function (ev) {
+            window.addEventListener(ev, retry, { once: true, capture: true });
+        });
+    }
+
     // Web Audio jet engine — synthesized so we ship no audio file.
-    // Plays for ~1.6s to match the .rocket launch CSS animation.
+    // Plays for ~2.4s to match the .rocket launch CSS animation.
     function playJetEngine() {
         if (prefersReducedMotion) return;
         var AC = window.AudioContext || window.webkitAudioContext;
         if (!AC) return;
         var ctx;
         try { ctx = new AC(); } catch (e) { return; }
-        // Most browsers block audio until first user gesture. If suspended,
-        // bail silently — the animation will play, just without sound.
-        // (Subsequent page loads in the same session usually run.)
+        // If autoplay is still blocked, ask for resume and check state.
+        // If still suspended, schedule a retry on first user gesture.
         if (ctx.state === 'suspended') {
-            ctx.resume().catch(function () {});
-            if (ctx.state === 'suspended') { return; }
+            try { ctx.resume(); } catch (e) {}
+            if (ctx.state === 'suspended') {
+                armAudioUnlock();
+                try { ctx.close && ctx.close(); } catch (e) {}
+                return;
+            }
         }
 
         var now = ctx.currentTime;
@@ -107,6 +144,8 @@
         noise.stop(now + DURATION + 0.05);
         rumble.stop(now + DURATION + 0.05);
         whine.stop(now + DURATION + 0.05);
+
+        audioPlayed = true;
 
         // Tear down the context shortly after, so we don't leak audio nodes.
         setTimeout(function () {

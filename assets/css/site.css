@@ -373,15 +373,17 @@ p  { margin: 0 0 1em; }
     animation: spin-tick 30s var(--ease) 4s infinite;
 }
 @keyframes launch {
-    0%   { transform: translate3d(0, calc(100vh + 200px), 0) scale(.5)  rotate(-8deg);  opacity: 0; }
-    20%  { opacity: 1; }
-    45%  { transform: translate3d(0, -22vh, 0)              scale(1.08) rotate(120deg); opacity: 1; }
-    70%  { transform: translate3d(0, -8vh, 0)               scale(1.02) rotate(300deg); opacity: 1; }
-    100% { transform: translate3d(0, 0, 0)                  scale(1)    rotate(360deg); opacity: 1; }
+    0%   { transform: translate3d(0, calc(100vh + 200px), 0) scale(.5)  rotate(-8deg);   opacity: 0; }
+    18%  { opacity: 1; }
+    35%  { transform: translate3d(0, -22vh, 0)              scale(1.08) rotate(180deg);  opacity: 1; }
+    55%  { transform: translate3d(0, -10vh, 0)              scale(1.04) rotate(540deg);  opacity: 1; }
+    80%  { transform: translate3d(0, -2vh, 0)               scale(1)    rotate(720deg);  opacity: 1; }
+    100% { transform: translate3d(0, 0, 0)                  scale(1)    rotate(720deg);  opacity: 1; }
 }
+/* 30s tick: two full barrel rolls in the last ~2.1s of each 30s cycle */
 @keyframes spin-tick {
     0%, 93%   { transform: rotate(0deg); }
-    100%      { transform: rotate(360deg); }
+    100%      { transform: rotate(720deg); }
 }
 @keyframes trail {
     0%   { height: 0; opacity: 0; }
