@@ -270,8 +270,9 @@ p  { margin: 0 0 1em; }
     overflow: visible;
     isolation: isolate;
     background: linear-gradient(180deg, #FFFFFF 0%, var(--ivory) 100%);
-    /* big top band so the ~4x logo can land centered above 'FROM SERVICE TO SUCCESS' without overlapping it. */
-    padding: clamp(16rem, 32vw, 34rem) 0 0;
+    /* small top breathing room — the rocket lives INSIDE .hero__copy now, so the
+       photo column doesn't sit beneath a huge empty band. */
+    padding: clamp(4rem, 9vw, 6.5rem) 0 0;
 }
 
 /* hero eyebrow: drop the compass-rose bullet on the hero only */
@@ -325,31 +326,26 @@ p  { margin: 0 0 1em; }
 }
 .hero__photo img { width: 100%; height: 100%; object-fit: cover; object-position: center 20%; }
 
-/* rocket — large logo, centered in the hero's top white-space band,
-   above the 'FROM SERVICE TO SUCCESS' eyebrow. Two-layer transform
-   structure so launch (on .rocket-wrap) and 30s spin (on .rocket)
-   never fight over the same `transform` property. */
+/* rocket — phoenix logo lives INSIDE the hero copy column, above
+   the 'FROM SERVICE TO SUCCESS' eyebrow. Two-layer transform structure
+   so launch (on .rocket-wrap) and 30s spin (on .rocket) never fight
+   over the same `transform` property. */
 .rocket-stage {
-    position: absolute;
-    left: 0; right: 0;
-    top: 0;
-    height: clamp(16rem, 32vw, 34rem);   /* matches hero padding-top */
+    position: relative;
+    width: clamp(200px, 26vw, 360px);
+    margin: 0 0 1.25rem;
     pointer-events: none;
     z-index: 3;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0 clamp(1rem, 4vw, 3rem);
 }
 .rocket-wrap {
-    display: inline-flex;
+    display: block;
     transform: translate3d(0, calc(100vh + 200px), 0) scale(.5) rotate(-8deg);
     opacity: 0;
     will-change: transform, opacity;
 }
 .rocket {
     /* phoenix-only crop (logo-mark.png is 2000x1464, ~4:3) */
-    width: clamp(240px, 30vw, 500px);
+    width: 100%;
     height: auto;
     aspect-ratio: 2000 / 1464;
     filter: drop-shadow(0 18px 38px rgba(14,21,48,.28));
@@ -359,7 +355,7 @@ p  { margin: 0 0 1em; }
 }
 .rocket-trail {
     position: absolute;
-    bottom: 0;
+    bottom: 10%;
     left: 50%;
     width: 6px;
     height: 0;
@@ -409,7 +405,7 @@ p  { margin: 0 0 1em; }
 
 @media (max-width: 900px) {
     .hero__row { grid-template-columns: 1fr; }
-    .rocket { width: clamp(180px, 50vw, 320px); }
+    /* on tablet/phone, single-column — keep logo size driven by .rocket-stage */
 }
 
 /* ---------- mantra band ---------- */
@@ -1238,9 +1234,9 @@ a:focus-visible, button:focus-visible {
     /* tighten section padding so content gets to the point faster */
     .section { padding: clamp(3rem, 8vw, 5rem) 0; }
 
-    /* hero: dial down the top white-space; logo + title still fit but logo shrinks via the @900 rule above */
-    .hero { padding: clamp(11rem, 30vw, 18rem) 0 0; }
-    .rocket-stage { height: clamp(11rem, 30vw, 18rem); padding: 0 clamp(.75rem, 3vw, 1.5rem); }
+    /* hero: small top breathing room; rocket flows inline above eyebrow */
+    .hero { padding: clamp(2.5rem, 7vw, 5rem) 0 0; }
+    .rocket-stage { width: clamp(170px, 42vw, 260px); margin-bottom: .85rem; }
     .hero__title { font-size: clamp(2.6rem, 11vw, 4rem); margin: .75rem 0 1rem; }
     .hero__lede  { font-size: 1.0625rem; margin-bottom: 1.5rem; }
     .hero__ctas  { gap: .65rem; }
