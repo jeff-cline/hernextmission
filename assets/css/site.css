@@ -270,8 +270,8 @@ p  { margin: 0 0 1em; }
     overflow: visible;
     isolation: isolate;
     background: linear-gradient(180deg, #FFFFFF 0%, var(--ivory) 100%);
-    /* extra top room for the rocket logo to sit ABOVE the eyebrow without overlap; no bottom padding so the mantra bar sits flush */
-    padding: clamp(9rem, 16vw, 14rem) 0 0;
+    /* big top band so the ~4x logo can land centered above 'FROM SERVICE TO SUCCESS' without overlapping it. */
+    padding: clamp(16rem, 32vw, 34rem) 0 0;
 }
 
 /* hero eyebrow: drop the compass-rose bullet on the hero only */
@@ -325,35 +325,42 @@ p  { margin: 0 0 1em; }
 }
 .hero__photo img { width: 100%; height: 100%; object-fit: cover; object-position: center 20%; }
 
-/* rocket — sits CENTERED in the hero's top white space, well above the eyebrow */
+/* rocket — large logo, centered in the hero's top white-space band,
+   above the 'FROM SERVICE TO SUCCESS' eyebrow. Two-layer transform
+   structure so launch (on .rocket-wrap) and 30s spin (on .rocket)
+   never fight over the same `transform` property. */
 .rocket-stage {
     position: absolute;
     left: 0; right: 0;
     top: 0;
-    /* match the hero's top padding so the rocket is vertically centered between the top of the section and the eyebrow text */
-    height: clamp(9rem, 16vw, 14rem);
+    height: clamp(16rem, 32vw, 34rem);   /* matches hero padding-top */
     pointer-events: none;
     z-index: 3;
     display: flex;
     align-items: center;
-    justify-content: flex-start;
-    padding-left: clamp(1.5rem, 5vw, 4rem);
+    justify-content: center;
+    padding: 0 clamp(1rem, 4vw, 3rem);
 }
-.rocket {
-    /* ~30% smaller than before so it fits comfortably in the top band without crowding the title */
-    width: clamp(84px, 9vw, 118px);
-    aspect-ratio: 1/1;
-    transform: translate3d(0, calc(100vh + 200px), 0) scale(0.65) rotate(-4deg);
+.rocket-wrap {
+    display: inline-flex;
+    transform: translate3d(0, calc(100vh + 200px), 0) scale(.5) rotate(-8deg);
     opacity: 0;
     will-change: transform, opacity;
-    filter: drop-shadow(0 14px 30px rgba(14,21,48,.25));
-    margin-top: 0;
+}
+.rocket {
+    /* ~4x the previous max (118px → ~460px) */
+    width: clamp(220px, 28vw, 460px);
+    height: auto;
+    aspect-ratio: 1/1;
+    filter: drop-shadow(0 18px 38px rgba(14,21,48,.28));
     object-fit: contain;
+    transform: rotate(0deg);
+    will-change: transform;
 }
 .rocket-trail {
     position: absolute;
     bottom: 0;
-    left: calc(clamp(1.5rem, 5vw, 4rem) + clamp(60px, 9vw, 100px));
+    left: 50%;
     width: 6px;
     height: 0;
     transform: translate3d(-50%, 0, 0);
@@ -362,21 +369,32 @@ p  { margin: 0 0 1em; }
     opacity: 0;
     filter: blur(.4px);
 }
-.rocket-stage[data-launched="true"] .rocket  { animation: launch 1.6s var(--ease) .15s forwards; }
-.rocket-stage[data-launched="true"] .rocket-trail { animation: trail 1.6s var(--ease) .15s forwards; }
+.rocket-stage[data-launched="true"] .rocket-wrap  { animation: launch 2.4s var(--ease) .15s forwards; }
+.rocket-stage[data-launched="true"] .rocket-trail { animation: trail 2.4s var(--ease) .15s forwards; }
+/* every 30s after landing, the logo does a single full spin (~2s).
+   delay is animation-duration * cycles — we set the spin tick to 30s with the spin in the final ~7%. */
+.rocket-stage[data-launched="true"] .rocket {
+    animation: spin-tick 30s var(--ease) 4s infinite;
+}
 @keyframes launch {
-    0%   { transform: translate3d(0, calc(100vh + 200px), 0) scale(.65) rotate(-4deg); opacity: 0; }
-    35%  { opacity: 1; }
-    70%  { transform: translate3d(0, -1.5vh, 0) scale(1.04) rotate(0); opacity: 1; }
-    100% { transform: translate3d(0, 0, 0) scale(1) rotate(0); opacity: 1; }
+    0%   { transform: translate3d(0, calc(100vh + 200px), 0) scale(.5)  rotate(-8deg);  opacity: 0; }
+    20%  { opacity: 1; }
+    45%  { transform: translate3d(0, -22vh, 0)              scale(1.08) rotate(120deg); opacity: 1; }
+    70%  { transform: translate3d(0, -8vh, 0)               scale(1.02) rotate(300deg); opacity: 1; }
+    100% { transform: translate3d(0, 0, 0)                  scale(1)    rotate(360deg); opacity: 1; }
+}
+@keyframes spin-tick {
+    0%, 93%   { transform: rotate(0deg); }
+    100%      { transform: rotate(360deg); }
 }
 @keyframes trail {
     0%   { height: 0; opacity: 0; }
-    25%  { height: 60vh; opacity: .95; }
+    25%  { height: 70vh; opacity: .95; }
     100% { height: 0; opacity: 0; }
 }
 @media (prefers-reduced-motion: reduce) {
-    .rocket-stage[data-launched="true"] .rocket { animation: none; transform: none; opacity: 1; }
+    .rocket-stage[data-launched="true"] .rocket-wrap  { animation: none; transform: none; opacity: 1; }
+    .rocket-stage[data-launched="true"] .rocket       { animation: none; transform: none; }
     .rocket-stage[data-launched="true"] .rocket-trail { animation: none; opacity: 0; }
 }
 
@@ -391,7 +409,7 @@ p  { margin: 0 0 1em; }
 
 @media (max-width: 900px) {
     .hero__row { grid-template-columns: 1fr; }
-    .rocket { width: clamp(72px, 16vw, 110px); }
+    .rocket { width: clamp(180px, 50vw, 320px); }
 }
 
 /* ---------- mantra band ---------- */
@@ -1220,9 +1238,9 @@ a:focus-visible, button:focus-visible {
     /* tighten section padding so content gets to the point faster */
     .section { padding: clamp(3rem, 8vw, 5rem) 0; }
 
-    /* hero: dial down the top white-space so the rocket + title fit in one screen */
-    .hero { padding: clamp(6.5rem, 14vw, 9rem) 0 0; }
-    .rocket-stage { height: clamp(6.5rem, 14vw, 9rem); padding-left: clamp(1rem, 4vw, 2rem); }
+    /* hero: dial down the top white-space; logo + title still fit but logo shrinks via the @900 rule above */
+    .hero { padding: clamp(11rem, 30vw, 18rem) 0 0; }
+    .rocket-stage { height: clamp(11rem, 30vw, 18rem); padding: 0 clamp(.75rem, 3vw, 1.5rem); }
     .hero__title { font-size: clamp(2.6rem, 11vw, 4rem); margin: .75rem 0 1rem; }
     .hero__lede  { font-size: 1.0625rem; margin-bottom: 1.5rem; }
     .hero__ctas  { gap: .65rem; }

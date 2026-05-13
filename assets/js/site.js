@@ -31,7 +31,7 @@
         }
 
         var now = ctx.currentTime;
-        var DURATION = 1.6;
+        var DURATION = 2.4;
 
         // ---- noise source (the whoosh / roar) ----
         var bufSize = ctx.sampleRate * DURATION;
