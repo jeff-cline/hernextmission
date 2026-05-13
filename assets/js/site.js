@@ -9,7 +9,110 @@
 (function () {
     'use strict';
 
-    /* ---------- 1. rocket launch ---------- */
+    /* ---------- 1. rocket launch + jet engine sound ---------- */
+
+    var prefersReducedMotion = window.matchMedia &&
+        window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    // Web Audio jet engine — synthesized so we ship no audio file.
+    // Plays for ~1.6s to match the .rocket launch CSS animation.
+    function playJetEngine() {
+        if (prefersReducedMotion) return;
+        var AC = window.AudioContext || window.webkitAudioContext;
+        if (!AC) return;
+        var ctx;
+        try { ctx = new AC(); } catch (e) { return; }
+        // Most browsers block audio until first user gesture. If suspended,
+        // bail silently — the animation will play, just without sound.
+        // (Subsequent page loads in the same session usually run.)
+        if (ctx.state === 'suspended') {
+            ctx.resume().catch(function () {});
+            if (ctx.state === 'suspended') { return; }
+        }
+
+        var now = ctx.currentTime;
+        var DURATION = 1.6;
+
+        // ---- noise source (the whoosh / roar) ----
+        var bufSize = ctx.sampleRate * DURATION;
+        var noiseBuf = ctx.createBuffer(1, bufSize, ctx.sampleRate);
+        var data = noiseBuf.getChannelData(0);
+        // Pink-ish noise: low-pass running average of white noise.
+        var lastVal = 0;
+        for (var i = 0; i < bufSize; i++) {
+            var white = Math.random() * 2 - 1;
+            lastVal = (lastVal + 0.04 * white) / 1.04;
+            data[i] = lastVal * 6.0; // boost
+        }
+        var noise = ctx.createBufferSource();
+        noise.buffer = noiseBuf;
+
+        // Bandpass to shape the roar
+        var bp = ctx.createBiquadFilter();
+        bp.type = 'bandpass';
+        bp.frequency.setValueAtTime(400, now);
+        bp.frequency.exponentialRampToValueAtTime(1800, now + DURATION * 0.55);
+        bp.frequency.exponentialRampToValueAtTime(900, now + DURATION);
+        bp.Q.value = 0.7;
+
+        var noiseGain = ctx.createGain();
+        noiseGain.gain.setValueAtTime(0.0001, now);
+        noiseGain.gain.exponentialRampToValueAtTime(0.35, now + 0.15);
+        noiseGain.gain.exponentialRampToValueAtTime(0.45, now + DURATION * 0.6);
+        noiseGain.gain.exponentialRampToValueAtTime(0.0001, now + DURATION);
+
+        noise.connect(bp).connect(noiseGain);
+
+        // ---- low rumble (sub-bass thrust) ----
+        var rumble = ctx.createOscillator();
+        rumble.type = 'sawtooth';
+        rumble.frequency.setValueAtTime(60, now);
+        rumble.frequency.exponentialRampToValueAtTime(130, now + DURATION * 0.6);
+        rumble.frequency.exponentialRampToValueAtTime(90, now + DURATION);
+        var rumbleGain = ctx.createGain();
+        rumbleGain.gain.setValueAtTime(0.0001, now);
+        rumbleGain.gain.exponentialRampToValueAtTime(0.22, now + 0.18);
+        rumbleGain.gain.exponentialRampToValueAtTime(0.0001, now + DURATION);
+        var rumbleLP = ctx.createBiquadFilter();
+        rumbleLP.type = 'lowpass';
+        rumbleLP.frequency.value = 220;
+        rumble.connect(rumbleLP).connect(rumbleGain);
+
+        // ---- high whine (turbine) ----
+        var whine = ctx.createOscillator();
+        whine.type = 'triangle';
+        whine.frequency.setValueAtTime(2200, now);
+        whine.frequency.exponentialRampToValueAtTime(5200, now + DURATION * 0.55);
+        whine.frequency.exponentialRampToValueAtTime(3200, now + DURATION);
+        var whineGain = ctx.createGain();
+        whineGain.gain.setValueAtTime(0.0001, now);
+        whineGain.gain.exponentialRampToValueAtTime(0.05, now + 0.2);
+        whineGain.gain.exponentialRampToValueAtTime(0.08, now + DURATION * 0.55);
+        whineGain.gain.exponentialRampToValueAtTime(0.0001, now + DURATION);
+
+        // ---- master gain (keep it polite) ----
+        var master = ctx.createGain();
+        master.gain.value = 0.85;
+
+        noiseGain.connect(master);
+        rumbleGain.connect(master);
+        whineGain.connect(whine.frequency); // subtle FM-style modulation: connect gain to next stage
+        whine.connect(whineGain).connect(master);
+
+        master.connect(ctx.destination);
+
+        noise.start(now);
+        rumble.start(now);
+        whine.start(now);
+        noise.stop(now + DURATION + 0.05);
+        rumble.stop(now + DURATION + 0.05);
+        whine.stop(now + DURATION + 0.05);
+
+        // Tear down the context shortly after, so we don't leak audio nodes.
+        setTimeout(function () {
+            if (ctx.close) ctx.close().catch(function () {});
+        }, (DURATION + 0.5) * 1000);
+    }
 
     function launchRocket() {
         var stages = document.querySelectorAll('[data-rocket]');
@@ -19,6 +122,11 @@
             s.offsetWidth;
             s.setAttribute('data-launched', 'true');
         });
+        // CSS sets .15s animation-delay on .rocket — start the engine sound
+        // a hair earlier than that so the whoosh leads the visual swoop.
+        if (stages.length) {
+            setTimeout(playJetEngine, 60);
+        }
     }
 
     /* ---------- 2. mobile nav ---------- */
