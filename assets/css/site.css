@@ -348,10 +348,10 @@ p  { margin: 0 0 1em; }
     will-change: transform, opacity;
 }
 .rocket {
-    /* ~4x the previous max (118px → ~460px) */
-    width: clamp(220px, 28vw, 460px);
+    /* phoenix-only crop (logo-mark.png is 2000x1464, ~4:3) */
+    width: clamp(240px, 30vw, 500px);
     height: auto;
-    aspect-ratio: 1/1;
+    aspect-ratio: 2000 / 1464;
     filter: drop-shadow(0 18px 38px rgba(14,21,48,.28));
     object-fit: contain;
     transform: rotate(0deg);
