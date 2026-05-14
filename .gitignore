@@ -56,3 +56,6 @@ build/
 secrets.json
 *.key
 *.pem
+
+# WordPress media uploads (large/binary)
+wordpress/briefings-hernextmission/wp-content/uploads/
