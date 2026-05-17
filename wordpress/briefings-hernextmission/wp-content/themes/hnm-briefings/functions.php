@@ -36,5 +36,5 @@ function hnm_default_primary_links() {
         $is_current = untrailingslashit($url) === untrailingslashit(home_url(add_query_arg([], $GLOBALS['wp']->request ?? '')));
         printf('<a href="%s"%s>%s</a>', esc_url($url), $is_current ? ' aria-current="page"' : '', esc_html($label));
     }
-    echo '<a href="' . esc_url(home_url('/')) . '" class="cta">Briefings</a>';
+    echo '<a href="' . esc_url(home_url('/')) . '">Blog</a>';
 }

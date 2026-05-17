@@ -29,7 +29,7 @@
                 'fallback_cb' => false,
                 'depth' => 1,
             ]);
-            echo '<a href="' . esc_url(home_url('/')) . '" class="cta">Briefings</a>';
+            echo '<a href="' . esc_url(home_url('/')) . '">Blog</a>';
         } else {
             hnm_default_primary_links();
         }
