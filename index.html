@@ -380,51 +380,81 @@
 </section>
 
 <!-- ============================ IT'S YOUR TURN ============================ -->
+<style>
+.turn__row{display:grid;grid-template-columns:1fr 1fr;gap:3.5rem;align-items:start}
+.turn__mosaic{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border-radius:.75rem;overflow:hidden;box-shadow:0 24px 60px -20px rgba(14,26,61,.35),0 0 0 1px rgba(0,0,0,.05);position:sticky;top:1rem}
+.turn__mosaic img{width:100%;aspect-ratio:1/1;object-fit:cover;display:block}
+.turn__body{line-height:1.7}
+.turn__body ul{line-height:1.9;padding-left:1.25rem}
+.turn__title{font-size:clamp(2.4rem,4.5vw,3.8rem);margin-top:.75rem;line-height:1.05}
+.turn__ctas{display:flex;flex-wrap:wrap;gap:.85rem;margin-top:2.25rem}
+@media (max-width:880px){
+  .turn__row{grid-template-columns:1fr;gap:2rem}
+  .turn__mosaic{max-width:520px;margin:0 auto;position:static}
+  .turn__ctas{justify-content:center}
+  .turn__body{text-align:center}
+}
+</style>
 <section class="section turn" style="background:var(--ivory)">
-    <div class="wrap text-center">
-        <span class="eyebrow eyebrow--center">For women in transition</span>
-        <h2 style="margin-top:1rem">It's Your Turn</h2>
-    </div>
-    <div class="wrap" style="max-width:760px;margin:2rem auto 0;line-height:1.7">
-        <p>You spent years answering the call.<br>
-        Leading. Serving. Holding everything together.<br>
-        Putting the mission, the team, and everyone else before yourself.</p>
+    <div class="wrap">
+        <div class="turn__row">
+            <div class="turn__mosaic" aria-hidden="true">
+                <img src="/mirror/images/img_ce22d7c51887.png" alt="" loading="lazy">
+                <img src="/mirror/images/img_d79428af063d.png" alt="" loading="lazy">
+                <img src="/mirror/images/img_e13ef344ea65.png" alt="" loading="lazy">
+                <img src="/mirror/images/img_e3f4ceffd7a3.png" alt="" loading="lazy">
+                <img src="/mirror/images/img_eb5ae16306db.png" alt="" loading="lazy">
+                <img src="/mirror/images/img_ef16ae8fd54f.png" alt="" loading="lazy">
+                <img src="/mirror/images/img_f206940ffc9d.png" alt="" loading="lazy">
+                <img src="/mirror/images/img_f29baa792c24.png" alt="" loading="lazy">
+                <img src="/mirror/images/img_feb69f0399fe.png" alt="" loading="lazy">
+            </div>
 
-        <p>And somewhere along the way… you disappeared inside the role.</p>
+            <div class="turn__body">
+                <span class="eyebrow">For women in transition</span>
+                <h2 class="turn__title">It's Your Turn</h2>
 
-        <p>Now the uniform is off, the structure is gone, and the world expects you to simply "adjust."<br>
-        But what nobody talks about is the identity loss, the exhaustion, the hyper-independence, or the feeling that you no longer fit where you once belonged.</p>
+                <p>You spent years answering the call.<br>
+                Leading. Serving. Holding everything together.<br>
+                Putting the mission, the team, and everyone else before yourself.</p>
 
-        <p><strong>Here's the truth:</strong></p>
+                <p>And somewhere along the way… you disappeared inside the role.</p>
 
-        <p>You are not broken.<br>
-        You are not "too much."<br>
-        You are not overqualified.<br>
-        And maybe… you were never meant to fit into the old boxes in the first place.</p>
+                <p>Now the uniform is off, the structure is gone, and the world expects you to simply "adjust."<br>
+                But what nobody talks about is the identity loss, the exhaustion, the hyper-independence, or the feeling that you no longer fit where you once belonged.</p>
 
-        <p>At Her Next Mission Foundation, we support female Veterans and first responders as they rebuild confidence, reconnect to themselves, and redefine success on their own terms.</p>
+                <p><strong>Here's the truth:</strong></p>
 
-        <p>Because this next chapter is not about shrinking to fit into civilian life.<br>
-        It's about finally creating a life that fits YOU.</p>
+                <p>You are not broken.<br>
+                You are not "too much."<br>
+                You are not overqualified.<br>
+                And maybe… you were never meant to fit into the old boxes in the first place.</p>
 
-        <p style="margin-top:1.5rem"><strong>It's your turn to:</strong></p>
+                <p>At Her Next Mission Foundation, we support female Veterans and first responders as they rebuild confidence, reconnect to themselves, and redefine success on their own terms.</p>
 
-        <ul style="line-height:1.9;padding-left:1.25rem">
-            <li>Feel like a woman again</li>
-            <li>Prioritize your health without guilt</li>
-            <li>Build meaningful community</li>
-            <li>Rediscover joy and purpose</li>
-            <li>Stop surviving and start living</li>
-            <li>Trust yourself again</li>
-            <li>Rewrite your identity beyond the title</li>
-        </ul>
+                <p>Because this next chapter is not about shrinking to fit into civilian life.<br>
+                It's about finally creating a life that fits YOU.</p>
 
-        <p style="margin-top:1.5rem">You carried the mission for everyone else.<br>
-        <strong>Now it's time to come home to yourself.</strong></p>
+                <p style="margin-top:1.5rem"><strong>It's your turn to:</strong></p>
 
-        <div style="display:flex;flex-wrap:wrap;gap:.85rem;justify-content:center;margin-top:2.25rem">
-            <a class="btn btn--ghost" href="/programs.html">Explore Programs</a>
-            <a class="btn btn--gold" href="mailto:krystalore@thecrewscoach.com?subject=I%20AM%20READY&body=Name%3A%0ANumber%3A%0ATell%20Me%20Your%20Story%3A">GET STARTED</a>
+                <ul>
+                    <li>Feel like a woman again</li>
+                    <li>Prioritize your health without guilt</li>
+                    <li>Build meaningful community</li>
+                    <li>Rediscover joy and purpose</li>
+                    <li>Stop surviving and start living</li>
+                    <li>Trust yourself again</li>
+                    <li>Rewrite your identity beyond the title</li>
+                </ul>
+
+                <p style="margin-top:1.5rem">You carried the mission for everyone else.<br>
+                <strong>Now it's time to come home to yourself.</strong></p>
+
+                <div class="turn__ctas">
+                    <a class="btn btn--ghost" href="/programs.html">Explore Programs</a>
+                    <a class="btn btn--gold" href="mailto:krystalore@thecrewscoach.com?subject=I%20AM%20READY&body=Name%3A%0ANumber%3A%0ATell%20Me%20Your%20Story%3A">GET STARTED</a>
+                </div>
+            </div>
         </div>
     </div>
 </section>
