@@ -182,7 +182,7 @@
 
     /* ---------- 3. mailto CTA helper ---------- */
 
-    var EMAIL = 'krystalore@thecrewscoach.com';
+    var EMAIL = 'hernextmission.org@gmail.com';
     var CONTACT_BLOCK = [
         '',
         '— Your contact info —',
