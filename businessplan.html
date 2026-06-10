@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Strategic Business Plan — HER NEXT MISSION</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" type="image/png" sizes="any" href="/assets/images/favicon.png?v=2">
+<meta name="theme-color" content="#0E1A3D">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,900&family=Inter:wght@400;500;600;700;800&display=swap">
+<style>
+  :root{
+    --navy:#0E1A3D;--navy-deep:#050A22;--navy-bright:#1F2D6A;
+    --ink:#0A0A14;--ink-soft:#3A3A46;--ink-mute:#6E6E7A;
+    --gold:#D4A537;--gold-soft:#F2D278;--gold-deep:#8C6618;--gold-glow:#FCEFC0;
+    --mist:#F7F4EC;--line:#E7E3D8;
+    --serif:'Fraunces',Georgia,serif;--sans:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{font-family:var(--sans);color:var(--ink);background:var(--mist);line-height:1.6}
+  h1,h2,h3{font-family:var(--serif);color:var(--navy-deep);font-weight:600;letter-spacing:-.01em;line-height:1.1}
+  a{color:inherit;text-decoration:none}
+
+  /* ---------- GATE ---------- */
+  #gate{position:fixed;inset:0;z-index:50;display:flex;align-items:center;justify-content:center;
+    background:radial-gradient(120% 90% at 80% -10%,var(--navy-bright) 0%,var(--navy) 40%,var(--navy-deep) 100%);padding:24px}
+  #gate .box{width:100%;max-width:420px;background:#fff;border-radius:20px;padding:44px 38px;text-align:center;
+    box-shadow:0 30px 80px rgba(5,10,34,.5);border-top:6px solid var(--gold)}
+  #gate img{height:74px;margin-bottom:20px}
+  #gate .eyebrow{color:var(--gold-deep);font-size:11px;font-weight:800;letter-spacing:.22em;text-transform:uppercase;margin-bottom:8px}
+  #gate h1{font-size:26px;margin-bottom:6px}
+  #gate p{color:var(--ink-mute);font-size:14px;margin-bottom:22px}
+  #gate input{width:100%;padding:14px 16px;border:1.5px solid var(--line);border-radius:11px;font-size:16px;
+    font-family:var(--sans);text-align:center;outline:none;transition:border-color .2s}
+  #gate input:focus{border-color:var(--gold)}
+  #gate button{width:100%;margin-top:14px;padding:14px;border:none;border-radius:11px;cursor:pointer;
+    font-family:var(--sans);font-weight:800;font-size:15px;letter-spacing:.02em;color:var(--navy-deep);
+    background:linear-gradient(135deg,var(--gold-soft) 0%,var(--gold) 50%,var(--gold-deep) 100%)}
+  #gate .err{color:#b4232a;font-size:13px;font-weight:600;margin-top:12px;min-height:18px}
+
+  /* ---------- CONTENT ---------- */
+  #content{display:none}
+  .topbar{height:8px;background:linear-gradient(90deg,var(--gold-soft),var(--gold),var(--gold-deep))}
+  header.hero{background:radial-gradient(120% 90% at 80% -10%,var(--navy-bright) 0%,var(--navy) 40%,var(--navy-deep) 100%);
+    color:#fff;padding:46px 24px 40px;text-align:center}
+  header.hero img{height:66px;margin-bottom:18px}
+  header.hero .eyebrow{color:var(--gold-soft);font-size:12px;font-weight:800;letter-spacing:.24em;text-transform:uppercase}
+  header.hero h1{color:#fff;font-size:40px;margin:10px 0 8px}
+  header.hero p{color:rgba(255,255,255,.82);max-width:620px;margin:0 auto;font-family:var(--serif);font-style:italic;font-size:18px}
+  header.hero .conf{display:inline-block;margin-top:16px;border:1px solid rgba(242,210,120,.5);color:var(--gold-soft);
+    font-size:10px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;padding:5px 12px;border-radius:5px}
+  main{max-width:1100px;margin:0 auto;padding:38px 24px 60px}
+  .actions{display:flex;flex-wrap:wrap;gap:14px;justify-content:center;margin-bottom:34px}
+  .btn{display:inline-flex;align-items:center;gap:9px;padding:14px 24px;border-radius:12px;font-weight:800;font-size:15px;cursor:pointer}
+  .btn-gold{background:linear-gradient(135deg,var(--gold-soft) 0%,var(--gold) 50%,var(--gold-deep) 100%);color:var(--navy-deep)}
+  .btn-navy{background:var(--navy-deep);color:var(--gold-soft);border:1px solid var(--navy)}
+  .sec-label{text-align:center;color:var(--gold-deep);font-size:12px;font-weight:800;letter-spacing:.2em;text-transform:uppercase;margin-bottom:14px}
+  .deckwrap{background:#fff;border-radius:18px;overflow:hidden;box-shadow:0 18px 50px rgba(5,10,34,.16);border:1px solid var(--line)}
+  .deckwrap iframe{display:block;width:100%;height:72vh;min-height:520px;border:0}
+  footer{text-align:center;color:var(--ink-mute);font-size:13px;padding:26px 24px 40px}
+  footer b{color:var(--navy)}
+  @media(max-width:640px){header.hero h1{font-size:30px}.deckwrap iframe{height:60vh}}
+</style>
+</head>
+<body>
+
+<!-- ===== PASSWORD GATE ===== -->
+<div id="gate">
+  <div class="box">
+    <img src="/assets/images/logo.png" alt="Her Next Mission Inc.">
+    <div class="eyebrow">Confidential · Board Access</div>
+    <h1>Strategic Business Plan</h1>
+    <p>This document is private. Please enter the access password to continue.</p>
+    <form id="gateForm" autocomplete="off">
+      <input id="pw" type="password" placeholder="Access password" aria-label="Access password" autofocus>
+      <button type="submit">Unlock</button>
+      <div class="err" id="err"></div>
+    </form>
+  </div>
+</div>
+
+<!-- ===== CONTENT (revealed after unlock) ===== -->
+<div id="content">
+  <div class="topbar"></div>
+  <header class="hero">
+    <img src="/assets/images/logo.png" alt="Her Next Mission Inc.">
+    <div class="eyebrow">Her Next Mission Inc. · 501(c)(3)</div>
+    <h1>Strategic Business Plan</h1>
+    <p>Helping women who serve discover their next mission.</p>
+    <div class="conf">Confidential — For Board Use Only</div>
+  </header>
+  <main>
+    <div class="actions">
+      <a class="btn btn-gold" href="/assets/docs/hm-v1-business-plan.pdf" target="_blank" rel="noopener">⬇ Full Business Plan (PDF)</a>
+      <a class="btn btn-navy" href="/assets/docs/hm-v1-board-deck.pdf" target="_blank" rel="noopener">⬇ Board Strategic Deck (PDF)</a>
+    </div>
+    <div class="sec-label">Board Strategic Plan — Presentation</div>
+    <div class="deckwrap">
+      <iframe src="/assets/docs/hm-v1-board-deck.pdf#toolbar=1&view=FitH" title="Board Strategic Plan deck"></iframe>
+    </div>
+  </main>
+  <footer>
+    <b>Her Next Mission Inc.</b> — From Service to Success · Confidential board document.
+  </footer>
+</div>
+
+<script>
+  (function(){
+    var PW = "HerNextMission";
+    var gate = document.getElementById('gate');
+    var content = document.getElementById('content');
+    function unlock(){ gate.style.display='none'; content.style.display='block'; try{sessionStorage.setItem('hnm_bp','1');}catch(e){} }
+    try{ if(sessionStorage.getItem('hnm_bp')==='1') unlock(); }catch(e){}
+    document.getElementById('gateForm').addEventListener('submit', function(e){
+      e.preventDefault();
+      var v = document.getElementById('pw').value.trim();
+      if(v === PW){ unlock(); }
+      else { document.getElementById('err').textContent = 'Incorrect password. Please try again.'; document.getElementById('pw').select(); }
+    });
+  })();
+</script>
+</body>
+</html>
