@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document Library — HER NEXT MISSION</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" type="image/png" sizes="any" href="/assets/images/favicon.png?v=2">
+<meta name="theme-color" content="#0E1A3D">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,900&family=Inter:wght@400;500;600;700;800&display=swap">
+<style>
+  :root{
+    --navy:#0E1A3D;--navy-deep:#050A22;--navy-bright:#1F2D6A;
+    --ink:#0A0A14;--ink-soft:#3A3A46;--ink-mute:#6E6E7A;
+    --gold:#D4A537;--gold-soft:#F2D278;--gold-deep:#8C6618;--gold-glow:#FCEFC0;
+    --mist:#F7F4EC;--line:#E7E3D8;
+    --serif:'Fraunces',Georgia,serif;--sans:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{font-family:var(--sans);color:var(--ink);background:var(--mist);line-height:1.6}
+  h1,h2,h3{font-family:var(--serif);color:var(--navy-deep);font-weight:600;letter-spacing:-.01em;line-height:1.12}
+  a{color:inherit;text-decoration:none}
+  .topbar{height:8px;background:linear-gradient(90deg,var(--gold-soft),var(--gold),var(--gold-deep))}
+
+  header.hero{background:radial-gradient(120% 90% at 80% -10%,var(--navy-bright) 0%,var(--navy) 40%,var(--navy-deep) 100%);
+    color:#fff;padding:46px 24px 40px;text-align:center}
+  header.hero img{height:64px;margin-bottom:16px}
+  header.hero .eyebrow{color:var(--gold-soft);font-size:12px;font-weight:800;letter-spacing:.24em;text-transform:uppercase}
+  header.hero h1{color:#fff;font-size:38px;margin:10px 0 8px}
+  header.hero p{color:rgba(255,255,255,.82);max-width:640px;margin:0 auto;font-family:var(--serif);font-style:italic;font-size:18px}
+
+  main{max-width:1180px;margin:0 auto;padding:38px 24px 60px}
+  .sec-label{display:flex;align-items:center;gap:14px;color:var(--gold-deep);font-size:12px;font-weight:800;
+    letter-spacing:.2em;text-transform:uppercase;margin:30px 0 16px}
+  .sec-label::after{content:"";flex:1;height:1px;background:var(--line)}
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:24px}
+  .card{background:#fff;border:1px solid var(--line);border-radius:16px;overflow:hidden;display:flex;flex-direction:column;
+    box-shadow:0 10px 30px rgba(5,10,34,.07);transition:transform .18s,box-shadow .18s}
+  .card:hover{transform:translateY(-4px);box-shadow:0 18px 46px rgba(5,10,34,.16)}
+  .card .thumb{position:relative;aspect-ratio:16/10;background:var(--navy-deep);overflow:hidden;border-bottom:3px solid var(--gold)}
+  .card .thumb img{width:100%;height:100%;object-fit:cover;object-position:top center}
+  .card .tag{position:absolute;top:12px;left:12px;background:rgba(5,10,34,.82);color:var(--gold-soft);
+    font-size:10px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;padding:4px 10px;border-radius:999px}
+  .card .body{padding:18px 20px 22px;display:flex;flex-direction:column;flex:1}
+  .card h3{font-size:19px;margin-bottom:6px}
+  .card p{font-size:13.5px;color:var(--ink-soft);margin-bottom:16px;flex:1}
+  .card .cta{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:11px 18px;border-radius:10px;
+    font-weight:800;font-size:14px;color:var(--navy-deep);
+    background:linear-gradient(135deg,var(--gold-soft) 0%,var(--gold) 50%,var(--gold-deep) 100%)}
+  .card .cta:hover{filter:brightness(1.04)}
+  .note{background:#fff;border:1px solid var(--line);border-left:4px solid var(--gold);border-radius:10px;
+    padding:14px 18px;margin-top:34px;font-size:13px;color:var(--ink-soft)}
+  footer{text-align:center;color:var(--ink-mute);font-size:13px;padding:24px}
+  footer b{color:var(--navy)}
+  @media(max-width:560px){header.hero h1{font-size:28px}}
+</style>
+</head>
+<body>
+<div class="topbar"></div>
+<header class="hero">
+  <img src="/assets/images/logo.png" alt="Her Next Mission Inc.">
+  <div class="eyebrow">Her Next Mission Inc. · Document Library</div>
+  <h1>Strategy &amp; Partnership Documents</h1>
+  <p>Business plan, sponsor materials, and award package — all in one place.</p>
+</header>
+
+<main>
+  <!-- INTERNAL -->
+  <div class="sec-label">Internal · Board &amp; Strategy</div>
+  <div class="grid">
+    <article class="card">
+      <div class="thumb"><span class="tag">Business Plan</span><img src="/assets/docs/thumbs/business-plan.png" alt="Strategic Business Plan cover"></div>
+      <div class="body">
+        <h3>Strategic Business Plan</h3>
+        <p>12-page plan — mission, programs, market, governance, and the 3-year P&amp;L.</p>
+        <a class="cta" href="/assets/docs/hm-v1-business-plan.pdf" target="_blank" rel="noopener">View &amp; Download PDF →</a>
+      </div>
+    </article>
+    <article class="card">
+      <div class="thumb"><span class="tag">Board Deck</span><img src="/assets/docs/thumbs/board-deck.png" alt="Board Strategic Plan deck cover"></div>
+      <div class="body">
+        <h3>Board Strategic Plan Deck</h3>
+        <p>13-slide presentation of the strategy, financials, and 3-year vision.</p>
+        <a class="cta" href="/assets/docs/hm-v1-board-deck.pdf" target="_blank" rel="noopener">View &amp; Download PDF →</a>
+      </div>
+    </article>
+  </div>
+
+  <!-- SPONSOR -->
+  <div class="sec-label">Sponsor &amp; Donor</div>
+  <div class="grid">
+    <article class="card">
+      <div class="thumb"><span class="tag">Prospectus</span><img src="/assets/docs/thumbs/sponsor-prospectus.png" alt="Sponsor Prospectus cover"></div>
+      <div class="body">
+        <h3>Sponsor Prospectus</h3>
+        <p>5-page prospectus — impact, activation, and the three partnership tiers.</p>
+        <a class="cta" href="/assets/docs/hm-v1-sponsor-prospectus.pdf" target="_blank" rel="noopener">View &amp; Download PDF →</a>
+      </div>
+    </article>
+    <article class="card">
+      <div class="thumb"><span class="tag">Sponsor Deck</span><img src="/assets/docs/thumbs/sponsor-deck.png" alt="Sponsorship deck cover"></div>
+      <div class="body">
+        <h3>Sponsorship Deck</h3>
+        <p>8-slide pitch for prospective corporate sponsors and partners.</p>
+        <a class="cta" href="/assets/docs/hm-v1-sponsor-deck.pdf" target="_blank" rel="noopener">View &amp; Download PDF →</a>
+      </div>
+    </article>
+    <article class="card">
+      <div class="thumb"><span class="tag">Cover Letter</span><img src="/assets/docs/thumbs/sponsor-cover-letter.png" alt="Sponsor cover letter"></div>
+      <div class="body">
+        <h3>Sponsor Cover Letter</h3>
+        <p>1-page branded letter to accompany the prospectus in outreach emails.</p>
+        <a class="cta" href="/assets/docs/hm-v1-sponsor-cover-letter.pdf" target="_blank" rel="noopener">View &amp; Download PDF →</a>
+      </div>
+    </article>
+  </div>
+
+  <!-- AWARD -->
+  <div class="sec-label">Melissa Washington Small Business Award</div>
+  <div class="grid">
+    <article class="card">
+      <div class="thumb"><span class="tag">Projections</span><img src="/assets/docs/thumbs/award-projections.png" alt="Financial projections cover"></div>
+      <div class="body">
+        <h3>Financial Projections</h3>
+        <p>4-page 3-year projections — the award's required financial submission.</p>
+        <a class="cta" href="/assets/docs/hm-v1-award-projections.pdf" target="_blank" rel="noopener">View &amp; Download PDF →</a>
+      </div>
+    </article>
+    <article class="card">
+      <div class="thumb"><span class="tag">Award Deck</span><img src="/assets/docs/thumbs/award-deck.png" alt="Award pitch deck cover"></div>
+      <div class="body">
+        <h3>Award Pitch Deck</h3>
+        <p>7-slide supporting deck — innovation, resilience, impact, and the ask.</p>
+        <a class="cta" href="/assets/docs/hm-v1-award-deck.pdf" target="_blank" rel="noopener">View &amp; Download PDF →</a>
+      </div>
+    </article>
+  </div>
+
+  <div class="note">
+    <b>Private review page.</b> This page isn't linked from the website and is hidden from search engines, but anyone with the link (or a direct PDF link) can open it. Tell me if you'd like it password-protected like the board plan page.
+  </div>
+</main>
+
+<footer><b>Her Next Mission Inc.</b> — From Service to Success · hernextmission.org</footer>
+</body>
+</html>
