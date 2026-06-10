@@ -1,0 +1,511 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Strategic Business Plan — HER NEXT MISSION</title><meta name="robots" content="noindex, nofollow"><link rel="icon" type="image/png" href="/assets/images/favicon.png?v=2"><meta name="theme-color" content="#0E1A3D"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,900&family=Inter:wght@400;500;600;700;800&display=swap"><style>
+:root{
+  --navy:#0E1A3D; --navy-deep:#050A22; --navy-bright:#1F2D6A;
+  --ink:#0A0A14; --ink-soft:#3A3A46; --ink-mute:#6E6E7A;
+  --gold:#D4A537; --gold-soft:#F2D278; --gold-deep:#8C6618; --gold-glow:#FCEFC0;
+  --paper:#FFFFFF; --mist:#F7F4EC; --line:#E7E3D8;
+  --serif:'Fraunces','Cormorant Garamond',Georgia,serif;
+  --sans:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+
+@page{size:8.5in 11in;margin:0}
+body{font-family:var(--sans);color:var(--ink);font-size:11pt;line-height:1.55;background:#fff}
+h1,h2,h3,h4{font-family:var(--serif);color:var(--navy-deep);font-weight:600;letter-spacing:-.01em;line-height:1.12}
+strong{font-weight:700;color:var(--navy)}
+.page{width:8.5in;min-height:11in;padding:.82in .9in .7in;position:relative;page-break-after:always;background:#fff}
+.page:last-child{page-break-after:auto}
+/* running brand bar */
+.page::before{content:"";position:absolute;top:0;left:0;right:0;height:.34in;background:linear-gradient(90deg,var(--navy-deep),var(--navy) 60%,var(--navy-bright))}
+.page::after{content:"";position:absolute;top:.34in;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--gold-soft),var(--gold),var(--gold-deep))}
+.foot{position:absolute;bottom:.45in;left:.9in;right:.9in;display:flex;justify-content:space-between;font-size:8pt;color:var(--ink-mute);letter-spacing:.04em;text-transform:uppercase}
+.foot b{color:var(--navy);font-weight:700}
+/* cover */
+.cover{background:radial-gradient(120% 90% at 80% -10%,var(--navy-bright) 0%,var(--navy) 38%,var(--navy-deep) 100%);color:#fff;padding:1.1in .95in}
+.cover::before,.cover::after{display:none}
+.cover .logo{height:96px;margin-bottom:54px}
+.cover .eyebrow{color:var(--gold-soft);font-size:11pt;font-weight:800;letter-spacing:.26em;text-transform:uppercase;margin-bottom:18px}
+.cover h1{color:#fff;font-size:42pt;line-height:1.04;margin-bottom:18px;max-width:6in}
+.cover .sub{color:rgba(255,255,255,.82);font-size:14pt;max-width:5.2in;font-family:var(--serif);font-style:italic}
+.cover .rule{width:84px;height:4px;background:linear-gradient(90deg,var(--gold-soft),var(--gold-deep));margin:30px 0}
+.cover .meta{position:absolute;bottom:1.0in;left:.95in;right:.95in;font-size:10pt;color:rgba(255,255,255,.7);line-height:1.7}
+.cover .meta b{color:var(--gold-soft);font-weight:700}
+.cover .conf{position:absolute;top:1.1in;right:.95in;border:1px solid rgba(242,210,120,.5);color:var(--gold-soft);font-size:8pt;font-weight:800;letter-spacing:.18em;text-transform:uppercase;padding:6px 12px;border-radius:4px}
+/* headings & content */
+.eyebrow{color:var(--gold-deep);font-size:9pt;font-weight:800;letter-spacing:.2em;text-transform:uppercase;margin-bottom:8px}
+h2.sec{font-size:23pt;margin:0 0 6px}
+.sec-rule{width:54px;height:3px;background:var(--gold);margin:10px 0 20px}
+h3{font-size:13.5pt;color:var(--navy);margin:20px 0 7px}
+h4{font-size:11pt;color:var(--gold-deep);text-transform:uppercase;letter-spacing:.08em;margin:16px 0 5px;font-family:var(--sans);font-weight:800}
+p{margin:0 0 11px;color:var(--ink-soft)}
+p.lead{font-size:12.5pt;color:var(--ink);font-family:var(--serif);line-height:1.5}
+ul,ol{margin:0 0 12px;padding-left:0;list-style:none}
+ul li{position:relative;padding-left:20px;margin-bottom:6px;color:var(--ink-soft)}
+ul li::before{content:"";position:absolute;left:0;top:.52em;width:7px;height:7px;border-radius:2px;background:var(--gold);transform:rotate(45deg)}
+ol{counter-reset:n;padding-left:0}
+ol li{position:relative;padding-left:30px;margin-bottom:8px;color:var(--ink-soft)}
+ol li::before{counter-increment:n;content:counter(n);position:absolute;left:0;top:0;width:20px;height:20px;background:var(--navy);color:var(--gold-soft);border-radius:5px;font-size:9pt;font-weight:800;display:flex;align-items:center;justify-content:center;font-family:var(--sans)}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.three{display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px}
+.card{background:var(--mist);border:1px solid var(--line);border-radius:12px;padding:18px 20px;border-top:3px solid var(--gold)}
+.card h3{margin:0 0 6px;font-size:12pt}
+.card p{font-size:9.5pt;margin:0;color:var(--ink-soft)}
+.callout{background:linear-gradient(135deg,var(--navy-deep),var(--navy));color:#fff;border-radius:14px;padding:24px 28px;margin:18px 0}
+.callout h3{color:var(--gold-soft);margin:0 0 6px}
+.callout p{color:rgba(255,255,255,.9);margin:0}
+.pill{display:inline-block;background:var(--gold-glow);color:var(--gold-deep);border:1px solid var(--gold);font-size:8.5pt;font-weight:800;letter-spacing:.06em;text-transform:uppercase;padding:4px 11px;border-radius:999px;margin:0 5px 6px 0}
+/* tables (financials) */
+table{width:100%;border-collapse:collapse;margin:11px 0 15px;font-size:10pt}
+th,td{padding:7px 11px;text-align:left;border-bottom:1px solid var(--line)}
+thead th{background:var(--navy-deep);color:#fff;font-family:var(--sans);font-weight:700;font-size:8.5pt;letter-spacing:.07em;text-transform:uppercase}
+tbody tr:nth-child(even){background:var(--mist)}
+td.n,th.n{text-align:right;font-variant-numeric:tabular-nums}
+tr.total td{border-top:2px solid var(--navy);border-bottom:none;font-weight:800;color:var(--navy);background:var(--gold-glow)}
+tr.sub td{font-weight:700;color:var(--navy)}
+.note{font-size:8.5pt;color:var(--ink-mute);font-style:italic;margin-top:4px}
+.kpi{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:14px 0}
+.kpi .k{background:var(--mist);border:1px solid var(--line);border-radius:12px;padding:16px;text-align:center}
+.kpi .k .n{font-family:var(--serif);font-size:30pt;color:var(--gold-deep);line-height:1;font-weight:600}
+.kpi .k .l{font-size:8.5pt;color:var(--ink-mute);text-transform:uppercase;letter-spacing:.06em;margin-top:6px}
+.headshot{width:100%;border-radius:12px;border:3px solid var(--gold);display:block}
+.sig{margin-top:30px}
+.sig .line{border-top:1.5px solid var(--ink);width:2.6in;margin-bottom:4px}
+.avoid{page-break-inside:avoid}
+
+
+html,body{scroll-behavior:smooth}
+/* top nav */
+.nav{position:fixed;top:0;left:0;right:0;height:54px;z-index:60;display:flex;align-items:center;gap:6px;
+  background:rgba(5,10,34,.94);backdrop-filter:blur(8px);color:#fff;padding:0 14px;border-bottom:1px solid rgba(212,165,55,.35)}
+.nav .brand{display:flex;align-items:center;gap:9px;font-family:var(--sans);font-weight:800;font-size:13px;letter-spacing:.04em;color:#fff}
+.nav .brand img{height:30px}
+.nav .brand small{display:block;color:var(--gold-soft);font-weight:700;font-size:9px;letter-spacing:.16em;text-transform:uppercase}
+.nav .sp{flex:1}
+.nav a.lnk{color:rgba(255,255,255,.82);font-family:var(--sans);font-weight:600;font-size:12.5px;padding:7px 11px;border-radius:8px;white-space:nowrap}
+.nav a.lnk:hover{background:rgba(255,255,255,.1);color:#fff}
+.nav a.pdf{background:linear-gradient(135deg,var(--gold-soft),var(--gold) 55%,var(--gold-deep));color:var(--navy-deep);font-weight:800}
+.nav .zone{color:var(--gold-soft);font-family:var(--sans);font-size:10px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;margin-right:4px}
+@media(max-width:760px){.nav a.lnk.hideSm{display:none}.nav .brand small{display:none}}
+
+/* ---- DECK presentation ---- */
+.present{position:fixed;left:0;right:0;top:54px;bottom:0;background:radial-gradient(120% 120% at 50% 0%,#10183a,#050a22 70%);overflow:hidden}
+.stage{position:absolute;top:50%;left:50%;width:1280px;height:720px;transform-origin:center center;box-shadow:0 30px 90px rgba(0,0,0,.55)}
+.present .slide{position:absolute;inset:0;display:none !important}
+.present .slide.active{display:flex !important}
+.zone-click{position:fixed;top:54px;bottom:64px;width:16%;z-index:50;cursor:pointer}
+.zone-click.l{left:0}.zone-click.r{right:0}
+.ctrl{position:fixed;bottom:16px;left:50%;transform:translateX(-50%);z-index:55;display:flex;align-items:center;gap:6px;
+  background:rgba(5,10,34,.88);border:1px solid rgba(212,165,55,.35);color:#fff;padding:7px 10px;border-radius:999px}
+.ctrl button{appearance:none;border:0;background:transparent;color:#fff;font-size:17px;cursor:pointer;padding:4px 10px;border-radius:999px;line-height:1}
+.ctrl button:hover{background:rgba(255,255,255,.14)}
+.ctrl .count{font-family:var(--sans);font-weight:700;font-size:13px;min-width:56px;text-align:center;color:var(--gold-soft)}
+.ctrl .fs{font-size:14px}
+
+/* ---- DOC paged web view ---- */
+.docwrap{background:#e9e4d8;min-height:100vh;padding:78px 14px 70px}
+.docstage{margin:0 auto;width:max-content}
+.docstage .page{margin:0 auto 26px;box-shadow:0 16px 44px rgba(5,10,34,.18);border-radius:8px;overflow:hidden}
+.docfoot{text-align:center;color:#6E6E7A;font-family:var(--sans);font-size:12px;padding:8px 0 4px}
+.docfoot a{color:var(--gold-deep);font-weight:700}
+
+/* ---- GATE ---- */
+#gate{position:fixed;inset:0;z-index:100;display:flex;align-items:center;justify-content:center;padding:24px;
+  background:radial-gradient(120% 90% at 80% -10%,var(--navy-bright) 0%,var(--navy) 40%,var(--navy-deep) 100%)}
+#gate .box{width:100%;max-width:410px;background:#fff;border-radius:20px;padding:42px 36px;text-align:center;box-shadow:0 30px 80px rgba(5,10,34,.5);border-top:6px solid var(--gold)}
+#gate img{height:64px;margin-bottom:16px}
+#gate .ey{color:var(--gold-deep);font-family:var(--sans);font-size:11px;font-weight:800;letter-spacing:.22em;text-transform:uppercase;margin-bottom:8px}
+#gate h1{font-size:24px;margin-bottom:6px}
+#gate p{color:var(--ink-mute);font-family:var(--sans);font-size:14px;margin-bottom:20px}
+#gate input{width:100%;padding:13px 15px;border:1.5px solid var(--line);border-radius:11px;font-size:16px;font-family:var(--sans);text-align:center;outline:none}
+#gate input:focus{border-color:var(--gold)}
+#gate button{width:100%;margin-top:12px;padding:13px;border:none;border-radius:11px;cursor:pointer;font-family:var(--sans);font-weight:800;font-size:15px;color:var(--navy-deep);background:linear-gradient(135deg,var(--gold-soft),var(--gold) 55%,var(--gold-deep))}
+#gate .err{color:#b4232a;font-family:var(--sans);font-size:13px;font-weight:600;margin-top:10px;min-height:18px}
+body.locked .nav,body.locked .present,body.locked .docwrap,body.locked .ctrl,body.locked .zone-click,body.locked .hubwrap{display:none !important}
+
+/* ---- HUB ---- */
+.hubwrap{min-height:100vh;background:var(--mist)}
+.hero{background:radial-gradient(120% 90% at 80% -10%,var(--navy-bright) 0%,var(--navy) 40%,var(--navy-deep) 100%);color:#fff;padding:64px 24px 52px;text-align:center}
+.hero img{height:62px;margin-bottom:16px}
+.hero .ey{color:var(--gold-soft);font-family:var(--sans);font-size:12px;font-weight:800;letter-spacing:.24em;text-transform:uppercase}
+.hero h1{color:#fff;font-size:40px;margin:10px 0 8px}
+.hero p{color:rgba(255,255,255,.82);max-width:640px;margin:0 auto;font-family:var(--serif);font-style:italic;font-size:18px}
+.hub{max-width:1120px;margin:0 auto;padding:40px 24px 64px}
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:24px}
+.c{background:#fff;border:1px solid var(--line);border-radius:16px;overflow:hidden;display:flex;flex-direction:column;box-shadow:0 10px 30px rgba(5,10,34,.07);transition:transform .18s,box-shadow .18s}
+.c:hover{transform:translateY(-4px);box-shadow:0 18px 46px rgba(5,10,34,.16)}
+.c .th{position:relative;aspect-ratio:16/10;background:var(--navy-deep);border-bottom:3px solid var(--gold)}
+.c .th img{width:100%;height:100%;object-fit:cover;object-position:top center}
+.c .tag{position:absolute;top:12px;left:12px;background:rgba(5,10,34,.82);color:var(--gold-soft);font-family:var(--sans);font-size:10px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;padding:4px 10px;border-radius:999px}
+.c .bd{padding:18px 20px 20px;display:flex;flex-direction:column;flex:1}
+.c h3{font-size:20px;margin-bottom:6px}
+.c p{font-family:var(--sans);font-size:13.5px;color:var(--ink-soft);margin-bottom:15px;flex:1}
+.c .btns{display:flex;gap:8px}
+.c a.b{flex:1;text-align:center;padding:10px;border-radius:10px;font-family:var(--sans);font-weight:800;font-size:13px}
+.c a.web{background:linear-gradient(135deg,var(--gold-soft),var(--gold) 55%,var(--gold-deep));color:var(--navy-deep)}
+.c a.pdf{background:var(--navy-deep);color:var(--gold-soft)}
+.crumbs{text-align:center;font-family:var(--sans);font-size:13px;color:var(--ink-mute);padding:22px}
+.crumbs a{color:var(--gold-deep);font-weight:700}
+</style></head><body><div class="nav">
+<a class="brand" href="/businessplan"><img src="/assets/images/logo.png" alt=""><span>HER NEXT MISSION<small>Internal · Board</small></span></a>
+<span class="zone"></span><span class="sp"></span>
+<a class="lnk hideSm" href="/board-deck">Board Strategic Deck</a>
+<a class="lnk" href="/assets/docs/hm-v1-business-plan.pdf" target="_blank" rel="noopener">↓ PDF</a>
+</div><div class="docwrap"><div class="docstage"><!-- ============ COVER ============ -->
+<div class="page cover">
+  <div class="conf">Confidential · Board Use</div>
+  <img class="logo" src="/assets/images/logo.png" alt="Her Next Mission Inc.">
+  <div class="eyebrow">Strategic Business Plan</div>
+  <h1>Helping Women Who Serve Discover Their Next Mission</h1>
+  <div class="rule"></div>
+  <p class="sub">A 501(c)(3) nonprofit empowering female Veterans &amp; first responders to reclaim identity, rebuild confidence, and build what comes next.</p>
+  <div class="meta">
+    <b>Her Next Mission Inc.</b> &nbsp;·&nbsp; 501(c)(3) Nonprofit Organization<br>
+    Prepared by Krystalore Crews, Founder &amp; Executive Director<br>
+    Board Draft v1.0 &nbsp;·&nbsp; Headquarters: Puerto Rico &nbsp;·&nbsp; Service Area: United States &amp; Puerto Rico
+  </div>
+</div>
+
+<!-- ============ EXECUTIVE SUMMARY ============ -->
+<div class="page">
+  <div class="eyebrow">Section 1</div>
+  <h2 class="sec">Executive Summary</h2>
+  <div class="sec-rule"></div>
+  <p class="lead">Her Next Mission Inc. exists to ensure that no woman who has served has to navigate life's most difficult transitions alone.</p>
+  <p>Founded by retired Air Force Senior Master Sergeant, leadership consultant, wellness expert, and best-selling author <strong>Krystalore Crews</strong>, Her Next Mission Inc. provides holistic support for female Veterans and first responders navigating military transition, retirement, career change, identity loss, divorce, grief, burnout, and major life reinvention.</p>
+  <p>Women who have dedicated their lives to serving others often struggle when the uniform comes off. While many organizations offer employment assistance or crisis intervention, few address the deeper challenges of <strong>identity, confidence, purpose, wellness, and belonging</strong>. Her Next Mission Inc. fills this gap through a comprehensive ecosystem of coaching, fitness, leadership development, entrepreneurship education, retreats, mentorship, and community — helping women move beyond surviving transition to thriving in their next chapter.</p>
+
+  <h3>At a Glance</h3>
+  <table>
+    <tbody>
+      <tr><td><strong>Organization</strong></td><td>Her Next Mission Inc. — 501(c)(3) nonprofit</td></tr>
+      <tr><td><strong>Founder</strong></td><td>Krystalore Crews, SMSgt USAF (Ret.)</td></tr>
+      <tr><td><strong>Headquarters</strong></td><td>Puerto Rico · Serving the United States &amp; Puerto Rico</td></tr>
+      <tr><td><strong>Population Served</strong></td><td>Female Veterans &amp; first responders, ages 25–65</td></tr>
+      <tr><td><strong>Primary Focus</strong></td><td>Wellness · Leadership · Entrepreneurship · Identity Reinvention · Community</td></tr>
+      <tr><td><strong>Year 1 Goal</strong></td><td>250 women served · 25 scholarships awarded</td></tr>
+      <tr><td><strong>Year 3 Vision</strong></td><td>1,000+ women served annually · $655K operating budget</td></tr>
+    </tbody>
+  </table>
+
+  <div class="kpi avoid">
+    <div class="k"><div class="n">2M+</div><div class="l">Women Veterans in the U.S.</div></div>
+    <div class="k"><div class="n">200K</div><div class="l">Transition from service / year</div></div>
+    <div class="k"><div class="n">#1</div><div class="l">Fastest-growing Veteran group</div></div>
+  </div>
+  <div class="foot"><span><b>Her Next Mission Inc.</b> · Strategic Business Plan</span><span>Confidential — Board Use</span></div>
+</div>
+
+<!-- ============ MISSION / VISION / VALUES ============ -->
+<div class="page">
+  <div class="eyebrow">Section 2</div>
+  <h2 class="sec">Mission, Vision &amp; Values</h2>
+  <div class="sec-rule"></div>
+
+  <h4>Mission</h4>
+  <p class="lead">Her Next Mission Inc. empowers female Veterans and first responders transitioning out of service to reclaim their identity, rebuild their confidence, and discover their next mission — through coaching, community, fitness, leadership development, and transformative experiences that honor their service and fuel their future.</p>
+
+  <h4>Vision</h4>
+  <p class="lead">A world where every woman who has served never has to navigate transition alone — where her sacrifice is celebrated, her wellbeing is prioritized, and her next chapter is as purposeful as the one she closed.</p>
+
+  <h4>Core Values</h4>
+  <div class="two">
+    <div>
+      <span class="pill">Service Beyond Service</span>
+      <span class="pill">Whole-Woman Wellness</span>
+      <span class="pill">Courage in Transition</span>
+      <span class="pill">Community as Mission</span>
+      <span class="pill">Integrity in Action</span>
+    </div>
+    <div>
+      <span class="pill">Leadership Through Example</span>
+      <span class="pill">Clarity Over Confusion</span>
+      <span class="pill">Excellence Without Apology</span>
+      <span class="pill">Resilience Through Adversity</span>
+    </div>
+  </div>
+
+  <div class="callout avoid">
+    <h3>Our Promise</h3>
+    <p>"You are not starting over. You are building what comes next."</p>
+  </div>
+  <div class="foot"><span><b>Her Next Mission Inc.</b> · Strategic Business Plan</span><span>Confidential — Board Use</span></div>
+</div>
+
+<!-- ============ PROBLEM & OPPORTUNITY ============ -->
+<div class="page">
+  <div class="eyebrow">Section 3</div>
+  <h2 class="sec">The Problem &amp; Opportunity</h2>
+  <div class="sec-rule"></div>
+  <p>More than two million women Veterans live in the United States, representing the fastest-growing segment of the Veteran population. When their role changes, many face one of the most significant identity transitions of their lives.</p>
+
+  <div class="two avoid">
+    <div class="card">
+      <h3>What Women Experience</h3>
+      <ul>
+        <li>Identity loss after service</li>
+        <li>Isolation and loneliness</li>
+        <li>Anxiety, depression &amp; higher rates of PTSD/MST</li>
+        <li>Difficulty translating military skills</li>
+        <li>Leadership burnout &amp; reduced confidence</li>
+        <li>Financial &amp; career-transition uncertainty</li>
+        <li>Physical health decline; few women-specific resources</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>The Gap We Fill</h3>
+      <p>Most existing support systems focus on <strong>employment</strong> or <strong>crisis intervention</strong>. Few help women rebuild identity, confidence, wellbeing, and purpose. First responders face the same challenges after retirement, injury, or burnout.</p>
+      <p>Her Next Mission Inc. delivers comprehensive support across identity, wellness, leadership, entrepreneurship, and community.</p>
+    </div>
+  </div>
+
+  <h3>Why Now</h3>
+  <p>The need has never been greater. Women remain one of the fastest-growing populations in the military and first-responder communities. Awareness of mental health, trauma-informed care, somatic healing, and preventive wellness is rising. Women are seeking more than jobs after service — they are seeking <strong>purpose, belonging, and a meaningful next mission</strong>.</p>
+
+  <h3>Target Population</h3>
+  <div class="two">
+    <div>
+      <h4>Primary Audience</h4>
+      <ul><li>Female Veterans</li><li>Female first responders</li><li>Women in major life transition (ages 25–65, national)</li></ul>
+    </div>
+    <div>
+      <h4>Priority Segments</h4>
+      <ul><li>Recently separated Veterans &amp; retiring service members</li><li>Military spouses in transition</li><li>Women recovering from burnout</li><li>Entrepreneurs building their next chapter</li></ul>
+    </div>
+  </div>
+  <div class="foot"><span><b>Her Next Mission Inc.</b> · Strategic Business Plan</span><span>Confidential — Board Use</span></div>
+</div>
+
+<!-- ============ PILLARS + NEXT FRAMEWORK ============ -->
+<div class="page">
+  <div class="eyebrow">Section 4</div>
+  <h2 class="sec">Our Five Core Pillars</h2>
+  <div class="sec-rule"></div>
+  <p>Everything Her Next Mission Inc. does falls under five strategic pillars — the foundation of every program, retreat, and event.</p>
+  <div class="three avoid">
+    <div class="card"><h3>1 · Transition &amp; Identity</h3><p><em>"Who am I now?"</em> Reinvention, purpose, confidence, and self-leadership after the uniform.</p></div>
+    <div class="card"><h3>2 · Wellness &amp; Resilience</h3><p>Fitness, stress management, burnout recovery, somatic practices, and emotional wellbeing.</p></div>
+    <div class="card"><h3>3 · Leadership Development</h3><p>Emotional intelligence, communication, boundaries, decision-making, and public speaking.</p></div>
+    <div class="card"><h3>4 · Career &amp; Entrepreneurship</h3><p>Career transition, business ownership, personal branding, and financial empowerment.</p></div>
+    <div class="card"><h3>5 · Community &amp; Connection</h3><p>Mentorship, peer support, retreats, events, and lifelong sisterhood.</p></div>
+    <div class="card" style="background:var(--navy-deep);border-top-color:var(--gold)"><h3 style="color:var(--gold-soft)">Outcome</h3><p style="color:rgba(255,255,255,.9)">Clarity, wellbeing, confidence, economic mobility, and belonging.</p></div>
+  </div>
+
+  <div class="callout avoid">
+    <h3>The NEXT Framework™</h3>
+    <p style="margin-top:8px"><b style="color:var(--gold-soft)">N</b>avigate Your Transition &nbsp;·&nbsp; <b style="color:var(--gold-soft)">E</b>mpower Your Wellbeing &nbsp;·&nbsp; <b style="color:var(--gold-soft)">X</b>pand Your Leadership &nbsp;·&nbsp; <b style="color:var(--gold-soft)">T</b>hrive Through Community</p>
+    <p style="margin-top:8px;color:rgba(255,255,255,.8);font-size:9.5pt">Every workshop, retreat, coaching program, scholarship, summit, and community event aligns with one or more components of the NEXT Framework™. Career &amp; Entrepreneurship is woven throughout all four.</p>
+  </div>
+  <div class="foot"><span><b>Her Next Mission Inc.</b> · Strategic Business Plan</span><span>Confidential — Board Use</span></div>
+</div>
+
+<!-- ============ PROGRAMS ============ -->
+<div class="page">
+  <div class="eyebrow">Section 5</div>
+  <h2 class="sec">Programs &amp; Services</h2>
+  <div class="sec-rule"></div>
+  <div class="two">
+    <div class="card"><h3>Leadership &amp; Business Bootcamp</h3><p>8-week virtual/hybrid cohort (20–50). Leadership, personal branding, business foundations, networking, public speaking, confidence. Scholarships available. <strong>Goal: 100 participants/yr.</strong></p></div>
+    <div class="card"><h3>Revive &amp; Thrive Retreats</h3><p>4- and 7-day transformational retreats (PR, Costa Rica, U.S.; 15–30 each) focused on identity reinvention, self-leadership, wellness, and community. <strong>Scholarship goal: $50K/yr.</strong></p></div>
+    <div class="card"><h3>Coaching &amp; Somatic Coaching</h3><p>Leadership, identity-reinvention, executive, and compassionate-inquiry coaching. 60–90 min virtual sessions. Scholarships available.</p></div>
+    <div class="card"><h3>Beyond Limits Fitness</h3><p>Virtual membership, live &amp; on-demand classes, workshops — strength, mobility, nutrition, sleep, stress, mindset. <strong>Goal: 250 active participants.</strong></p></div>
+    <div class="card"><h3>Her Next Mission Podcast</h3><p>Weekly platform on transition, leadership, entrepreneurship, and wellness. <strong>Goal: 10,000 downloads, Year 1.</strong></p></div>
+    <div class="card"><h3>Her Next Mission Summit</h3><p>Annual hybrid gathering — keynotes, leadership, wellness, networking, entrepreneurship. <strong>Goal: 250 attendees, Year 1.</strong></p></div>
+  </div>
+  <div class="foot"><span><b>Her Next Mission Inc.</b> · Strategic Business Plan</span><span>Confidential — Board Use</span></div>
+</div>
+
+<!-- ============ MARKET ANALYSIS + SWOT ============ -->
+<div class="page">
+  <div class="eyebrow">Section 6</div>
+  <h2 class="sec">Market Analysis</h2>
+  <div class="sec-rule"></div>
+  <div class="kpi avoid">
+    <div class="k"><div class="n">2M+</div><div class="l">Women Veterans</div></div>
+    <div class="k"><div class="n">200K+</div><div class="l">Transition annually</div></div>
+    <div class="k"><div class="n">100Ks</div><div class="l">Female first responders</div></div>
+  </div>
+  <h3>How We Are Different</h3>
+  <p>Existing organizations — Wounded Warrior Project, The Mission Continues, Women Veterans Alliance, Veterati, Hiring Our Heroes — largely emphasize employment or crisis services. Her Next Mission Inc. is distinguished by a <strong>women-centered, whole-person model</strong>:</p>
+  <div class="two">
+    <div><ul><li>Women-centered &amp; community-driven</li><li>Fitness + wellness integration</li><li>Somatic coaching</li></ul></div>
+    <div><ul><li>Leadership &amp; entrepreneurship support</li><li>Transformational retreat experiences</li><li>Founder-led with lived experience</li></ul></div>
+  </div>
+
+  <h3>SWOT</h3>
+  <div class="two avoid">
+    <div class="card"><h3 style="font-size:11pt">Strengths</h3><p>Strong founder brand, military credibility, existing audience, proven programs, speaking platform, retreat experience.</p></div>
+    <div class="card"><h3 style="font-size:11pt">Weaknesses</h3><p>New organization, limited staff, founder dependence, limited operating history.</p></div>
+    <div class="card"><h3 style="font-size:11pt">Opportunities</h3><p>Federal grants, corporate sponsorships, Veteran &amp; women's-leadership initiatives, wellness-industry growth.</p></div>
+    <div class="card"><h3 style="font-size:11pt">Threats</h3><p>Grant competition, economic conditions, donor fatigue, market saturation.</p></div>
+  </div>
+  <div class="foot"><span><b>Her Next Mission Inc.</b> · Strategic Business Plan</span><span>Confidential — Board Use</span></div>
+</div>
+
+<!-- ============ FINANCIALS: REVENUE + P&L ============ -->
+<div class="page">
+  <div class="eyebrow">Section 7</div>
+  <h2 class="sec">Revenue Model &amp; 3-Year P&amp;L</h2>
+  <div class="sec-rule"></div>
+  <p>Revenue is intentionally diversified across grants, sponsorships, donations, fundraising events, earned program income, and the annual summit — reducing dependence on any single source.</p>
+
+  <h4>Three-Year Revenue Projection</h4>
+  <table>
+    <thead><tr><th>Revenue Source</th><th class="n">Year 1</th><th class="n">Year 2</th><th class="n">Year 3</th></tr></thead>
+    <tbody>
+      <tr><td>Grants &amp; Donations</td><td class="n">$100,000</td><td class="n">$200,000</td><td class="n">$300,000</td></tr>
+      <tr><td>Retreat Revenue</td><td class="n">$40,000</td><td class="n">$75,000</td><td class="n">$125,000</td></tr>
+      <tr><td>Business Bootcamps</td><td class="n">$25,000</td><td class="n">$50,000</td><td class="n">$75,000</td></tr>
+      <tr><td>Coaching Revenue</td><td class="n">$20,000</td><td class="n">$40,000</td><td class="n">$60,000</td></tr>
+      <tr><td>Summit Revenue</td><td class="n">$15,000</td><td class="n">$35,000</td><td class="n">$50,000</td></tr>
+      <tr><td>Podcast Sponsorships</td><td class="n">$5,000</td><td class="n">$15,000</td><td class="n">$25,000</td></tr>
+      <tr><td>Merchandise</td><td class="n">$5,000</td><td class="n">$10,000</td><td class="n">$20,000</td></tr>
+      <tr class="total"><td>Total Revenue</td><td class="n">$210,000</td><td class="n">$425,000</td><td class="n">$655,000</td></tr>
+    </tbody>
+  </table>
+
+  <h4>Income Statement Summary</h4>
+  <table>
+    <thead><tr><th>&nbsp;</th><th class="n">Year 1</th><th class="n">Year 2</th><th class="n">Year 3</th></tr></thead>
+    <tbody>
+      <tr><td>Total Revenue</td><td class="n">$210,000</td><td class="n">$425,000</td><td class="n">$655,000</td></tr>
+      <tr><td>Total Operating Expenses</td><td class="n">$200,000</td><td class="n">$385,000</td><td class="n">$600,000</td></tr>
+      <tr class="sub"><td>Operating Surplus</td><td class="n">$10,000</td><td class="n">$40,000</td><td class="n">$55,000</td></tr>
+      <tr><td>Board-Designated Reserve</td><td class="n">$20,000</td><td class="n">$30,000</td><td class="n">$40,000</td></tr>
+      <tr class="total"><td>Net Change in Net Assets</td><td class="n">($10,000)</td><td class="n">$10,000</td><td class="n">$15,000</td></tr>
+    </tbody>
+  </table>
+  <p class="note">Year 1 figures are the Board-adopted budget. Years 2–3 expenses are management projections scaled with revenue growth. The planned Year-1 net of ($10,000) is funded by founder seed capital and launch grants; the board-designated reserve grows to approximately $90,000 by the end of Year 3.</p>
+  <div class="foot"><span><b>Her Next Mission Inc.</b> · Strategic Business Plan</span><span>Confidential — Board Use</span></div>
+</div>
+
+<!-- ============ YEAR 1 BUDGET DETAIL ============ -->
+<div class="page">
+  <div class="eyebrow">Section 7 (cont.)</div>
+  <h2 class="sec">Year-1 Operating Budget</h2>
+  <div class="sec-rule"></div>
+  <table>
+    <thead><tr><th>Expense Category</th><th class="n">Year 1</th><th>Purpose</th></tr></thead>
+    <tbody>
+      <tr><td>Programs &amp; Scholarships</td><td class="n">$90,000</td><td>Coaching, bootcamps, fitness, scholarships</td></tr>
+      <tr><td>Administrative Support</td><td class="n">$30,000</td><td>Contract admin, bookkeeping</td></tr>
+      <tr><td>Retreat Operations</td><td class="n">$25,000</td><td>Venue, facilitation, logistics</td></tr>
+      <tr><td>Marketing &amp; Media</td><td class="n">$20,000</td><td>Podcast, brand, acquisition</td></tr>
+      <tr><td>Technology &amp; Website</td><td class="n">$10,000</td><td>Platform, CRM, hosting</td></tr>
+      <tr><td>Professional Services</td><td class="n">$10,000</td><td>Legal, accounting, grant writing</td></tr>
+      <tr><td>Travel &amp; Events</td><td class="n">$10,000</td><td>Summit, conferences, outreach</td></tr>
+      <tr><td>Insurance &amp; Compliance</td><td class="n">$5,000</td><td>Liability, filings, governance</td></tr>
+      <tr class="sub"><td>Operating Expenses</td><td class="n">$200,000</td><td>&nbsp;</td></tr>
+      <tr><td>Board-Designated Reserve</td><td class="n">$20,000</td><td>Financial sustainability</td></tr>
+      <tr class="total"><td>Total Uses of Funds</td><td class="n">$220,000</td><td>&nbsp;</td></tr>
+    </tbody>
+  </table>
+  <p>The budget prioritizes <strong>direct program delivery</strong> — roughly three of every four operating dollars fund programs and the women they serve. A board-designated reserve is established in Year 1 to build long-term resilience.</p>
+  <div class="foot"><span><b>Her Next Mission Inc.</b> · Strategic Business Plan</span><span>Confidential — Board Use</span></div>
+</div>
+
+<!-- ============ ORG STRUCTURE + GOVERNANCE ============ -->
+<div class="page">
+  <div class="eyebrow">Section 8</div>
+  <h2 class="sec">Organization &amp; Governance</h2>
+  <div class="sec-rule"></div>
+  <div class="two">
+    <div>
+      <h4>Founder &amp; Executive Director</h4>
+      <p><strong>Krystalore Crews</strong> — 22-year Air Force Veteran (Ret.), leadership consultant, certified coach, fitness professional, retreat leader, best-selling author, and speaker. Responsible for vision, programs, fundraising, partnerships, and community building.</p>
+      <h4>Year-1 Staffing</h4>
+      <ul><li>Executive Director</li><li>Administrative contractor</li><li>Grant writer (contract)</li><li>Bookkeeper</li><li>Volunteer coaches &amp; ambassadors</li></ul>
+    </div>
+    <div>
+      <h4>Board &amp; Committees</h4>
+      <p>The Board of Directors is the ultimate governing body, responsible for governance, financial oversight, strategic direction, compliance, and fundraising support.</p>
+      <ul><li>Executive Committee</li><li>Finance Committee</li><li>Development Committee</li><li>Programs Committee</li><li>Marketing Committee</li></ul>
+    </div>
+  </div>
+
+  <h3>Entity Separation &amp; Conflict of Interest</h3>
+  <p>Her Next Mission Inc. operates independently from the founder's for-profit entities — <strong>Crews Beyond Limits Consulting</strong> (corporate wellness &amp; leadership consulting) and <strong>Revive &amp; Thrive Retreats</strong> (premium retreats). Each maintains separate governance, bank accounts, bookkeeping, contracts, budgets, insurance, and tax filings.</p>
+  <p><strong>No charitable donations or grant funds may be used to subsidize for-profit activities.</strong> All transactions involving related parties require full board disclosure, review by disinterested directors, a fairness determination, and documentation in the minutes — consistent with IRS requirements. The board may approve strategic collaborations (e.g., scholarship recipients attending approved retreats) only when they directly advance the charitable mission.</p>
+  <div class="foot"><span><b>Her Next Mission Inc.</b> · Strategic Business Plan</span><span>Confidential — Board Use</span></div>
+</div>
+
+<!-- ============ IMPACT + KPIs ============ -->
+<div class="page">
+  <div class="eyebrow">Section 9</div>
+  <h2 class="sec">Impact &amp; Measurement</h2>
+  <div class="sec-rule"></div>
+  <div class="callout avoid">
+    <h3>Theory of Change</h3>
+    <p>If women are provided wellness support, coaching, leadership development, entrepreneurship education, mentorship, and community, they will increase confidence, wellbeing, connection, and purpose — leading to successful, sustainable transitions.</p>
+  </div>
+  <h3>Year-1 Key Performance Indicators</h3>
+  <table>
+    <tbody>
+      <tr><td>Women Served</td><td class="n">250</td><td>Coaching Participants</td><td class="n">75</td></tr>
+      <tr><td>Scholarships Awarded</td><td class="n">25</td><td>Retreat Participants</td><td class="n">40</td></tr>
+      <tr><td>Community Members</td><td class="n">500</td><td>Corporate Sponsors</td><td class="n">5</td></tr>
+      <tr><td>Podcast Downloads</td><td class="n">10,000</td><td>Grant Funding Raised</td><td class="n">$100,000</td></tr>
+      <tr class="sub"><td>Participant Satisfaction</td><td class="n">90%+</td><td>&nbsp;</td><td class="n">&nbsp;</td></tr>
+    </tbody>
+  </table>
+
+  <h3>Three-Year Vision</h3>
+  <div class="two">
+    <div><ul><li>1,000+ women served annually</li><li>Regional community chapters</li><li>Nationally recognized summit</li></ul></div>
+    <div><ul><li>$100,000+ scholarship fund</li><li>National corporate partnerships</li><li>Research &amp; impact initiatives</li></ul></div>
+  </div>
+  <div class="foot"><span><b>Her Next Mission Inc.</b> · Strategic Business Plan</span><span>Confidential — Board Use</span></div>
+</div>
+
+<!-- ============ MILESTONES + RISKS ============ -->
+<div class="page">
+  <div class="eyebrow">Section 10</div>
+  <h2 class="sec">Milestones &amp; Risk Management</h2>
+  <div class="sec-rule"></div>
+  <h3>First-Year Roadmap</h3>
+  <div class="two">
+    <div class="card"><h3 style="font-size:11pt">Q1</h3><p>Articles of Incorporation · EIN · launch website · recruit board · open bank account.</p></div>
+    <div class="card"><h3 style="font-size:11pt">Q2</h3><p>File/confirm 501(c)(3) · launch podcast &amp; community · submit first grants.</p></div>
+    <div class="card"><h3 style="font-size:11pt">Q3</h3><p>Launch first bootcamp · award first scholarships · host first retreat.</p></div>
+    <div class="card"><h3 style="font-size:11pt">Q4</h3><p>Host first summit · secure corporate sponsors · hire first contractor.</p></div>
+  </div>
+  <h3>Risks &amp; Mitigation</h3>
+  <table>
+    <thead><tr><th>Risk</th><th>Mitigation</th></tr></thead>
+    <tbody>
+      <tr><td>Funding delays</td><td>Diversified revenue streams across grants, sponsorship, earned income</td></tr>
+      <tr><td>Founder burnout</td><td>Board support, delegation, contractor staffing</td></tr>
+      <tr><td>Grant dependence</td><td>Corporate sponsorship &amp; earned-income strategy</td></tr>
+      <tr><td>Program growth challenges</td><td>Pilot programs before scaling</td></tr>
+      <tr><td>Volunteer turnover</td><td>Ambassador &amp; recognition program</td></tr>
+    </tbody>
+  </table>
+  <div class="callout avoid">
+    <h3>Helping Women Who Serve Discover Their Next Mission</h3>
+    <p>"You are not starting over. You are building what comes next." — Her Next Mission Inc.</p>
+  </div>
+  <div class="foot"><span><b>Her Next Mission Inc.</b> · Strategic Business Plan</span><span>Confidential — Board Use</span></div>
+</div>
+</div><div class="docfoot">Her Next Mission Inc. · <a href="/assets/docs/hm-v1-business-plan.pdf" target="_blank" rel="noopener">Download PDF</a></div></div><div id="gate"><div class="box">
+  <img src="/assets/images/logo.png" alt="Her Next Mission Inc.">
+  <div class="ey">Confidential · Private Access</div>
+  <h1>Strategic Business Plan</h1>
+  <p>This material is private. Enter the access password to continue.</p>
+  <form id="gf" autocomplete="off">
+    <input id="pw" type="password" placeholder="Access password" autofocus>
+    <button type="submit">Unlock</button>
+    <div class="err" id="er"></div>
+  </form>
+</div></div><script>
+(function(){var st=document.querySelector('.docstage');
+function fit(){var w=document.documentElement.clientWidth;st.style.zoom=Math.min(1,(w-24)/816);}
+window.addEventListener('resize',fit);fit();})();
+</script><script>
+(function(){var K='hnm_access',P='HerNextMission',b=document.body,g=document.getElementById('gate');
+function open(){b.classList.remove('locked');if(g)g.style.display='none';try{sessionStorage.setItem(K,'1');}catch(e){}}
+try{if(sessionStorage.getItem(K)==='1'){open();return;}}catch(e){}
+b.classList.add('locked');
+document.getElementById('gf').addEventListener('submit',function(e){e.preventDefault();
+  if(document.getElementById('pw').value.trim()===P){open();}
+  else{document.getElementById('er').textContent='Incorrect password. Please try again.';document.getElementById('pw').select();}});
+})();
+</script></body></html>

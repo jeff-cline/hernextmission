@@ -1,0 +1,282 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Sponsor Prospectus — HER NEXT MISSION</title><link rel="icon" type="image/png" href="/assets/images/favicon.png?v=2"><meta name="theme-color" content="#0E1A3D"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,900&family=Inter:wght@400;500;600;700;800&display=swap"><style>
+:root{
+  --navy:#0E1A3D; --navy-deep:#050A22; --navy-bright:#1F2D6A;
+  --ink:#0A0A14; --ink-soft:#3A3A46; --ink-mute:#6E6E7A;
+  --gold:#D4A537; --gold-soft:#F2D278; --gold-deep:#8C6618; --gold-glow:#FCEFC0;
+  --paper:#FFFFFF; --mist:#F7F4EC; --line:#E7E3D8;
+  --serif:'Fraunces','Cormorant Garamond',Georgia,serif;
+  --sans:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+
+@page{size:8.5in 11in;margin:0}
+body{font-family:var(--sans);color:var(--ink);font-size:11pt;line-height:1.55;background:#fff}
+h1,h2,h3,h4{font-family:var(--serif);color:var(--navy-deep);font-weight:600;letter-spacing:-.01em;line-height:1.12}
+strong{font-weight:700;color:var(--navy)}
+.page{width:8.5in;min-height:11in;padding:.82in .9in .7in;position:relative;page-break-after:always;background:#fff}
+.page:last-child{page-break-after:auto}
+/* running brand bar */
+.page::before{content:"";position:absolute;top:0;left:0;right:0;height:.34in;background:linear-gradient(90deg,var(--navy-deep),var(--navy) 60%,var(--navy-bright))}
+.page::after{content:"";position:absolute;top:.34in;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--gold-soft),var(--gold),var(--gold-deep))}
+.foot{position:absolute;bottom:.45in;left:.9in;right:.9in;display:flex;justify-content:space-between;font-size:8pt;color:var(--ink-mute);letter-spacing:.04em;text-transform:uppercase}
+.foot b{color:var(--navy);font-weight:700}
+/* cover */
+.cover{background:radial-gradient(120% 90% at 80% -10%,var(--navy-bright) 0%,var(--navy) 38%,var(--navy-deep) 100%);color:#fff;padding:1.1in .95in}
+.cover::before,.cover::after{display:none}
+.cover .logo{height:96px;margin-bottom:54px}
+.cover .eyebrow{color:var(--gold-soft);font-size:11pt;font-weight:800;letter-spacing:.26em;text-transform:uppercase;margin-bottom:18px}
+.cover h1{color:#fff;font-size:42pt;line-height:1.04;margin-bottom:18px;max-width:6in}
+.cover .sub{color:rgba(255,255,255,.82);font-size:14pt;max-width:5.2in;font-family:var(--serif);font-style:italic}
+.cover .rule{width:84px;height:4px;background:linear-gradient(90deg,var(--gold-soft),var(--gold-deep));margin:30px 0}
+.cover .meta{position:absolute;bottom:1.0in;left:.95in;right:.95in;font-size:10pt;color:rgba(255,255,255,.7);line-height:1.7}
+.cover .meta b{color:var(--gold-soft);font-weight:700}
+.cover .conf{position:absolute;top:1.1in;right:.95in;border:1px solid rgba(242,210,120,.5);color:var(--gold-soft);font-size:8pt;font-weight:800;letter-spacing:.18em;text-transform:uppercase;padding:6px 12px;border-radius:4px}
+/* headings & content */
+.eyebrow{color:var(--gold-deep);font-size:9pt;font-weight:800;letter-spacing:.2em;text-transform:uppercase;margin-bottom:8px}
+h2.sec{font-size:23pt;margin:0 0 6px}
+.sec-rule{width:54px;height:3px;background:var(--gold);margin:10px 0 20px}
+h3{font-size:13.5pt;color:var(--navy);margin:20px 0 7px}
+h4{font-size:11pt;color:var(--gold-deep);text-transform:uppercase;letter-spacing:.08em;margin:16px 0 5px;font-family:var(--sans);font-weight:800}
+p{margin:0 0 11px;color:var(--ink-soft)}
+p.lead{font-size:12.5pt;color:var(--ink);font-family:var(--serif);line-height:1.5}
+ul,ol{margin:0 0 12px;padding-left:0;list-style:none}
+ul li{position:relative;padding-left:20px;margin-bottom:6px;color:var(--ink-soft)}
+ul li::before{content:"";position:absolute;left:0;top:.52em;width:7px;height:7px;border-radius:2px;background:var(--gold);transform:rotate(45deg)}
+ol{counter-reset:n;padding-left:0}
+ol li{position:relative;padding-left:30px;margin-bottom:8px;color:var(--ink-soft)}
+ol li::before{counter-increment:n;content:counter(n);position:absolute;left:0;top:0;width:20px;height:20px;background:var(--navy);color:var(--gold-soft);border-radius:5px;font-size:9pt;font-weight:800;display:flex;align-items:center;justify-content:center;font-family:var(--sans)}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.three{display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px}
+.card{background:var(--mist);border:1px solid var(--line);border-radius:12px;padding:18px 20px;border-top:3px solid var(--gold)}
+.card h3{margin:0 0 6px;font-size:12pt}
+.card p{font-size:9.5pt;margin:0;color:var(--ink-soft)}
+.callout{background:linear-gradient(135deg,var(--navy-deep),var(--navy));color:#fff;border-radius:14px;padding:24px 28px;margin:18px 0}
+.callout h3{color:var(--gold-soft);margin:0 0 6px}
+.callout p{color:rgba(255,255,255,.9);margin:0}
+.pill{display:inline-block;background:var(--gold-glow);color:var(--gold-deep);border:1px solid var(--gold);font-size:8.5pt;font-weight:800;letter-spacing:.06em;text-transform:uppercase;padding:4px 11px;border-radius:999px;margin:0 5px 6px 0}
+/* tables (financials) */
+table{width:100%;border-collapse:collapse;margin:11px 0 15px;font-size:10pt}
+th,td{padding:7px 11px;text-align:left;border-bottom:1px solid var(--line)}
+thead th{background:var(--navy-deep);color:#fff;font-family:var(--sans);font-weight:700;font-size:8.5pt;letter-spacing:.07em;text-transform:uppercase}
+tbody tr:nth-child(even){background:var(--mist)}
+td.n,th.n{text-align:right;font-variant-numeric:tabular-nums}
+tr.total td{border-top:2px solid var(--navy);border-bottom:none;font-weight:800;color:var(--navy);background:var(--gold-glow)}
+tr.sub td{font-weight:700;color:var(--navy)}
+.note{font-size:8.5pt;color:var(--ink-mute);font-style:italic;margin-top:4px}
+.kpi{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:14px 0}
+.kpi .k{background:var(--mist);border:1px solid var(--line);border-radius:12px;padding:16px;text-align:center}
+.kpi .k .n{font-family:var(--serif);font-size:30pt;color:var(--gold-deep);line-height:1;font-weight:600}
+.kpi .k .l{font-size:8.5pt;color:var(--ink-mute);text-transform:uppercase;letter-spacing:.06em;margin-top:6px}
+.headshot{width:100%;border-radius:12px;border:3px solid var(--gold);display:block}
+.sig{margin-top:30px}
+.sig .line{border-top:1.5px solid var(--ink);width:2.6in;margin-bottom:4px}
+.avoid{page-break-inside:avoid}
+
+
+html,body{scroll-behavior:smooth}
+/* top nav */
+.nav{position:fixed;top:0;left:0;right:0;height:54px;z-index:60;display:flex;align-items:center;gap:6px;
+  background:rgba(5,10,34,.94);backdrop-filter:blur(8px);color:#fff;padding:0 14px;border-bottom:1px solid rgba(212,165,55,.35)}
+.nav .brand{display:flex;align-items:center;gap:9px;font-family:var(--sans);font-weight:800;font-size:13px;letter-spacing:.04em;color:#fff}
+.nav .brand img{height:30px}
+.nav .brand small{display:block;color:var(--gold-soft);font-weight:700;font-size:9px;letter-spacing:.16em;text-transform:uppercase}
+.nav .sp{flex:1}
+.nav a.lnk{color:rgba(255,255,255,.82);font-family:var(--sans);font-weight:600;font-size:12.5px;padding:7px 11px;border-radius:8px;white-space:nowrap}
+.nav a.lnk:hover{background:rgba(255,255,255,.1);color:#fff}
+.nav a.pdf{background:linear-gradient(135deg,var(--gold-soft),var(--gold) 55%,var(--gold-deep));color:var(--navy-deep);font-weight:800}
+.nav .zone{color:var(--gold-soft);font-family:var(--sans);font-size:10px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;margin-right:4px}
+@media(max-width:760px){.nav a.lnk.hideSm{display:none}.nav .brand small{display:none}}
+
+/* ---- DECK presentation ---- */
+.present{position:fixed;left:0;right:0;top:54px;bottom:0;background:radial-gradient(120% 120% at 50% 0%,#10183a,#050a22 70%);overflow:hidden}
+.stage{position:absolute;top:50%;left:50%;width:1280px;height:720px;transform-origin:center center;box-shadow:0 30px 90px rgba(0,0,0,.55)}
+.present .slide{position:absolute;inset:0;display:none !important}
+.present .slide.active{display:flex !important}
+.zone-click{position:fixed;top:54px;bottom:64px;width:16%;z-index:50;cursor:pointer}
+.zone-click.l{left:0}.zone-click.r{right:0}
+.ctrl{position:fixed;bottom:16px;left:50%;transform:translateX(-50%);z-index:55;display:flex;align-items:center;gap:6px;
+  background:rgba(5,10,34,.88);border:1px solid rgba(212,165,55,.35);color:#fff;padding:7px 10px;border-radius:999px}
+.ctrl button{appearance:none;border:0;background:transparent;color:#fff;font-size:17px;cursor:pointer;padding:4px 10px;border-radius:999px;line-height:1}
+.ctrl button:hover{background:rgba(255,255,255,.14)}
+.ctrl .count{font-family:var(--sans);font-weight:700;font-size:13px;min-width:56px;text-align:center;color:var(--gold-soft)}
+.ctrl .fs{font-size:14px}
+
+/* ---- DOC paged web view ---- */
+.docwrap{background:#e9e4d8;min-height:100vh;padding:78px 14px 70px}
+.docstage{margin:0 auto;width:max-content}
+.docstage .page{margin:0 auto 26px;box-shadow:0 16px 44px rgba(5,10,34,.18);border-radius:8px;overflow:hidden}
+.docfoot{text-align:center;color:#6E6E7A;font-family:var(--sans);font-size:12px;padding:8px 0 4px}
+.docfoot a{color:var(--gold-deep);font-weight:700}
+
+/* ---- GATE ---- */
+#gate{position:fixed;inset:0;z-index:100;display:flex;align-items:center;justify-content:center;padding:24px;
+  background:radial-gradient(120% 90% at 80% -10%,var(--navy-bright) 0%,var(--navy) 40%,var(--navy-deep) 100%)}
+#gate .box{width:100%;max-width:410px;background:#fff;border-radius:20px;padding:42px 36px;text-align:center;box-shadow:0 30px 80px rgba(5,10,34,.5);border-top:6px solid var(--gold)}
+#gate img{height:64px;margin-bottom:16px}
+#gate .ey{color:var(--gold-deep);font-family:var(--sans);font-size:11px;font-weight:800;letter-spacing:.22em;text-transform:uppercase;margin-bottom:8px}
+#gate h1{font-size:24px;margin-bottom:6px}
+#gate p{color:var(--ink-mute);font-family:var(--sans);font-size:14px;margin-bottom:20px}
+#gate input{width:100%;padding:13px 15px;border:1.5px solid var(--line);border-radius:11px;font-size:16px;font-family:var(--sans);text-align:center;outline:none}
+#gate input:focus{border-color:var(--gold)}
+#gate button{width:100%;margin-top:12px;padding:13px;border:none;border-radius:11px;cursor:pointer;font-family:var(--sans);font-weight:800;font-size:15px;color:var(--navy-deep);background:linear-gradient(135deg,var(--gold-soft),var(--gold) 55%,var(--gold-deep))}
+#gate .err{color:#b4232a;font-family:var(--sans);font-size:13px;font-weight:600;margin-top:10px;min-height:18px}
+body.locked .nav,body.locked .present,body.locked .docwrap,body.locked .ctrl,body.locked .zone-click,body.locked .hubwrap{display:none !important}
+
+/* ---- HUB ---- */
+.hubwrap{min-height:100vh;background:var(--mist)}
+.hero{background:radial-gradient(120% 90% at 80% -10%,var(--navy-bright) 0%,var(--navy) 40%,var(--navy-deep) 100%);color:#fff;padding:64px 24px 52px;text-align:center}
+.hero img{height:62px;margin-bottom:16px}
+.hero .ey{color:var(--gold-soft);font-family:var(--sans);font-size:12px;font-weight:800;letter-spacing:.24em;text-transform:uppercase}
+.hero h1{color:#fff;font-size:40px;margin:10px 0 8px}
+.hero p{color:rgba(255,255,255,.82);max-width:640px;margin:0 auto;font-family:var(--serif);font-style:italic;font-size:18px}
+.hub{max-width:1120px;margin:0 auto;padding:40px 24px 64px}
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:24px}
+.c{background:#fff;border:1px solid var(--line);border-radius:16px;overflow:hidden;display:flex;flex-direction:column;box-shadow:0 10px 30px rgba(5,10,34,.07);transition:transform .18s,box-shadow .18s}
+.c:hover{transform:translateY(-4px);box-shadow:0 18px 46px rgba(5,10,34,.16)}
+.c .th{position:relative;aspect-ratio:16/10;background:var(--navy-deep);border-bottom:3px solid var(--gold)}
+.c .th img{width:100%;height:100%;object-fit:cover;object-position:top center}
+.c .tag{position:absolute;top:12px;left:12px;background:rgba(5,10,34,.82);color:var(--gold-soft);font-family:var(--sans);font-size:10px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;padding:4px 10px;border-radius:999px}
+.c .bd{padding:18px 20px 20px;display:flex;flex-direction:column;flex:1}
+.c h3{font-size:20px;margin-bottom:6px}
+.c p{font-family:var(--sans);font-size:13.5px;color:var(--ink-soft);margin-bottom:15px;flex:1}
+.c .btns{display:flex;gap:8px}
+.c a.b{flex:1;text-align:center;padding:10px;border-radius:10px;font-family:var(--sans);font-weight:800;font-size:13px}
+.c a.web{background:linear-gradient(135deg,var(--gold-soft),var(--gold) 55%,var(--gold-deep));color:var(--navy-deep)}
+.c a.pdf{background:var(--navy-deep);color:var(--gold-soft)}
+.crumbs{text-align:center;font-family:var(--sans);font-size:13px;color:var(--ink-mute);padding:22px}
+.crumbs a{color:var(--gold-deep);font-weight:700}
+</style></head><body><div class="nav">
+<a class="brand" href="/sponsorship"><img src="/assets/images/logo.png" alt=""><span>HER NEXT MISSION<small>Sponsor & Donor</small></span></a>
+<span class="zone"></span><span class="sp"></span>
+<a class="lnk hideSm" href="/sponsor-deck">Sponsorship Deck</a>
+<a class="lnk hideSm" href="/sponsor-letter">Sponsor Letter</a>
+<a class="lnk" href="/assets/docs/hm-v1-sponsor-prospectus.pdf" target="_blank" rel="noopener">↓ PDF</a>
+<a class="lnk pdf" href="mailto:krystalore@thecrewscoach.com?subject=Sponsorship%20%E2%80%94%20Her%20Next%20Mission">Become a Sponsor</a>
+</div><div class="docwrap"><div class="docstage"><!-- COVER -->
+<div class="page cover">
+  <img class="logo" src="/assets/images/logo.png" alt="Her Next Mission Inc.">
+  <div class="eyebrow">Sponsor Prospectus</div>
+  <h1>Stand With the Women Who Served Us All</h1>
+  <div class="rule"></div>
+  <p class="sub">Partner with Her Next Mission Inc. to help female Veterans &amp; first responders discover their next mission.</p>
+  <div class="meta">
+    <b>Her Next Mission Inc.</b> &nbsp;·&nbsp; 501(c)(3) Nonprofit Organization<br>
+    From Service to Success &nbsp;·&nbsp; hernextmission.org &nbsp;·&nbsp; krystalore@thecrewscoach.com
+  </div>
+</div>
+
+<!-- WHY IT MATTERS -->
+<div class="page">
+  <div class="eyebrow">Why It Matters</div>
+  <h2 class="sec">The Women Who Served Deserve a Strong Next Chapter</h2>
+  <div class="sec-rule"></div>
+  <p class="lead">Women are the fastest-growing Veteran population in America — and when the uniform comes off, too many navigate the hardest transition of their lives alone.</p>
+  <div class="kpi avoid">
+    <div class="k"><div class="n">2M+</div><div class="l">Women Veterans in the U.S.</div></div>
+    <div class="k"><div class="n">200K</div><div class="l">Transition each year</div></div>
+    <div class="k"><div class="n">#1</div><div class="l">Fastest-growing Veteran group</div></div>
+  </div>
+  <p>Most support stops at employment or crisis services. Few organizations help women rebuild <strong>identity, confidence, wellbeing, and belonging</strong>. Her Next Mission Inc. is a 501(c)(3) founded by retired Air Force Senior Master Sergeant <strong>Krystalore Crews</strong> to close that gap — through coaching, wellness, leadership development, entrepreneurship education, retreats, and community.</p>
+  <div class="callout avoid">
+    <h3>Our Mission</h3>
+    <p>Empower female Veterans and first responders to reclaim their identity, rebuild confidence, and discover their next mission — honoring their service and fueling their future.</p>
+  </div>
+  <div class="foot"><span><b>Her Next Mission Inc.</b> · Sponsor Prospectus</span><span>hernextmission.org</span></div>
+</div>
+
+<!-- WHAT YOUR PARTNERSHIP MAKES POSSIBLE -->
+<div class="page">
+  <div class="eyebrow">Your Impact</div>
+  <h2 class="sec">What Your Partnership Makes Possible</h2>
+  <div class="sec-rule"></div>
+  <p>Sponsors don't simply write a check — they put their name behind women who have already given so much, and gain authentic, mission-aligned visibility with a community that values service, resilience, and integrity. In our first year, partners help us:</p>
+  <div class="kpi avoid">
+    <div class="k"><div class="n">250</div><div class="l">Women served</div></div>
+    <div class="k"><div class="n">25</div><div class="l">Scholarships awarded</div></div>
+    <div class="k"><div class="n">75</div><div class="l">Coaching participants</div></div>
+  </div>
+  <h3>Activation — Audience, Brand &amp; Impact</h3>
+  <div class="two">
+    <div><ul>
+      <li>Brand-safe podcast reads on <em>From Service to Success</em></li>
+      <li>Live-event naming, stage time &amp; on-site brand activation</li>
+      <li>Co-branded content spotlighting beneficiaries (with consent)</li>
+    </ul></div>
+    <div><ul>
+      <li>Corporate consulting track — a leadership offsite with our facilitators</li>
+      <li>Veteran-impact reporting your DEI/ESG team can use</li>
+      <li>Recognition across the site, summit &amp; community</li>
+    </ul></div>
+  </div>
+  <div class="foot"><span><b>Her Next Mission Inc.</b> · Sponsor Prospectus</span><span>hernextmission.org</span></div>
+</div>
+
+<!-- SPONSOR TIERS -->
+<div class="page">
+  <div class="eyebrow">Partnership Levels</div>
+  <h2 class="sec">Three Tiers. Real Activation.</h2>
+  <div class="sec-rule"></div>
+  <p>We design partnerships around what your team needs to report and the audience your brand wants to stand with. Levels below are starting points — we'll tailor the right fit together.</p>
+  <div class="three avoid">
+    <div class="card">
+      <h3>Featured Sponsor</h3>
+      <p style="font-family:var(--serif);font-size:18pt;color:var(--gold-deep);margin:4px 0 10px"><strong>$5,000</strong></p>
+      <ul style="font-size:9.5pt">
+        <li>Featured placement on the website</li>
+        <li>Recognition across the podcast</li>
+        <li>Visibility at one annual event</li>
+        <li>Impact updates</li>
+      </ul>
+    </div>
+    <div class="card" style="border-top-color:var(--gold);background:var(--gold-glow)">
+      <h3>Lead Sponsor</h3>
+      <p style="font-family:var(--serif);font-size:18pt;color:var(--gold-deep);margin:4px 0 10px"><strong>$10,000</strong></p>
+      <ul style="font-size:9.5pt">
+        <li>Everything in Featured, plus:</li>
+        <li>Reserved table at live events</li>
+        <li>Dedicated landing page</li>
+        <li>Recognition at speaking events</li>
+        <li>Podcast &amp; TV features</li>
+      </ul>
+    </div>
+    <div class="card" style="border-top-color:var(--navy)">
+      <h3>Mission Partner</h3>
+      <p style="font-family:var(--serif);font-size:18pt;color:var(--gold-deep);margin:4px 0 10px"><strong>$25,000+</strong></p>
+      <ul style="font-size:9.5pt">
+        <li>Everything in Lead, plus:</li>
+        <li>Naming rights to a live event (50+ women)</li>
+        <li>Full media &amp; production rights</li>
+        <li>Corporate consulting track</li>
+        <li>Press &amp; leadership access</li>
+      </ul>
+    </div>
+  </div>
+  <p class="note">Investment levels are customizable. Multi-year and program-specific sponsorships (summit, podcast, scholarships, retreats) are available on request.</p>
+  <div class="foot"><span><b>Her Next Mission Inc.</b> · Sponsor Prospectus</span><span>hernextmission.org</span></div>
+</div>
+
+<!-- WAYS TO GIVE + CTA -->
+<div class="page">
+  <div class="eyebrow">Ways to Give</div>
+  <h2 class="sec">Every Gift Funds a Woman's Next Mission</h2>
+  <div class="sec-rule"></div>
+  <div class="three avoid">
+    <div class="card"><h3>$50</h3><p>Sponsors a woman's coaching session.</p></div>
+    <div class="card"><h3>$500</h3><p>Funds a retreat scholarship seat.</p></div>
+    <div class="card"><h3>$5,000</h3><p>Underwrites a full community cohort.</p></div>
+  </div>
+  <p>Monthly giving, donor-advised funds, in-kind support, and matching gifts are all welcome. As a 501(c)(3) nonprofit, contributions to Her Next Mission Inc. are tax-deductible to the extent allowed by law.</p>
+
+  <div class="callout avoid">
+    <h3>Let's Find Your Fit</h3>
+    <p style="margin-top:6px">Krystalore Crews, Founder &amp; Executive Director<br>
+    <b style="color:var(--gold-soft)">krystalore@thecrewscoach.com</b> &nbsp;·&nbsp; hernextmission.org</p>
+  </div>
+  <p class="lead" style="text-align:center;margin-top:24px;color:var(--navy)">"You are not starting over. You are building what comes next."</p>
+  <div class="foot"><span><b>Her Next Mission Inc.</b> · Sponsor Prospectus</span><span>hernextmission.org</span></div>
+</div>
+</div><div class="docfoot">Her Next Mission Inc. · <a href="/assets/docs/hm-v1-sponsor-prospectus.pdf" target="_blank" rel="noopener">Download PDF</a></div></div><script>
+(function(){var st=document.querySelector('.docstage');
+function fit(){var w=document.documentElement.clientWidth;st.style.zoom=Math.min(1,(w-24)/816);}
+window.addEventListener('resize',fit);fit();})();
+</script></body></html>
