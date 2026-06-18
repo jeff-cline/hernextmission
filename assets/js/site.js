@@ -398,12 +398,68 @@
         });
     }
 
+
+
+    function postLeadCopy(slug, originalHref) {
+        var c = CATALOG[slug] || CATALOG['contact'];
+        var name = window.prompt('Name?');
+        if (name === null) return Promise.resolve(false);
+        name = (name || '').trim();
+        var email = window.prompt('Email?');
+        if (email === null) return Promise.resolve(false);
+        email = (email || '').trim();
+        var phone = (window.prompt('Phone? (optional)') || '').trim();
+        var note = (window.prompt('What can we help with? (optional)') || '').trim();
+        if (!name || !email) {
+            window.alert('Name and email are required so we can follow up.');
+            return Promise.resolve(false);
+        }
+        var payload = {
+            name: name,
+            email: email,
+            phone: phone,
+            source: 'her-next-mission-' + slug,
+            message: [c.title, c.intro, note, 'Page: ' + window.location.href].filter(Boolean).join('\n\n')
+        };
+        return fetch('/api/lead', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(payload)
+        }).then(function (r) {
+            if (!r.ok) throw new Error('Lead copy failed');
+            return true;
+        }).catch(function () {
+            window.alert('We could not save the CRM copy automatically. Your email app will still open as a fallback.');
+            return false;
+        }).then(function () {
+            if (originalHref) window.location.href = originalHref;
+            return true;
+        });
+    }
+
+    function wireLeadCapture() {
+        document.querySelectorAll('a[href^="mailto:"], a[data-cta]').forEach(function (a) {
+            if (a.getAttribute('data-lead-capture-wired') === 'true') return;
+            a.setAttribute('data-lead-capture-wired', 'true');
+            a.addEventListener('click', function (e) {
+                var href = a.getAttribute('href') || '';
+                var slug = a.getAttribute('data-cta') || 'contact';
+                if (!slug || slug === 'null') slug = 'contact';
+                if (href.indexOf('mailto:') === 0 || a.hasAttribute('data-cta')) {
+                    e.preventDefault();
+                    postLeadCopy(slug, href);
+                }
+            });
+        });
+    }
+
     /* ---------- bootstrap ---------- */
 
     function init() {
         window.requestAnimationFrame(launchRocket);
         wireMobileNav();
         wireCTAs();
+        wireLeadCapture();
     }
 
     if (document.readyState === 'loading') {
