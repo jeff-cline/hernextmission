@@ -1,0 +1,14 @@
+{
+  "name": "hnm-raffle",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Her Next Mission 360 raffle service — booth codes, QR, confirmation, admin/operator reconciliation. Static-site friendly (no WordPress).",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.21.2",
+    "qrcode": "^1.5.4"
+  }
+}
