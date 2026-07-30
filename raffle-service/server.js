@@ -15,6 +15,7 @@
  *
  * Nothing here calls TouchPix (it has no API). Delivery + CRM update are pluggable.
  */
+require("dotenv").config();
 const express = require("express");
 const QRCode = require("qrcode");
 const store = require("./store");
